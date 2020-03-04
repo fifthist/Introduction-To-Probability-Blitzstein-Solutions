@@ -10,6 +10,8 @@ bookdown::gitbook:
     download: ["pdf", "epub"]
     fontsettings:
       theme: sepia
+    sharing:
+      github: yes
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
