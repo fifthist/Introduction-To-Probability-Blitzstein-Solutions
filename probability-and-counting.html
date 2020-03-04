@@ -103,53 +103,68 @@
 <div id="section" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> </h3>
 <p><strong>Intuition</strong></p>
-<p>There are 11 slots to put letters into. We have one <span class="math inline">\(M\)</span>, four <span class="math inline">\(I\)</span>, four <span class="math inline">\(S\)</span>, and two <span class="math inline">\(P\)</span>. Then, there are <span class="math inline">\({11 \choose 1}\)</span> ways to place the <span class="math inline">\(M\)</span>, <span class="math inline">\({10 \choose 4}\)</span> ways to place <span class="math inline">\(I\)</span>, <span class="math inline">\({6 \choose 4}\)</span> ways to place the <span class="math inline">\(S\)</span>, and <span class="math inline">\({2 \choose 2}\)</span> ways to place the <span class="math inline">\(P\)</span>.</p>
+<p>Imagine eleven empty slots to place the letters into.</p>
+<p>How many ways are there to place the four <span class="math inline">\(I\)</span>-s into the slots? For each placement of <span class="math inline">\(I\)</span>s, can we figure out the number of ways to place the remaining letters into the <span class="math inline">\(7\)</span> empty slots?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
-<p><span class="math display">\[ {11 \choose 1} \times {10 \choose 4} \times {6 \choose 4} \times {2 \choose 2} \]</span> </details></p>
+<p>We have one <span class="math inline">\(M\)</span>, four <span class="math inline">\(I\)</span>-s, four <span class="math inline">\(S\)</span>-s, and two <span class="math inline">\(P\)</span>-s. There are <span class="math inline">\({11 \choose 4}\)</span> ways to place the <span class="math inline">\(I\)</span>-s, <span class="math inline">\({7 \choose 4}\)</span> ways to place <span class="math inline">\(S\)</span>-s, <span class="math inline">\({3 \choose 2}\)</span> ways to place the <span class="math inline">\(P\)</span>-s, and <span class="math inline">\({1 \choose 1}\)</span> ways to place the <span class="math inline">\(M\)</span>.</p>
+<p><span class="math display">\[ {11 \choose 4} \times {7 \choose 4} \times {3 \choose 2} \times {1 \choose 1} \]</span> </details></p>
 </div>
 <div id="section-1" class="section level3">
 <h3><span class="header-section-number">1.1.2</span> </h3>
 <p>a. <strong>Intuition</strong></p>
-<p>If the first digit can’t be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, we are left with <span class="math inline">\(8\)</span> choices for the first digit. The remaining six digits can by any digits.</p>
+<p>If the first digit can’t be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, how many choices are we left with for the first digit? For each choice of first digit, how many choices do we have for the remaining six digits?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
-<p><span class="math display">\[ 8 \times 10^{6} \]</span> </details></p>
+<p>If the first digit can’t be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, we have eight choices for the first digit - <span class="math inline">\(2\)</span> to <span class="math inline">\(9\)</span>. The remaining six digits can be anything from <span class="math inline">\(0\)</span> to <span class="math inline">\(9\)</span>. Hence, the solution is <span class="math display">\[ 8 \times 10^{6} \]</span> </details></p>
 <p>b. <strong>Intuition</strong></p>
-<p>We can subtract the number of seven digits phone numbers that start with <span class="math inline">\(911\)</span> from the total number of phone numbers we found in the previous part.</p>
-<p>If a phone number starts with <span class="math inline">\(911\)</span>, it has ten choices for each of the remaining four digits.</p>
+<p>How many phone numbers start with <span class="math inline">\(911\)</span>?</p>
+<p>Can we use the answer from the previous part to find the desired quantity?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>We can subtract the number of phone numbers that start with <span class="math inline">\(911\)</span> from the total number of phone numbers we found in the previous part.</p>
+<p>If a phone number starts with <span class="math inline">\(911\)</span>, it has ten choices for each of the remaining four digits.</p>
 <p><span class="math display">\[ 8 \times 10^{6} - 10^{4} \]</span> </details></p>
 </div>
 <div id="section-2" class="section level3">
 <h3><span class="header-section-number">1.1.3</span> </h3>
 <p>a. <strong>Intuition</strong></p>
-<p>Fred has <span class="math inline">\(10\)</span> choices for Monday, <span class="math inline">\(9\)</span> choices for Tuesday, <span class="math inline">\(8\)</span> choices for Wednesday, <span class="math inline">\(7\)</span> choices for Thursday and <span class="math inline">\(6\)</span> choices for Friday.</p>
+<p>How many choices of restaurants does Fred have on Monday?</p>
+<p>Once Fred attends a restaurant on Monday, how many choices of restaurants does he have for the remainder of the week?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>Fred has <span class="math inline">\(10\)</span> choices for Monday, <span class="math inline">\(9\)</span> choices for Tuesday, <span class="math inline">\(8\)</span> choices for Wednesday, <span class="math inline">\(7\)</span> choices for Thursday and <span class="math inline">\(6\)</span> choices for Friday.</p>
 <p><span class="math display">\[ 10 \times 9 \times 8 \times 7 \times 6 \]</span> </details></p>
 <p>b. <strong>Intution</strong></p>
-<p>For the first restaurant, Fred has <span class="math inline">\(10\)</span> choices. For all subsequent days, Fred has <span class="math inline">\(9\)</span> choices, sinces he doesn’t want to eat at the restaurant he ate at the previous day.</p>
+<p>We are told that Fred will not attend a restaurant he went to the previous day, but can he go to a restaurant he went to two or more days ago?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>For the first restaurant, Fred has <span class="math inline">\(10\)</span> choices. For all subsequent days, Fred has <span class="math inline">\(9\)</span> choices, since the only restriction is that he doesn’t want to eat at the restaurant he ate at the previous day.</p>
 <p><span class="math display">\[ 10 \times 9^{4} \]</span> </details></p>
 </div>
 <div id="section-3" class="section level3">
 <h3><span class="header-section-number">1.1.4</span> </h3>
 <p>a. <strong>Intuition</strong></p>
-<p>There are <span class="math inline">\({n \choose 2}\)</span> matches in a round-robin setting. For a given match, there are two outcomes. Irrespective of the outcome, the next match also has two possible outcomes. Hence, we can use the multiplication rule to count the total possible outcomes.</p>
+<p>How many matches are there in a <em>round-robin</em> tournament?</p>
+<p>How many outcomes are possible for each match?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>There are <span class="math inline">\({n \choose 2}\)</span> matches.</p>
+<p>For a given match, there are two outcomes. Each match has two possible outcomes. We can use the multiplication rule to count the total possible outcomes.</p>
 <p><span class="math display">\[ 2^{{n \choose 2}} \]</span> </details></p>
 <p>b. <strong>Intuition</strong></p>
-<p>Since every player plays every other player exactly once, the number of games is the number of ways to pair up <span class="math inline">\(n\)</span> people.</p>
+<p>How many opponents will every player play against?</p>
+<p>How many times will a given pair of players face each other?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>Since every player plays every other player exactly once, the number of games is the number of ways to pair up <span class="math inline">\(n\)</span> people.</p>
 <p><span class="math display">\[ {n \choose 2} \]</span> </details></p>
 </div>
 <div id="section-4" class="section level3">
 <h3><span class="header-section-number">1.1.5</span> </h3>
 <p>a. <strong>Intuition</strong></p>
-<p>By the end of each round, half of the players participating in the round are eliminated. So, the problem reduces to finding out how many times can the number of players be divided by two until a single player is left.</p>
+<p>How many players are left by the end of a round compared to the number of players at the start of the round?</p>
+<p>How many rounds need to pass for a single player to be left standing?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>By the end of each round, half of the players participating in the round are eliminated. So, the problem reduces to finding out how many times the number of players can be halved before a single player is left.</p>
 <p>The number of times <span class="math inline">\(N\)</span> can be divided by two is <span class="math display">\[\log_{2}{N}\]</span> </details></p>
 <p>b. <strong>Intuition</strong></p>
-<p>In a given round, two opponents participate in only that one match. Thus, the number of games in a given round is <span class="math inline">\(\frac{N_{r}}{2}\)</span> where <span class="math inline">\(N_{r}\)</span> is the number of players in the <span class="math inline">\(r\)</span>-th round.</p>
+<p>Suppose there are <span class="math inline">\(N_{r}\)</span> players at the start of round <span class="math inline">\(r\)</span>. If every player plays exactly one game, how many games will be played in round <span class="math inline">\(r\)</span>?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>The number of games in a given round is <span class="math inline">\(\frac{N_{r}}{2}\)</span>. We can sum up these values for all the rounds.</p>
 <span class="math display" id="eq:var-beta">\[\begin{equation} 
   \begin{split}
    f(N) &amp; = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
@@ -161,8 +176,10 @@
   \end{equation}\]</span>
 <p></details></p>
 <p>c. <strong>Intuition</strong></p>
-<p>Tournament is over when a single player is left. Hece, <span class="math inline">\(N-1\)</span> players need to be eliminated. As a result of a match, exactly one player is eliminated. Hence, <span class="math inline">\(N-1\)</span> matches are needed to eliminate <span class="math inline">\(N-1\)</span> people.</p>
+<p>How many players need to be eliminated before the tournament is over?</p>
+<p>How many players are eliminated as a result of a single match?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
+<p>Tournament is over when a single player is left. Hece, <span class="math inline">\(N-1\)</span> players need to be eliminated. As a result of a match, exactly one player is eliminated. Hence, the number of matches needed to eliminate <span class="math inline">\(N-1\)</span> people is</p>
 <p><span class="math display">\[ N-1 \]</span> </details></p>
 
 </div>

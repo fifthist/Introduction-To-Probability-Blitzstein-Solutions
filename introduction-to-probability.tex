@@ -103,37 +103,50 @@ and Jessica Hwang.
 
 \textbf{Intuition}
 
-There are 11 slots to put letters into. We have one \(M\), four \(I\),
-four \(S\), and two \(P\). Then, there are \({11 \choose 1}\) ways to
-place the \(M\), \({10 \choose 4}\) ways to place \(I\),
-\({6 \choose 4}\) ways to place the \(S\), and \({2 \choose 2}\) ways to
-place the \(P\).
+Imagine eleven empty slots to place the letters into.
+
+How many ways are there to place the four \(I\)-s into the slots? For
+each placement of \(I\)s, can we figure out the number of ways to place
+the remaining letters into the \(7\) empty slots?
 
  \textbf{Solution}
 
-\[ {11 \choose 1} \times {10 \choose 4} \times {6 \choose 4} \times {2 \choose 2} \]
+We have one \(M\), four \(I\)-s, four \(S\)-s, and two \(P\)-s. There
+are \({11 \choose 4}\) ways to place the \(I\)-s, \({7 \choose 4}\) ways
+to place \(S\)-s, \({3 \choose 2}\) ways to place the \(P\)-s, and
+\({1 \choose 1}\) ways to place the \(M\).
+
+\[ {11 \choose 4} \times {7 \choose 4} \times {3 \choose 2} \times {1 \choose 1} \]
 
 \subsection{}\label{section-1}
 
 a.~\textbf{Intuition}
 
-If the first digit can't be \(0\) or \(1\), we are left with \(8\)
-choices for the first digit. The remaining six digits can by any digits.
+If the first digit can't be \(0\) or \(1\), how many choices are we left
+with for the first digit? For each choice of first digit, how many
+choices do we have for the remaining six digits?
 
  \textbf{Solution}
 
+If the first digit can't be \(0\) or \(1\), we have eight choices for
+the first digit - \(2\) to \(9\). The remaining six digits can be
+anything from \(0\) to \(9\). Hence, the solution is
 \[ 8 \times 10^{6} \]
 
 b.~\textbf{Intuition}
 
-We can subtract the number of seven digits phone numbers that start with
-\(911\) from the total number of phone numbers we found in the previous
-part.
+How many phone numbers start with \(911\)?
+
+Can we use the answer from the previous part to find the desired
+quantity?
+
+ \textbf{Solution}
+
+We can subtract the number of phone numbers that start with \(911\) from
+the total number of phone numbers we found in the previous part.
 
 If a phone number starts with \(911\), it has ten choices for each of
 the remaining four digits.
-
- \textbf{Solution}
 
 \[ 8 \times 10^{6} - 10^{4} \]
 
@@ -141,21 +154,30 @@ the remaining four digits.
 
 a.~\textbf{Intuition}
 
+How many choices of restaurants does Fred have on Monday?
+
+Once Fred attends a restaurant on Monday, how many choices of
+restaurants does he have for the remainder of the week?
+
+ \textbf{Solution}
+
 Fred has \(10\) choices for Monday, \(9\) choices for Tuesday, \(8\)
 choices for Wednesday, \(7\) choices for Thursday and \(6\) choices for
 Friday.
-
- \textbf{Solution}
 
 \[ 10 \times 9 \times 8 \times 7 \times 6 \]
 
 b.~\textbf{Intution}
 
-For the first restaurant, Fred has \(10\) choices. For all subsequent
-days, Fred has \(9\) choices, sinces he doesn't want to eat at the
-restaurant he ate at the previous day.
+We are told that Fred will not attend a restaurant he went to the
+previous day, but can he go to a restaurant he went to two or more days
+ago?
 
  \textbf{Solution}
+
+For the first restaurant, Fred has \(10\) choices. For all subsequent
+days, Fred has \(9\) choices, since the only restriction is that he
+doesn't want to eat at the restaurant he ate at the previous day.
 
 \[ 10 \times 9^{4} \]
 
@@ -163,21 +185,30 @@ restaurant he ate at the previous day.
 
 a.~\textbf{Intuition}
 
-There are \({n \choose 2}\) matches in a round-robin setting. For a
-given match, there are two outcomes. Irrespective of the outcome, the
-next match also has two possible outcomes. Hence, we can use the
-multiplication rule to count the total possible outcomes.
+How many matches are there in a \emph{round-robin} tournament?
+
+How many outcomes are possible for each match?
 
  \textbf{Solution}
+
+There are \({n \choose 2}\) matches.
+
+For a given match, there are two outcomes. Each match has two possible
+outcomes. We can use the multiplication rule to count the total possible
+outcomes.
 
 \[ 2^{{n \choose 2}} \]
 
 b.~\textbf{Intuition}
 
-Since every player plays every other player exactly once, the number of
-games is the number of ways to pair up \(n\) people.
+How many opponents will every player play against?
+
+How many times will a given pair of players face each other?
 
  \textbf{Solution}
+
+Since every player plays every other player exactly once, the number of
+games is the number of ways to pair up \(n\) people.
 
 \[ {n \choose 2} \]
 
@@ -185,22 +216,29 @@ games is the number of ways to pair up \(n\) people.
 
 a.~\textbf{Intuition}
 
-By the end of each round, half of the players participating in the round
-are eliminated. So, the problem reduces to finding out how many times
-can the number of players be divided by two until a single player is
-left.
+How many players are left by the end of a round compared to the number
+of players at the start of the round?
+
+How many rounds need to pass for a single player to be left standing?
 
  \textbf{Solution}
+
+By the end of each round, half of the players participating in the round
+are eliminated. So, the problem reduces to finding out how many times
+the number of players can be halved before a single player is left.
 
 The number of times \(N\) can be divided by two is \[\log_{2}{N}\]
 
 b.~\textbf{Intuition}
 
-In a given round, two opponents participate in only that one match.
-Thus, the number of games in a given round is \(\frac{N_{r}}{2}\) where
-\(N_{r}\) is the number of players in the \(r\)-th round.
+Suppose there are \(N_{r}\) players at the start of round \(r\). If
+every player plays exactly one game, how many games will be played in
+round \(r\)?
 
  \textbf{Solution}
+
+The number of games in a given round is \(\frac{N_{r}}{2}\). We can sum
+up these values for all the rounds.
 
 \begin{equation} 
   \begin{split}
@@ -214,12 +252,16 @@ Thus, the number of games in a given round is \(\frac{N_{r}}{2}\) where
 
 c.~\textbf{Intuition}
 
-Tournament is over when a single player is left. Hece, \(N-1\) players
-need to be eliminated. As a result of a match, exactly one player is
-eliminated. Hence, \(N-1\) matches are needed to eliminate \(N-1\)
-people.
+How many players need to be eliminated before the tournament is over?
+
+How many players are eliminated as a result of a single match?
 
  \textbf{Solution}
+
+Tournament is over when a single player is left. Hece, \(N-1\) players
+need to be eliminated. As a result of a match, exactly one player is
+eliminated. Hence, the number of matches needed to eliminate \(N-1\)
+people is
 
 \[ N-1 \]
 
