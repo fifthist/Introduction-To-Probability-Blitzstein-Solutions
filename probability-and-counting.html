@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Probability and Counting | Introduction to Probability, Second Edition</title>
+  <meta name="description" content="This is a solution manual for the exercises in Introduction to Probability, Second Edition by Joseph Blitzstein and Jessica Hwang." />
+  <meta name="generator" content="bookdown 0.17.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Probability and Counting | Introduction to Probability, Second Edition" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a solution manual for the exercises in Introduction to Probability, Second Edition by Joseph Blitzstein and Jessica Hwang." />
+  <meta name="github-repo" content="Fifthist/probability-solutions-manual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Probability and Counting | Introduction to Probability, Second Edition" />
+  
+  <meta name="twitter:description" content="This is a solution manual for the exercises in Introduction to Probability, Second Edition by Joseph Blitzstein and Jessica Hwang." />
+  
+
+<meta name="author" content="Fifthist" />
+
+
+<meta name="date" content="2020-03-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="probability-and-counting.html"><a href="probability-and-counting.html"><i class="fa fa-check"></i><b>1</b> Probability and Counting</a><ul>
+<li class="chapter" data-level="1.1" data-path="probability-and-counting.html"><a href="probability-and-counting.html#counting"><i class="fa fa-check"></i><b>1.1</b> Counting</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section"><i class="fa fa-check"></i><b>1.1.1</b> </a></li>
+<li class="chapter" data-level="1.1.2" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-1"><i class="fa fa-check"></i><b>1.1.2</b> </a></li>
+<li class="chapter" data-level="1.1.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-2"><i class="fa fa-check"></i><b>1.1.3</b> </a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><em>Introduction to Probability, Second Edition</em></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probability-and-counting" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Probability and Counting</h1>
+<div id="counting" class="section level2">
+<h2><span class="header-section-number">1.1</span> Counting</h2>
+<div id="section" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>There are 11 slots to put letters into. We have one <span class="math inline">\(M\)</span>, four <span class="math inline">\(I\)</span>, four <span class="math inline">\(S\)</span>, and two <span class="math inline">\(P\)</span>. Then, there are <span class="math inline">\({11 \choose 1}\)</span> ways to place the <span class="math inline">\(M\)</span>, <span class="math inline">\({10 \choose 4}\)</span> ways to place <span class="math inline">\(I\)</span>, <span class="math inline">\({6 \choose 4}\)</span> ways to place the <span class="math inline">\(S\)</span>, and <span class="math inline">\({2 \choose 2}\)</span> ways to place the <span class="math inline">\(P\)</span>.</p>
+<p><strong>Solution</strong></p>
+<p><span class="math display">\[ {11 \choose 1} \times {10 \choose 4} \times {6 \choose 4} \times {2 \choose 2} \]</span></p>
+</div>
+<div id="section-1" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> </h3>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Intuition</strong></li>
+</ol>
+<p>If the first digit can’t be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, we are left with <span class="math inline">\(8\)</span> choices for the first digit. The remaining six digits can by any digits.</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Solution</strong></li>
+</ol>
+<p><span class="math display">\[ 8 \times 10^{6} \]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Intuition</strong></li>
+</ol>
+<p>We can subtract the number of seven digits phone numbers that start with <span class="math inline">\(911\)</span> from the total number of phone numbers we found in the previous part.</p>
+<p>If a phone number starts with <span class="math inline">\(911\)</span>, it has ten choices for each of the remaining four digits.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Solution</strong></li>
+</ol>
+<p><span class="math display">\[ 8 \times 10^{6} - 10^{4} \]</span></p>
+</div>
+<div id="section-2" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> </h3>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Intuition</strong></li>
+</ol>
+<p>Fred has <span class="math inline">\(10\)</span> choices for Monday, <span class="math inline">\(9\)</span> choices for Tuesday, <span class="math inline">\(8\)</span> choices for Wednesday, <span class="math inline">\(7\)</span> choices for Thursday and <span class="math inline">\(6\)</span> choices for Friday.</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Solution</strong></li>
+</ol>
+<p><span class="math display">\[ 10 \times 9 \times 8 \times 7 \times 6 \]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Intution</strong></li>
+</ol>
+<p>For the first restaurant, Fred has <span class="math inline">\(10\)</span> choices. For all subsequent days, Fred has <span class="math inline">\(9\)</span> choices, sinces he doesn’t want to eat at the restaurant he ate at the previous day.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Solution</strong></li>
+</ol>
+<p><span class="math display">\[ 10 \times 9^{4} \]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Fifthist/probability-solutions-manual/edit/master/01-probability_and_counting.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
