@@ -203,6 +203,50 @@ restaurant he ate at the previous day.
 
 \[ 10 \times 9^{4} \]
 
+\subsection{}\label{section-3}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \textbf{Intuition}
+\end{enumerate}
+
+There are \({n \choose 2}\) matches in a round-robin setting. For a
+given match, there are two outcomes. Irrespective of the outcome, the
+next match also has two possible outcomes. Hence, we can use the
+multiplication rule to count the total possible outcomes.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \textbf{Solution}
+\end{enumerate}
+
+\[ 2^{{n \choose 2}} \]
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Intuition}
+\end{enumerate}
+
+Since every player plays every other player exactly once, the number of
+games is the number of ways to pair up \(n\) people.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Solution}
+\end{enumerate}
+
+\[ {n \choose 2} \]
+
 \bibliography{book.bib,packages.bib}
 
 \end{document}
