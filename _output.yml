@@ -6,8 +6,8 @@ bookdown::gitbook:
       #  <li><a href="./">A Solution Manual for Introduction to Probability, Second Edition</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/Fifthist/probability-solutions-manual/edit/master/%s
-    # download: ["pdf", "epub"]
+    # edit: https://github.com/Fifthist/probability-solutions-manual/edit/master/%s
+    download: ["pdf", "epub"]
     fontsettings:
       theme: sepia
 bookdown::pdf_book:
