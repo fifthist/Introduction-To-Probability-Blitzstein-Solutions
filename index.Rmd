@@ -1,0 +1,24 @@
+--- 
+title: "_Introduction to Probability, Second Edition_"
+author: "Fifthist"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook 
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike 
+link-citations: yes
+github-repo: Fifthist/probability-solutions-manual
+description: "This is a solution manual for the exercises in _Introduction to Probability, Second Edition_ by Joseph Blitzstein and Jessica Hwang."
+---
+
+# Preface {-}
+
+This book is an unofficial solution manual for the exercises in _Introduction to Probability, Second Edition_ by Joseph Blitzstein and Jessica Hwang.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

@@ -1,0 +1,52 @@
+# Probability and Counting
+
+## Counting
+  
+###
+
+__Intuition__
+
+There are 11 slots to put letters into. We have one $M$, four $I$, four $S$, and two $P$. Then, there are ${11 \choose 1}$ ways to place the $M$, ${10 \choose 4}$ ways to place $I$, ${6 \choose 4}$ ways to place the $S$, and ${2 \choose 2}$ ways to place the $P$.
+
+__Solution__
+
+$$ {11 \choose 1} \times {10 \choose 4} \times {6 \choose 4} \times {2 \choose 2} $$
+
+###
+
+(a) __Intuition__
+
+If the first digit can't be $0$ or $1$, we are left with $8$ choices for the first digit. The remaining six digits can by any digits.
+
+(a) __Solution__
+
+$$ 8 \times 10^{6} $$
+
+
+(b) __Intuition__ 
+
+We can subtract the number of seven digits phone numbers that start with $911$ from the total number of phone numbers we found in the previous part. 
+
+If a phone number starts with $911$, it has ten choices for each of the remaining four digits.
+
+(b) __Solution__
+
+$$ 8 \times 10^{6} - 10^{4} $$
+
+### 
+
+(a) __Intuition__
+
+Fred has $10$ choices for Monday, $9$ choices for Tuesday, $8$ choices for Wednesday, $7$ choices for Thursday and $6$ choices for Friday.
+
+(a) __Solution__
+
+$$ 10 \times 9 \times 8 \times 7 \times 6 $$
+
+(b) __Intution__
+
+For the first restaurant, Fred has $10$ choices. For all subsequent days, Fred has $9$ choices, sinces he doesn't want to eat at the restaurant he ate at the previous day.
+
+(b) __Solution__
+
+$$ 10 \times 9^{4} $$

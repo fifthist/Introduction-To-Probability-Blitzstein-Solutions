@@ -1,0 +1,5 @@
+book_filename: "introduction-to-probability"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
