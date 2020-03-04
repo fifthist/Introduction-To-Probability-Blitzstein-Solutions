@@ -50,3 +50,22 @@ For the first restaurant, Fred has $10$ choices. For all subsequent days, Fred h
 (b) __Solution__
 
 $$ 10 \times 9^{4} $$
+
+###
+
+(a) __Intuition__
+
+There are ${n \choose 2}$ matches in a round-robin setting. For a given match, there are two outcomes. Irrespective of the outcome, the next match also has two possible outcomes. Hence, we can use the multiplication rule to count the total possible outcomes.
+
+(a) __Solution__
+
+$$ 2^{{n \choose 2}} $$
+
+
+(b) __Intuition__
+
+Since every player plays every other player exactly once, the number of games is the number of ways to pair up $n$ people.
+
+(b) __Solution__
+
+$$ {n \choose 2} $$
