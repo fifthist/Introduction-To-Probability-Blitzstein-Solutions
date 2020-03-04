@@ -69,3 +69,39 @@ Since every player plays every other player exactly once, the number of games is
 (b) __Solution__
 
 $$ {n \choose 2} $$
+
+
+###
+
+(a) __Intuition__
+
+By the end of each round, half of the players participating in the round are eliminated. So, the problem reduces to finding out how many times can the number of players be divided by two until a single player is left.
+
+(a) __Solution__
+
+The number of times $N$ can be divided by two is $$\log_{2}{N}$$
+
+
+(b) __Intuition__
+
+In a given round, two opponents participate in only that one match. Thus, the number of games in a given round is $\frac{N_{r}}{2}$ where $N_{r}$ is the number of players in the $r$-th round.
+
+(b) __Solution__
+
+\begin{equation} 
+\begin{split}
+ f(N) & = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
+ & =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
+ & =N \times \frac{N-1}{N}\\
+ & =N-1
+\end{split}
+(\#eq:var-beta)
+\end{equation} 
+
+(c) __Intuition__
+
+Tournament is over when a single player is left. Hece, $N-1$ players need to be eliminated. As a result of a match, exactly one player is eliminated. Hence, $N-1$ matches are needed to eliminate $N-1$ people.
+
+(c) __Solution__
+
+$$ N-1 $$
