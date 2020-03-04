@@ -8,100 +8,116 @@ __Intuition__
 
 There are 11 slots to put letters into. We have one $M$, four $I$, four $S$, and two $P$. Then, there are ${11 \choose 1}$ ways to place the $M$, ${10 \choose 4}$ ways to place $I$, ${6 \choose 4}$ ways to place the $S$, and ${2 \choose 2}$ ways to place the $P$.
 
-__Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ {11 \choose 1} \times {10 \choose 4} \times {6 \choose 4} \times {2 \choose 2} $$
+  $$ {11 \choose 1} \times {10 \choose 4} \times {6 \choose 4} \times {2 \choose 2} $$
+</details>
 
 ###
 
-(a) __Intuition__
+a.\ __Intuition__
 
 If the first digit can't be $0$ or $1$, we are left with $8$ choices for the first digit. The remaining six digits can by any digits.
 
-(a) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ 8 \times 10^{6} $$
+  $$ 8 \times 10^{6} $$
+</details>
 
-
-(b) __Intuition__ 
+b.\ __Intuition__ 
 
 We can subtract the number of seven digits phone numbers that start with $911$ from the total number of phone numbers we found in the previous part. 
 
 If a phone number starts with $911$, it has ten choices for each of the remaining four digits.
 
-(b) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ 8 \times 10^{6} - 10^{4} $$
+  $$ 8 \times 10^{6} - 10^{4} $$
+</details>
 
 ### 
 
-(a) __Intuition__
+a.\ __Intuition__
 
 Fred has $10$ choices for Monday, $9$ choices for Tuesday, $8$ choices for Wednesday, $7$ choices for Thursday and $6$ choices for Friday.
 
-(a) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ 10 \times 9 \times 8 \times 7 \times 6 $$
+  $$ 10 \times 9 \times 8 \times 7 \times 6 $$
+</details>
 
-(b) __Intution__
+b.\ __Intution__
 
 For the first restaurant, Fred has $10$ choices. For all subsequent days, Fred has $9$ choices, sinces he doesn't want to eat at the restaurant he ate at the previous day.
 
-(b) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ 10 \times 9^{4} $$
+  $$ 10 \times 9^{4} $$
+</details>
 
 ###
 
-(a) __Intuition__
+a.\ __Intuition__
 
 There are ${n \choose 2}$ matches in a round-robin setting. For a given match, there are two outcomes. Irrespective of the outcome, the next match also has two possible outcomes. Hence, we can use the multiplication rule to count the total possible outcomes.
 
-(a) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ 2^{{n \choose 2}} $$
+  $$ 2^{{n \choose 2}} $$
+</details>
 
-
-(b) __Intuition__
+b.\ __Intuition__
 
 Since every player plays every other player exactly once, the number of games is the number of ways to pair up $n$ people.
 
-(b) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ {n \choose 2} $$
-
+  $$ {n \choose 2} $$
+</details>
 
 ###
 
-(a) __Intuition__
+a.\ __Intuition__
 
 By the end of each round, half of the players participating in the round are eliminated. So, the problem reduces to finding out how many times can the number of players be divided by two until a single player is left.
 
-(a) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-The number of times $N$ can be divided by two is $$\log_{2}{N}$$
+  The number of times $N$ can be divided by two is $$\log_{2}{N}$$
+</details>
 
-
-(b) __Intuition__
+b.\ __Intuition__
 
 In a given round, two opponents participate in only that one match. Thus, the number of games in a given round is $\frac{N_{r}}{2}$ where $N_{r}$ is the number of players in the $r$-th round.
 
-(b) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-\begin{equation} 
-\begin{split}
- f(N) & = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
- & =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
- & =N \times \frac{N-1}{N}\\
- & =N-1
-\end{split}
-(\#eq:var-beta)
-\end{equation} 
+  \begin{equation} 
+  \begin{split}
+   f(N) & = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
+   & =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
+   & =N \times \frac{N-1}{N}\\
+   & =N-1
+  \end{split}
+  (\#eq:var-beta)
+  \end{equation} 
+</details>
 
-(c) __Intuition__
+c.\ __Intuition__
 
 Tournament is over when a single player is left. Hece, $N-1$ players need to be eliminated. As a result of a match, exactly one player is eliminated. Hence, $N-1$ matches are needed to eliminate $N-1$ people.
 
-(c) __Solution__
+<details>
+  <summary>__Solution__</summary>
 
-$$ N-1 $$
+  $$ N-1 $$
+</details>

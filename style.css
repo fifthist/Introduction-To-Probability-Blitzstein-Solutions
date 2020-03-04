@@ -12,3 +12,12 @@ pre {
 pre code {
   white-space: inherit;
 }
+details summary {
+  cursor: pointer;
+}
+details {
+  margin-bottom: 16px;
+}
+summary:focus {
+  outline: none;
+}
