@@ -73,6 +73,7 @@
 <li class="chapter" data-level="1.1.2" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-1"><i class="fa fa-check"></i><b>1.1.2</b> </a></li>
 <li class="chapter" data-level="1.1.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-2"><i class="fa fa-check"></i><b>1.1.3</b> </a></li>
 <li class="chapter" data-level="1.1.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-3"><i class="fa fa-check"></i><b>1.1.4</b> </a></li>
+<li class="chapter" data-level="1.1.5" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-4"><i class="fa fa-check"></i><b>1.1.5</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -163,6 +164,41 @@
 <li><strong>Solution</strong></li>
 </ol>
 <p><span class="math display">\[ {n \choose 2} \]</span></p>
+</div>
+<div id="section-4" class="section level3">
+<h3><span class="header-section-number">1.1.5</span> </h3>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Intuition</strong></li>
+</ol>
+<p>By the end of each round, half of the players participating in the round are eliminated. So, the problem reduces to finding out how many times can the number of players be divided by two until a single player is left.</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Solution</strong></li>
+</ol>
+<p>The number of times <span class="math inline">\(N\)</span> can be divided by two is <span class="math display">\[\log_{2}{N}\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Intuition</strong></li>
+</ol>
+<p>In a given round, two opponents participate in only that one match. Thus, the number of games in a given round is <span class="math inline">\(\frac{N_{r}}{2}\)</span> where <span class="math inline">\(N_{r}\)</span> is the number of players in the <span class="math inline">\(r\)</span>-th round.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Solution</strong></li>
+</ol>
+<span class="math display" id="eq:var-beta">\[\begin{equation} 
+\begin{split}
+ f(N) &amp; = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
+ &amp; =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
+ &amp; =N \times \frac{N-1}{N}\\
+ &amp; =N-1
+\end{split}
+\tag{1.1}
+\end{equation}\]</span>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><strong>Intuition</strong></li>
+</ol>
+<p>Tournament is over when a single player is left. Hece, <span class="math inline">\(N-1\)</span> players need to be eliminated. As a result of a match, exactly one player is eliminated. Hence, <span class="math inline">\(N-1\)</span> matches are needed to eliminate <span class="math inline">\(N-1\)</span> people.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><strong>Solution</strong></li>
+</ol>
+<p><span class="math display">\[ N-1 \]</span></p>
 
 </div>
 </div>

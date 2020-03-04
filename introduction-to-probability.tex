@@ -247,6 +247,82 @@ games is the number of ways to pair up \(n\) people.
 
 \[ {n \choose 2} \]
 
+\subsection{}\label{section-4}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \textbf{Intuition}
+\end{enumerate}
+
+By the end of each round, half of the players participating in the round
+are eliminated. So, the problem reduces to finding out how many times
+can the number of players be divided by two until a single player is
+left.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \textbf{Solution}
+\end{enumerate}
+
+The number of times \(N\) can be divided by two is \[\log_{2}{N}\]
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Intuition}
+\end{enumerate}
+
+In a given round, two opponents participate in only that one match.
+Thus, the number of games in a given round is \(\frac{N_{r}}{2}\) where
+\(N_{r}\) is the number of players in the \(r\)-th round.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Solution}
+\end{enumerate}
+
+\begin{equation} 
+\begin{split}
+ f(N) & = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
+ & =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
+ & =N \times \frac{N-1}{N}\\
+ & =N-1
+\end{split}
+\label{eq:var-beta}
+\end{equation}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Intuition}
+\end{enumerate}
+
+Tournament is over when a single player is left. Hece, \(N-1\) players
+need to be eliminated. As a result of a match, exactly one player is
+eliminated. Hence, \(N-1\) matches are needed to eliminate \(N-1\)
+people.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Solution}
+\end{enumerate}
+
+\[ N-1 \]
+
 \bibliography{book.bib,packages.bib}
 
 \end{document}
