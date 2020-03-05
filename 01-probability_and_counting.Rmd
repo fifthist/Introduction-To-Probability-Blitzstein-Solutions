@@ -173,3 +173,94 @@ There are ${20 \choose 2}$ ways to pair up twenty chess players. For each pairin
 matches.
 
 </details>
+
+###
+
+a.\ __Intuition__
+
+How many ways are there to assign three wins to player $A$? 
+
+Out of the remaining four games, how many ways are there to assign two draws and two losses to $A$?
+
+<details>
+  <summary>__Solution__</summary>
+
+There are ${7 \choose 3}$ ways to assign three wins to player $A$. For a specific combination of three games won by $A$, there are ${4 \choose 2}$ ways to assign two draws to $A$. There is only one way to assign two losses to $A$ from the remaining two games, namely, $A$ losses both games.
+
+  $$ {7 \choose 3} \times {4 \choose 2} \times {2 \choose 2} $$
+</details>
+
+b.\ __Intuition__
+
+Can $A$ get $4$ points if $A$ never wins? What if $A$ wins more than $4$ games?
+
+List the possible outcomes of games that award $4$ points to $A$.
+
+<details>
+  <summary>__Solution__</summary>
+  
+  If $A$ were to draw every game, there would need to be at least $8$ games for $A$ to obtain $4$ points, so $A$ has to win at least $1$ game. Similarly, if $A$ wins more than $4$ games, they will have more than $4$ points.
+  
+  Case 1: $A$ wins $1$ game and draws $6$.
+  
+  This case amounts to selecting $1$ out of $7$ for $A$ to win and assigning a draw for the other $6$ games. Hence, there are $7$ possibilities.
+    
+  Case 2: $A$ wins $2$ games and draws $4$.
+  
+  There are ${7 \choose 2}$ ways to assign $2$ wins to $A$. For each of them, there are ${5 \choose 4}$ ways to assign four draws to $A$ out of the remaining $5$ games. Player $B$ wins the remaining game. The total number of possibilites for this case is ${7 \choose 2} \times {5 \choose 4}$.
+  
+  Case 3: $A$ wins $3$ games and draws $2$.
+  
+  There are ${7 \choose 3}$ ways to assign $3$ wins to $A$. For each of them, there are ${4 \choose 2}$ ways to assign two draws to $A$ out of the remaining $4$ games. $B$ wins the remaining $2$ games. The total number of possibilites for this case is ${7 \choose 3} \times {4 \choose 2}$.
+  
+  Case 4: $A$ wins $4$ games and loses $3$.
+  
+  There are ${7 \choose 4}$ ways to assign $4$ wins to $A$. $B$ wins the remaining $3$ games.
+  The total number of possibilites for this case is ${7 \choose 4}$.
+  
+  Summing up the number of possibilities in each of the cases we get
+  
+  $$ {7 \choose 1} + {7 \choose 2} \times {5 \choose 4} + {7 \choose 3} \times {4 \choose 2} + {7 \choose 4} $$
+</details>
+
+c.\ __Intuition__
+
+Given the final score of $4$ to $3$ and the fact that the match will end if either of the players reaches $4$ points, could $B$ have been the player to win the last game?
+
+Suppose $A$ wins the last game. Could $A$ have won only $1$ game out of the first $6$?
+
+Count the number of possibilites for the case when $A$ wins the last game and the number of possibilities for the case when $A$ draws the last game.
+
+<details>
+  <summary>__Solution__</summary>
+  
+  If $B$ were to win the last game, that would mean that $A$ had already obtained $4$ points prior to the last game, so the last game would not be played at all. Hence, $B$ could not have won the last game.
+  
+  Case 1: $A$ wins $3$ out of the first $6$ games and wins the last game.
+  
+  There are ${6 \choose 3}$ ways to assign $3$ wins to $A$ out of the first $6$ games. The other $3$ games end in a draw. The number of possibilities then is ${6 \choose 3}$.
+  
+  Case 2: $A$ wins $2$ and draws $2$ out of the first $6$ games and wins the last game.
+  
+  There are ${6 \choose 2}$ ways to assign $2$ wins to $A$ out of the first $6$ games. From the $4$ remaining games, there are ${4 \choose 2}$ ways to assign $2$ draws. The remaining $2$ games are won by $B$. The number of possibilities is ${6 \choose 2} \times {4 \choose 2}$.
+  
+  Case 3: The last game ends in a draw.
+  
+  This case implies that $A$ had $3.5$ and $B$ had $2.5$ points by the end of game $6$.
+  
+  Case 3.1: $A$ wins $3$ and draws $1$ out of the first $6$ games.
+  
+  There are ${6 \choose 3}$ ways to assign $3$ wins to $A$ out of the first $6$ games. There are ${3 \choose 1}$ ways to assign a draw out of the remaining $3$ games. $B$ wins the other $2$ games. The number of possibilities is ${6 \choose 3} \times {3 \choose 1}$.
+  
+  Case 3.2: $A$ wins $2$ and draws $3$ out of the first $6$ games.
+   
+  There are ${6 \choose 2}$ ways to assign $2$ wins to $A$ out of the first $6$ games. There are ${4 \choose 3}$ ways to assign $3$ draws out of the remaining $4$ games. $B$ wins the remaining game. The number of possibilities is ${6 \choose 2} \times {4 \choose 3}$.
+  
+  Case 3.3: $A$ wins $1$ and draws $5$ of the first $6$ games.
+  
+  There are ${6 \choose 1}$ ways to assign a win to $A$ out of the first $6$ games.
+  
+  The total number of possibilities then is
+  
+  $$ {6 \choose 3} + {6 \choose 2} \times {4 \choose 2} + {6 \choose 3} \times {3 \choose 1} + {6 \choose 2} \times {4 \choose 3} + {6 \choose 1}$$
+</details>
