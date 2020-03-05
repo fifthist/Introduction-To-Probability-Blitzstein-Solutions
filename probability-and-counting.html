@@ -83,6 +83,7 @@
 <li class="chapter" data-level="1.1.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-2"><i class="fa fa-check"></i><b>1.1.3</b> </a></li>
 <li class="chapter" data-level="1.1.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-3"><i class="fa fa-check"></i><b>1.1.4</b> </a></li>
 <li class="chapter" data-level="1.1.5" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-4"><i class="fa fa-check"></i><b>1.1.5</b> </a></li>
+<li class="chapter" data-level="1.1.6" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-5"><i class="fa fa-check"></i><b>1.1.6</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -189,6 +190,16 @@
 <p><details> <summary><strong>Solution</strong></summary></p>
 <p>Tournament is over when a single player is left. Hece, <span class="math inline">\(N-1\)</span> players need to be eliminated. As a result of a match, exactly one player is eliminated. Hence, the number of matches needed to eliminate <span class="math inline">\(N-1\)</span> people is</p>
 <p><span class="math display">\[ N-1 \]</span> </details></p>
+</div>
+<div id="section-5" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>How many ways can we match up twenty chess players if we don’t care about who plays with white and who plays with black pieces?</p>
+<p>Can we use the answer from the previous part to find the desired quantity?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>There are <span class="math inline">\({20 \choose 2}\)</span> ways to pair up twenty chess players. For each pairing, we can first let player <span class="math inline">\(A\)</span> play with whites, then let player <span class="math inline">\(B\)</span> play with whites. Thus, for each of the <span class="math inline">\({20 \choose 2}\)</span> pairs, we have <span class="math inline">\(2\)</span> matches for a total of</p>
+<p><span class="math display">\[ {20 \choose 2} \times 2 \]</span> matches.</p>
+<p></details></p>
 
 </div>
 </div>

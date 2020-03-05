@@ -264,6 +264,25 @@ people is
 
 \[ N-1 \]
 
+\subsection{}\label{section-5}
+
+\textbf{Intuition}
+
+How many ways can we match up twenty chess players if we don't care
+about who plays with white and who plays with black pieces?
+
+Can we use the answer from the previous part to find the desired
+quantity?
+
+ \textbf{Solution}
+
+There are \({20 \choose 2}\) ways to pair up twenty chess players. For
+each pairing, we can first let player \(A\) play with whites, then let
+player \(B\) play with whites. Thus, for each of the \({20 \choose 2}\)
+pairs, we have \(2\) matches for a total of
+
+\[ {20 \choose 2} \times 2 \] matches.
+
 \bibliography{book.bib,packages.bib}
 
 \end{document}
