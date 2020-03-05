@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-03-04" />
+<meta name="date" content="2020-03-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,15 @@
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        // extensions: ["tex2jax.js", "TeX/AMSmath.js"],
+        // jax: ["output/SVG"],
+        //"TeX-AMS_SVG": {linebreaks: { automatic: true }},
+        //displayAlign: "left"
+    })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_SVG"></script>
 
 
 
@@ -165,14 +174,13 @@
 <p>Suppose there are <span class="math inline">\(N_{r}\)</span> players at the start of round <span class="math inline">\(r\)</span>. If every player plays exactly one game, how many games will be played in round <span class="math inline">\(r\)</span>?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
 <p>The number of games in a given round is <span class="math inline">\(\frac{N_{r}}{2}\)</span>. We can sum up these values for all the rounds.</p>
-<span class="math display" id="eq:var-beta">\[\begin{equation} 
+<span class="math display">\[\begin{equation} 
   \begin{split}
    f(N) &amp; = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
    &amp; =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
    &amp; =N \times \frac{N-1}{N}\\
    &amp; =N-1
   \end{split}
-  \tag{1.1}
   \end{equation}\]</span>
 <p></details></p>
 <p>c. <strong>Intuition</strong></p>
