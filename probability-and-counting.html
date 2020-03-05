@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Probability and Counting | Introduction to Probability, Second Edition</title>
   <meta name="description" content="This is a solution manual for the exercises in Introduction to Probability, Second Edition by Joseph Blitzstein and Jessica Hwang." />
-  <meta name="generator" content="bookdown 0.17.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Probability and Counting | Introduction to Probability, Second Edition" />
   <meta property="og:type" content="book" />
@@ -84,6 +84,7 @@
 <li class="chapter" data-level="1.1.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-3"><i class="fa fa-check"></i><b>1.1.4</b> </a></li>
 <li class="chapter" data-level="1.1.5" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-4"><i class="fa fa-check"></i><b>1.1.5</b> </a></li>
 <li class="chapter" data-level="1.1.6" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-5"><i class="fa fa-check"></i><b>1.1.6</b> </a></li>
+<li class="chapter" data-level="1.1.7" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-6"><i class="fa fa-check"></i><b>1.1.7</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -200,6 +201,50 @@
 <p>There are <span class="math inline">\({20 \choose 2}\)</span> ways to pair up twenty chess players. For each pairing, we can first let player <span class="math inline">\(A\)</span> play with whites, then let player <span class="math inline">\(B\)</span> play with whites. Thus, for each of the <span class="math inline">\({20 \choose 2}\)</span> pairs, we have <span class="math inline">\(2\)</span> matches for a total of</p>
 <p><span class="math display">\[ {20 \choose 2} \times 2 \]</span> matches.</p>
 <p></details></p>
+</div>
+<div id="section-6" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> </h3>
+<p>a. <strong>Intuition</strong></p>
+<p>How many ways are there to assign three wins to player <span class="math inline">\(A\)</span>?</p>
+<p>Out of the remaining four games, how many ways are there to assign two draws and two losses to <span class="math inline">\(A\)</span>?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>There are <span class="math inline">\({7 \choose 3}\)</span> ways to assign three wins to player <span class="math inline">\(A\)</span>. For a specific combination of three games won by <span class="math inline">\(A\)</span>, there are <span class="math inline">\({4 \choose 2}\)</span> ways to assign two draws to <span class="math inline">\(A\)</span>. There is only one way to assign two losses to <span class="math inline">\(A\)</span> from the remaining two games, namely, <span class="math inline">\(A\)</span> losses both games.</p>
+<p><span class="math display">\[ {7 \choose 3} \times {4 \choose 2} \times {2 \choose 2} \]</span> </details></p>
+<p>b. <strong>Intuition</strong></p>
+<p>Can <span class="math inline">\(A\)</span> get <span class="math inline">\(4\)</span> points if <span class="math inline">\(A\)</span> never wins? What if <span class="math inline">\(A\)</span> wins more than <span class="math inline">\(4\)</span> games?</p>
+<p>List the possible outcomes of games that award <span class="math inline">\(4\)</span> points to <span class="math inline">\(A\)</span>.</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>If <span class="math inline">\(A\)</span> were to draw every game, there would need to be at least <span class="math inline">\(8\)</span> games for <span class="math inline">\(A\)</span> to obtain <span class="math inline">\(4\)</span> points, so <span class="math inline">\(A\)</span> has to win at least <span class="math inline">\(1\)</span> game. Similarly, if <span class="math inline">\(A\)</span> wins more than <span class="math inline">\(4\)</span> games, they will have more than <span class="math inline">\(4\)</span> points.</p>
+<p>Case 1: <span class="math inline">\(A\)</span> wins <span class="math inline">\(1\)</span> game and draws <span class="math inline">\(6\)</span>.</p>
+<p>This case amounts to selecting <span class="math inline">\(1\)</span> out of <span class="math inline">\(7\)</span> for <span class="math inline">\(A\)</span> to win and assigning a draw for the other <span class="math inline">\(6\)</span> games. Hence, there are <span class="math inline">\(7\)</span> possibilities.</p>
+<p>Case 2: <span class="math inline">\(A\)</span> wins <span class="math inline">\(2\)</span> games and draws <span class="math inline">\(4\)</span>.</p>
+<p>There are <span class="math inline">\({7 \choose 2}\)</span> ways to assign <span class="math inline">\(2\)</span> wins to <span class="math inline">\(A\)</span>. For each of them, there are <span class="math inline">\({5 \choose 4}\)</span> ways to assign four draws to <span class="math inline">\(A\)</span> out of the remaining <span class="math inline">\(5\)</span> games. Player <span class="math inline">\(B\)</span> wins the remaining game. The total number of possibilites for this case is <span class="math inline">\({7 \choose 2} \times {5 \choose 4}\)</span>.</p>
+<p>Case 3: <span class="math inline">\(A\)</span> wins <span class="math inline">\(3\)</span> games and draws <span class="math inline">\(2\)</span>.</p>
+<p>There are <span class="math inline">\({7 \choose 3}\)</span> ways to assign <span class="math inline">\(3\)</span> wins to <span class="math inline">\(A\)</span>. For each of them, there are <span class="math inline">\({4 \choose 2}\)</span> ways to assign two draws to <span class="math inline">\(A\)</span> out of the remaining <span class="math inline">\(4\)</span> games. <span class="math inline">\(B\)</span> wins the remaining <span class="math inline">\(2\)</span> games. The total number of possibilites for this case is <span class="math inline">\({7 \choose 3} \times {4 \choose 2}\)</span>.</p>
+<p>Case 4: <span class="math inline">\(A\)</span> wins <span class="math inline">\(4\)</span> games and loses <span class="math inline">\(3\)</span>.</p>
+<p>There are <span class="math inline">\({7 \choose 4}\)</span> ways to assign <span class="math inline">\(4\)</span> wins to <span class="math inline">\(A\)</span>. <span class="math inline">\(B\)</span> wins the remaining <span class="math inline">\(3\)</span> games. The total number of possibilites for this case is <span class="math inline">\({7 \choose 4}\)</span>.</p>
+<p>Summing up the number of possibilities in each of the cases we get</p>
+<p><span class="math display">\[ {7 \choose 1} + {7 \choose 2} \times {5 \choose 4} + {7 \choose 3} \times {4 \choose 2} + {7 \choose 4} \]</span> </details></p>
+<p>c. <strong>Intuition</strong></p>
+<p>Given the final score of <span class="math inline">\(4\)</span> to <span class="math inline">\(3\)</span> and the fact that the match will end if either of the players reaches <span class="math inline">\(4\)</span> points, could <span class="math inline">\(B\)</span> have been the player to win the last game?</p>
+<p>Suppose <span class="math inline">\(A\)</span> wins the last game. Could <span class="math inline">\(A\)</span> have won only <span class="math inline">\(1\)</span> game out of the first <span class="math inline">\(6\)</span>?</p>
+<p>Count the number of possibilites for the case when <span class="math inline">\(A\)</span> wins the last game and the number of possibilities for the case when <span class="math inline">\(A\)</span> draws the last game.</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>If <span class="math inline">\(B\)</span> were to win the last game, that would mean that <span class="math inline">\(A\)</span> had already obtained <span class="math inline">\(4\)</span> points prior to the last game, so the last game would not be played at all. Hence, <span class="math inline">\(B\)</span> could not have won the last game.</p>
+<p>Case 1: <span class="math inline">\(A\)</span> wins <span class="math inline">\(3\)</span> out of the first <span class="math inline">\(6\)</span> games and wins the last game.</p>
+<p>There are <span class="math inline">\({6 \choose 3}\)</span> ways to assign <span class="math inline">\(3\)</span> wins to <span class="math inline">\(A\)</span> out of the first <span class="math inline">\(6\)</span> games. The other <span class="math inline">\(3\)</span> games end in a draw. The number of possibilities then is <span class="math inline">\({6 \choose 3}\)</span>.</p>
+<p>Case 2: <span class="math inline">\(A\)</span> wins <span class="math inline">\(2\)</span> and draws <span class="math inline">\(2\)</span> out of the first <span class="math inline">\(6\)</span> games and wins the last game.</p>
+<p>There are <span class="math inline">\({6 \choose 2}\)</span> ways to assign <span class="math inline">\(2\)</span> wins to <span class="math inline">\(A\)</span> out of the first <span class="math inline">\(6\)</span> games. From the <span class="math inline">\(4\)</span> remaining games, there are <span class="math inline">\({4 \choose 2}\)</span> ways to assign <span class="math inline">\(2\)</span> draws. The remaining <span class="math inline">\(2\)</span> games are won by <span class="math inline">\(B\)</span>. The number of possibilities is <span class="math inline">\({6 \choose 2} \times {4 \choose 2}\)</span>.</p>
+<p>Case 3: The last game ends in a draw.</p>
+<p>This case implies that <span class="math inline">\(A\)</span> had <span class="math inline">\(3.5\)</span> and <span class="math inline">\(B\)</span> had <span class="math inline">\(2.5\)</span> points by the end of game <span class="math inline">\(6\)</span>.</p>
+<p>Case 3.1: <span class="math inline">\(A\)</span> wins <span class="math inline">\(3\)</span> and draws <span class="math inline">\(1\)</span> out of the first <span class="math inline">\(6\)</span> games.</p>
+<p>There are <span class="math inline">\({6 \choose 3}\)</span> ways to assign <span class="math inline">\(3\)</span> wins to <span class="math inline">\(A\)</span> out of the first <span class="math inline">\(6\)</span> games. There are <span class="math inline">\({3 \choose 1}\)</span> ways to assign a draw out of the remaining <span class="math inline">\(3\)</span> games. <span class="math inline">\(B\)</span> wins the other <span class="math inline">\(2\)</span> games. The number of possibilities is <span class="math inline">\({6 \choose 3} \times {3 \choose 1}\)</span>.</p>
+<p>Case 3.2: <span class="math inline">\(A\)</span> wins <span class="math inline">\(2\)</span> and draws <span class="math inline">\(3\)</span> out of the first <span class="math inline">\(6\)</span> games.</p>
+<p>There are <span class="math inline">\({6 \choose 2}\)</span> ways to assign <span class="math inline">\(2\)</span> wins to <span class="math inline">\(A\)</span> out of the first <span class="math inline">\(6\)</span> games. There are <span class="math inline">\({4 \choose 3}\)</span> ways to assign <span class="math inline">\(3\)</span> draws out of the remaining <span class="math inline">\(4\)</span> games. <span class="math inline">\(B\)</span> wins the remaining game. The number of possibilities is <span class="math inline">\({6 \choose 2} \times {4 \choose 3}\)</span>.</p>
+<p>Case 3.3: <span class="math inline">\(A\)</span> wins <span class="math inline">\(1\)</span> and draws <span class="math inline">\(5\)</span> of the first <span class="math inline">\(6\)</span> games.</p>
+<p>There are <span class="math inline">\({6 \choose 1}\)</span> ways to assign a win to <span class="math inline">\(A\)</span> out of the first <span class="math inline">\(6\)</span> games.</p>
+<p>The total number of possibilities then is</p>
+<p><span class="math display">\[ {6 \choose 3} + {6 \choose 2} \times {4 \choose 2} + {6 \choose 3} \times {3 \choose 1} + {6 \choose 2} \times {4 \choose 3} + {6 \choose 1}\]</span> </details></p>
 
 </div>
 </div>
