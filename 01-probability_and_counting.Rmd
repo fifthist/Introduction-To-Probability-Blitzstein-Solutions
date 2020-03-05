@@ -155,3 +155,21 @@ Tournament is over when a single player is left. Hece, $N-1$ players need to be 
 
   $$ N-1 $$
 </details>
+
+### 
+
+__Intuition__
+
+How many ways can we match up twenty chess players if we don't care about who plays with white and who plays with black pieces?
+
+Can we use the answer from the previous part to find the desired quantity?
+
+<details>
+  <summary>__Solution__</summary>
+
+There are ${20 \choose 2}$ ways to pair up twenty chess players. For each pairing, we can first let player $A$ play with whites, then let player $B$ play with whites. Thus, for each of the ${20 \choose 2}$ pairs, we have $2$ matches for a total of
+
+  $$ {20 \choose 2} \times 2 $$
+matches.
+
+</details>
