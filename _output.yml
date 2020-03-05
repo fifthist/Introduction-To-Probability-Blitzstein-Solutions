@@ -12,6 +12,8 @@ bookdown::gitbook:
       theme: sepia
     sharing:
       github: yes
+  includes:
+    in_header: mathjax-config.html
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

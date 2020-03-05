@@ -139,7 +139,6 @@ The number of games in a given round is $\frac{N_{r}}{2}$. We can sum up these v
    & =N \times \frac{N-1}{N}\\
    & =N-1
   \end{split}
-  (\#eq:var-beta)
   \end{equation} 
 </details>
 
