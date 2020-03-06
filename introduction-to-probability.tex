@@ -553,6 +553,51 @@ replacement}. \({52 \choose 13}^{4}\) assumes that all four players have
 \({52 \choose 13}\) choices of hands available to them. This would be
 true if sampling was done \emph{with replacement}.
 
+\subsection{}\label{section-12}
+
+\textbf{Intuition}
+
+Why is the answer not \({520 \choose 10}\)?
+
+Why is the answer not \(520^{10}\)?
+
+ \textbf{Solution}
+
+The problem amounts to sampling with replacement where order does not
+matter, since having \(10\) copies of each card amounts to replacing the
+card. This is done using the Bose-Einstein method.
+
+Thus, the answer is \[{52 + 10 - 1 \choose 10} = {61 \choose 10}\]
+
+\subsection{}\label{section-13}
+
+\textbf{Intuition}
+
+How many possibilities are there for a small pizza? What about a medium
+pizza?
+
+Note that ordering a Small Vegetarian and a Large Pepperoni is the same
+as ordering a Large Pepperoni and a Small Vegetarian.
+
+ \textbf{Solution}
+
+There are \(4\) choices for sizes and \(9\) choices for toppings for a
+total of \(36\) possibilities for a single pizza. Since we are ordering
+\(2\) pizzas, we get \(36^{2}\) possibilities. However, this result
+overcounts the desired quantity by a factor of \(2\), since
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Small Vegetarian, Large Pepperoni
+\item
+  Large Pepperoni, Small Vegetarian
+\end{enumerate}
+
+describe the same order. The number of possibilities then is
+\[\frac{36^{2}}{2}\]
+
 \bibliography{book.bib,packages.bib}
 
 \end{document}

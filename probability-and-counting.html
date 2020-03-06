@@ -90,6 +90,8 @@
 <li class="chapter" data-level="1.1.10" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-9"><i class="fa fa-check"></i><b>1.1.10</b> </a></li>
 <li class="chapter" data-level="1.1.11" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-10"><i class="fa fa-check"></i><b>1.1.11</b> </a></li>
 <li class="chapter" data-level="1.1.12" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-11"><i class="fa fa-check"></i><b>1.1.12</b> </a></li>
+<li class="chapter" data-level="1.1.13" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-12"><i class="fa fa-check"></i><b>1.1.13</b> </a></li>
+<li class="chapter" data-level="1.1.14" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-13"><i class="fa fa-check"></i><b>1.1.14</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -317,6 +319,29 @@
 <p>Does dealing <span class="math inline">\(13\)</span> cards to player <span class="math inline">\(A\)</span> change the number of possible hands <span class="math inline">\(B\)</span> could get?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
 <p>The key is to notice that the sampling is done <em>without replacement</em>. <span class="math inline">\({52 \choose 13}^{4}\)</span> assumes that all four players have <span class="math inline">\({52 \choose 13}\)</span> choices of hands available to them. This would be true if sampling was done <em>with replacement</em>.</p>
+<p></details></p>
+</div>
+<div id="section-12" class="section level3">
+<h3><span class="header-section-number">1.1.13</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>Why is the answer not <span class="math inline">\({520 \choose 10}\)</span>?</p>
+<p>Why is the answer not <span class="math inline">\(520^{10}\)</span>?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>The problem amounts to sampling with replacement where order does not matter, since having <span class="math inline">\(10\)</span> copies of each card amounts to replacing the card. This is done using the Bose-Einstein method.</p>
+<p>Thus, the answer is <span class="math display">\[{52 + 10 - 1 \choose 10} = {61 \choose 10}\]</span> </details></p>
+</div>
+<div id="section-13" class="section level3">
+<h3><span class="header-section-number">1.1.14</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>How many possibilities are there for a small pizza? What about a medium pizza?</p>
+<p>Note that ordering a Small Vegetarian and a Large Pepperoni is the same as ordering a Large Pepperoni and a Small Vegetarian.</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>There are <span class="math inline">\(4\)</span> choices for sizes and <span class="math inline">\(9\)</span> choices for toppings for a total of <span class="math inline">\(36\)</span> possibilities for a single pizza. Since we are ordering <span class="math inline">\(2\)</span> pizzas, we get <span class="math inline">\(36^{2}\)</span> possibilities. However, this result overcounts the desired quantity by a factor of <span class="math inline">\(2\)</span>, since</p>
+<ol style="list-style-type: decimal">
+<li>Small Vegetarian, Large Pepperoni</li>
+<li>Large Pepperoni, Small Vegetarian</li>
+</ol>
+<p>describe the same order. The number of possibilities then is <span class="math display">\[\frac{36^{2}}{2}\]</span></p>
 <p></details></p>
 
 </div>
