@@ -88,6 +88,8 @@
 <li class="chapter" data-level="1.1.8" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-7"><i class="fa fa-check"></i><b>1.1.8</b> </a></li>
 <li class="chapter" data-level="1.1.9" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-8"><i class="fa fa-check"></i><b>1.1.9</b> </a></li>
 <li class="chapter" data-level="1.1.10" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-9"><i class="fa fa-check"></i><b>1.1.10</b> </a></li>
+<li class="chapter" data-level="1.1.11" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-10"><i class="fa fa-check"></i><b>1.1.11</b> </a></li>
+<li class="chapter" data-level="1.1.12" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-11"><i class="fa fa-check"></i><b>1.1.12</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -285,6 +287,36 @@
 <li>STAT134, STAT110, History 124, English 101, Calculus 102, Physics 101, Art 121</li>
 </ol>
 <p>Notice that both are selections the same <span class="math inline">\(7\)</span> courses.</p>
+<p></details></p>
+</div>
+<div id="section-10" class="section level3">
+<h3><span class="header-section-number">1.1.11</span> </h3>
+<p>a. <strong>Intuition</strong></p>
+<p>To specify a function, we need to assign an output to every input. How many ways are there to do this?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>Each of the <span class="math inline">\(n\)</span> inputs has <span class="math inline">\(m\)</span> choices for an output, resulting in <span class="math display">\[m^{n}\]</span> possible functions. </details></p>
+<p>b. <strong>Intuition</strong></p>
+<p>A function is <em>one-to-one</em> if it maps unique inputs to unique outputs. Suppose <span class="math inline">\(n &lt; m\)</span>. Can a function be one-to-one?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>If <span class="math inline">\(n &lt; m\)</span>, at least two inputs will be mapped to the same output, so no one-to-one function is possible.</p>
+<p>If <span class="math inline">\(n \geq m\)</span>, the first input has <span class="math inline">\(m\)</span> choices, the second input has <span class="math inline">\(m - 1\)</span> choices, and so on. The total number of one-to-one functions then is <span class="math display">\[m(m-1)(m-2)\dots(m-n+1)\]</span> </details></p>
+</div>
+<div id="section-11" class="section level3">
+<h3><span class="header-section-number">1.1.12</span> </h3>
+<p>a. <strong>Intuition</strong></p>
+<p>How many ways are there to select <span class="math inline">\(13\)</span> cards out of a standard deck?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p><span class="math display">\[{52 \choose 13}\]</span> </details></p>
+<p>b. <strong>Intuition</strong></p>
+<p>How many ways are there to break a standard deck into <span class="math inline">\(4\)</span> groups of size <span class="math inline">\(13\)</span>? Can we use this result to get the desired quantity?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>The number of ways to break <span class="math inline">\(52\)</span> cards into <span class="math inline">\(4\)</span> groups of size <span class="math inline">\(13\)</span> is <span class="math display">\[\frac{{52 \choose 13}{39 \choose 13}{26 \choose 13}{13 \choose 13}}{4!}\]</span>.</p>
+<p>The reason for dividision by <span class="math inline">\(4!\)</span> is that all permutations of specific <span class="math inline">\(4\)</span> groups describe the same way to group <span class="math inline">\(52\)</span> cards.</p>
+<p>Since we do care about the order of the <span class="math inline">\(4\)</span> groups, we should not divide by <span class="math inline">\({4!}\)</span>. The final answer then is <span class="math display">\[{52 \choose 13}{39 \choose 13}{26 \choose 13}{13 \choose 13}\]</span> </details></p>
+<p>c. <strong>Intuition</strong></p>
+<p>Does dealing <span class="math inline">\(13\)</span> cards to player <span class="math inline">\(A\)</span> change the number of possible hands <span class="math inline">\(B\)</span> could get?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>The key is to notice that the sampling is done <em>without replacement</em>. <span class="math inline">\({52 \choose 13}^{4}\)</span> assumes that all four players have <span class="math inline">\({52 \choose 13}\)</span> choices of hands available to them. This would be true if sampling was done <em>with replacement</em>.</p>
 <p></details></p>
 
 </div>

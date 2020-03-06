@@ -487,6 +487,72 @@ For example, consider the following two choices.
 
 Notice that both are selections the same \(7\) courses.
 
+\subsection{}\label{section-10}
+
+a.~\textbf{Intuition}
+
+To specify a function, we need to assign an output to every input. How
+many ways are there to do this?
+
+ \textbf{Solution}
+
+Each of the \(n\) inputs has \(m\) choices for an output, resulting in
+\[m^{n}\] possible functions.
+
+b.~\textbf{Intuition}
+
+A function is \emph{one-to-one} if it maps unique inputs to unique
+outputs. Suppose \(n < m\). Can a function be one-to-one?
+
+ \textbf{Solution}
+
+If \(n < m\), at least two inputs will be mapped to the same output, so
+no one-to-one function is possible.
+
+If \(n \geq m\), the first input has \(m\) choices, the second input has
+\(m - 1\) choices, and so on. The total number of one-to-one functions
+then is \[m(m-1)(m-2)\dots(m-n+1)\]
+
+\subsection{}\label{section-11}
+
+a.~\textbf{Intuition}
+
+How many ways are there to select \(13\) cards out of a standard deck?
+
+ \textbf{Solution}
+
+\[{52 \choose 13}\]
+
+b.~\textbf{Intuition}
+
+How many ways are there to break a standard deck into \(4\) groups of
+size \(13\)? Can we use this result to get the desired quantity?
+
+ \textbf{Solution}
+
+The number of ways to break \(52\) cards into \(4\) groups of size
+\(13\) is
+\[\frac{{52 \choose 13}{39 \choose 13}{26 \choose 13}{13 \choose 13}}{4!}\].
+
+The reason for dividision by \(4!\) is that all permutations of specific
+\(4\) groups describe the same way to group \(52\) cards.
+
+Since we do care about the order of the \(4\) groups, we should not
+divide by \({4!}\). The final answer then is
+\[{52 \choose 13}{39 \choose 13}{26 \choose 13}{13 \choose 13}\]
+
+c.~\textbf{Intuition}
+
+Does dealing \(13\) cards to player \(A\) change the number of possible
+hands \(B\) could get?
+
+ \textbf{Solution}
+
+The key is to notice that the sampling is done \emph{without
+replacement}. \({52 \choose 13}^{4}\) assumes that all four players have
+\({52 \choose 13}\) choices of hands available to them. This would be
+true if sampling was done \emph{with replacement}.
+
 \bibliography{book.bib,packages.bib}
 
 \end{document}
