@@ -79,7 +79,7 @@
 
 \title{\emph{Introduction to Probability, Second Edition}}
 \author{Fifthist}
-\date{2020-03-05}
+\date{2020-03-06}
 
 \begin{document}
 \maketitle
@@ -411,6 +411,81 @@ first \(6\) games.
 The total number of possibilities then is
 
 \[ {6 \choose 3} + {6 \choose 2} \times {4 \choose 2} + {6 \choose 3} \times {3 \choose 1} + {6 \choose 2} \times {4 \choose 3} + {6 \choose 1}\]
+
+\subsection{}\label{section-7}
+
+Solution is provided by the author.
+
+\subsection{}\label{section-8}
+
+Solution is provided by the author.
+
+\subsection{}\label{section-9}
+
+a.~\textbf{Intuition}
+
+How many choices are there if the student takes only one statistics
+course? What about two statistics courses?
+
+ \textbf{Solution}
+
+Case 1: Student takes exactly one statistics course.
+
+There are \(5\) choices for the statistics course. There are
+\({15 \choose 6}\) choices of selecting \(6\) non-statistics courses.
+
+Case 2: Student takes exactly two statistics courses.
+
+There are \({5 \choose 2}\) choices for the two statistics course. There
+are \({15 \choose 5}\) choices of selecting \(5\) non-statistics
+courses.
+
+Case 3: Student takes exactly three statistics courses.
+
+There are \({5 \choose 3}\) choices for the three statistics course.
+There are \({15 \choose 4}\) choices of selecting \(4\) non-statistics
+courses.
+
+Case 4: Student takes exactly four statistics courses.
+
+There are \({5 \choose 4}\) choices for the four statistics course.
+There are \({15 \choose 3}\) choices of selecting \(3\) non-statistics
+courses.
+
+Case 5: Student takes all the statistics courses.
+
+There are \({15 \choose 2}\) choices of selecting \(2\) non-statistics
+courses.
+
+So the total number of choices is
+
+\[{5 \choose 1} \times {15 \choose 6} + {5 \choose 2} \times {15 \choose 5} + {5 \choose 3} \times {15 \choose 4} + {5 \choose 4} \times {15 \choose 3} + {5 \choose 5} \times {15 \choose 2}\]
+
+b.~\textbf{Intuition}
+
+Would \({5 \choose 1} \times {19 \choose 6}\) overcount any choices?
+
+ \textbf{Solution}
+
+It is true that there are \({5 \choose 1}\) ways to select a statistics
+course, and \({19 \choose 6}\) ways to select \(6\) more courses from
+the remaining \(19\) courses, but this procedure results in
+overcounting.
+
+For example, consider the following two choices.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  STAT110, STAT134, History 124, English 101, Calculus 102, Physics 101,
+  Art 121
+\item
+  STAT134, STAT110, History 124, English 101, Calculus 102, Physics 101,
+  Art 121
+\end{enumerate}
+
+Notice that both are selections the same \(7\) courses.
 
 \bibliography{book.bib,packages.bib}
 
