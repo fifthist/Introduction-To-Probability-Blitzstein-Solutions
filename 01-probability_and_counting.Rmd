@@ -423,3 +423,32 @@ Note that ordering a Small Vegetarian and a Large Pepperoni is the same as order
   describe the same order. The number of possibilities then is $$\frac{36^{2}}{2}$$
   
 </details>
+
+## Story Proofs
+
+###
+
+Solution provided by the author
+
+###
+
+Solution provided by the author
+
+###
+
+__Intuition__
+
+How many ways are there to sample $n$ objects from a set of $2n$?
+
+Can we break up the original set into two sets of size $n$ and sample from both sets?
+
+<details>
+  <summary>__Solution__</summary>
+  
+  ${2n \choose n}$ counts the number of ways to sample $n$ objects from a set of $2n$. Instead of sampling from the whole set, we can break the set into two sets of size $n$ each. Then, we have to sample $n$ objects in total from both sets. 
+  
+  We can sample all $n$ objects from the first set, or $1$ object from the first set and $n-1$ objects from the second set, or $2$ objects from the first set and $n-2$ objects from the second set and so on.
+  
+  There are ${n \choose n}$ ways to sample all $n$ objects from the first set, ${n \choose 1} {n \choose n-1}$ ways to sample $1$ object from the first set and $n-1$ objects from the second set, ${n \choose 2} {n \choose n-2}$ ways to sample $2$ objects from the first set and $n-2$ objects from the second set. The pattern is clear $$ \sum_{k=0}^{n} {n \choose k} {n \choose n-k} = \sum_{k=0}^{n} {n \choose k}^{2}$$
+  
+</details>
