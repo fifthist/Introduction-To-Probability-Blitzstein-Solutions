@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-03-06" />
+<meta name="date" content="2020-03-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,6 +92,11 @@
 <li class="chapter" data-level="1.1.12" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-11"><i class="fa fa-check"></i><b>1.1.12</b> </a></li>
 <li class="chapter" data-level="1.1.13" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-12"><i class="fa fa-check"></i><b>1.1.13</b> </a></li>
 <li class="chapter" data-level="1.1.14" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-13"><i class="fa fa-check"></i><b>1.1.14</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="probability-and-counting.html"><a href="probability-and-counting.html#story-proofs"><i class="fa fa-check"></i><b>1.2</b> Story Proofs</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-14"><i class="fa fa-check"></i><b>1.2.1</b> </a></li>
+<li class="chapter" data-level="1.2.2" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-15"><i class="fa fa-check"></i><b>1.2.2</b> </a></li>
+<li class="chapter" data-level="1.2.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-16"><i class="fa fa-check"></i><b>1.2.3</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -342,6 +347,28 @@
 <li>Large Pepperoni, Small Vegetarian</li>
 </ol>
 <p>describe the same order. The number of possibilities then is <span class="math display">\[\frac{36^{2}}{2}\]</span></p>
+<p></details></p>
+</div>
+</div>
+<div id="story-proofs" class="section level2">
+<h2><span class="header-section-number">1.2</span> Story Proofs</h2>
+<div id="section-14" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> </h3>
+<p>Solution provided by the author</p>
+</div>
+<div id="section-15" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> </h3>
+<p>Solution provided by the author</p>
+</div>
+<div id="section-16" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>How many ways are there to sample <span class="math inline">\(n\)</span> objects from a set of <span class="math inline">\(2n\)</span>?</p>
+<p>Can we break up the original set into two sets of size <span class="math inline">\(n\)</span> and sample from both sets?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p><span class="math inline">\({2n \choose n}\)</span> counts the number of ways to sample <span class="math inline">\(n\)</span> objects from a set of <span class="math inline">\(2n\)</span>. Instead of sampling from the whole set, we can break the set into two sets of size <span class="math inline">\(n\)</span> each. Then, we have to sample <span class="math inline">\(n\)</span> objects in total from both sets.</p>
+<p>We can sample all <span class="math inline">\(n\)</span> objects from the first set, or <span class="math inline">\(1\)</span> object from the first set and <span class="math inline">\(n-1\)</span> objects from the second set, or <span class="math inline">\(2\)</span> objects from the first set and <span class="math inline">\(n-2\)</span> objects from the second set and so on.</p>
+<p>There are <span class="math inline">\({n \choose n}\)</span> ways to sample all <span class="math inline">\(n\)</span> objects from the first set, <span class="math inline">\({n \choose 1} {n \choose n-1}\)</span> ways to sample <span class="math inline">\(1\)</span> object from the first set and <span class="math inline">\(n-1\)</span> objects from the second set, <span class="math inline">\({n \choose 2} {n \choose n-2}\)</span> ways to sample <span class="math inline">\(2\)</span> objects from the first set and <span class="math inline">\(n-2\)</span> objects from the second set. The pattern is clear <span class="math display">\[ \sum_{k=0}^{n} {n \choose k} {n \choose n-k} = \sum_{k=0}^{n} {n \choose k}^{2}\]</span></p>
 <p></details></p>
 
 </div>
