@@ -686,6 +686,111 @@ half.
 Taking the sum as \(k+1\) ranges from \(3\) to \(n+1\), we get the
 desired result.
 
+\subsection{}\label{section-19}
+
+Solution provided by the author
+
+\subsection{}\label{section-20}
+
+a.~\textbf{Intuition}
+
+Suppose there are \(n+1\) people at a party, and we need to group them
+into \(k\) non empty groups. Let us focus on a specific person. Call him
+Tony.
+
+Suppose Tony is in a group by himself. How many ways are there to group
+the remaining \(n\) people?
+
+If Tony is not in a group by himself, how many groups can he join?
+
+ \textbf{Solution}
+
+Case 1: If Tony is in a group by himself, then we have to break the
+remaining \(n\) people into \(k-1\) groups. This can be done in \[
+  \left\{
+    \begin{array}{cc}
+        n\\
+        k-1
+    \end{array}
+  \right\}
+  \] ways.
+
+Case 2: If Tony is not in a group by himself, then we first break up the
+remaining \(n\) people into \(k\) groups. Then, Tony can join any of
+them. The number of possible groups then is \[
+  k\left\{
+    \begin{array}{cc}
+        n\\
+        k
+    \end{array}
+  \right\}
+  \]
+
+Case 1 and 2 together count the number of ways to break up \(n+1\)
+people into \(k\) non empty groups, which is precisely what the left
+side of the equation counts.
+
+b.~\textbf{Intuition}
+
+Suppose we would like to break the \(n+1\) guests into \(k+1\) groups
+instead of \(k\).
+
+Tony wants to have \(3\) people in his group. How many ways are there to
+select them? For each such selection, how many ways are there to group
+the remaining people?
+
+What is the largest number of people Tony can have in his group?
+
+ \textbf{Solution}
+
+Say Tony wants to have \(m\) in his group. That is to say he does not
+want \(n-m\) people. These \(n-m\) people must then be broken into \(k\)
+groups.
+
+The number of people Tony wants to join his group can range from \(0\)
+to \(n-k\). The reason for the upper bound is that at least \(k\) people
+are required to make up the remaining \(k\) groups.
+
+Taking the sum over the number of people in Tony's group we get
+\[\sum_{j=0}^{n-k}{n \choose j}\left\{
+    \begin{array}{cc}
+        n-j\\
+        k
+    \end{array}
+  \right\}
+  \]
+
+Now, instead of taking the sum over the number of people Tony wants in
+his group, we can equivalently take the sum over the number of people
+Tony does not want in his group. Hence,
+
+\[\sum_{j=0}^{n-k}{n \choose j}\left\{
+      \begin{array}{cc}
+          n-j\\
+          k
+      \end{array}
+    \right\} = \sum_{i=n}^{k}{n \choose i}\left\{
+      \begin{array}{cc}
+          i\\
+          k
+      \end{array}
+    \right\}
+  \] Since the sum counts all possible ways to group \(n+1\) people into
+\(k+1\) groups, we have \[
+\sum_{i=n}^{k}{n \choose i}\left\{
+      \begin{array}{cc}
+          i\\
+          k
+      \end{array}
+    \right\} = 
+    \left\{
+      \begin{array}{cc}
+          n+1\\
+          k+1
+      \end{array}
+    \right\}
+\] as desired.
+
 \bibliography{book.bib,packages.bib}
 
 \end{document}

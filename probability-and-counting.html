@@ -99,6 +99,8 @@
 <li class="chapter" data-level="1.2.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-16"><i class="fa fa-check"></i><b>1.2.3</b> </a></li>
 <li class="chapter" data-level="1.2.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-17"><i class="fa fa-check"></i><b>1.2.4</b> </a></li>
 <li class="chapter" data-level="1.2.5" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-18"><i class="fa fa-check"></i><b>1.2.5</b> </a></li>
+<li class="chapter" data-level="1.2.6" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-19"><i class="fa fa-check"></i><b>1.2.6</b> </a></li>
+<li class="chapter" data-level="1.2.7" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-20"><i class="fa fa-check"></i><b>1.2.7</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -391,6 +393,76 @@
 <p><details> <summary><strong>Solution</strong></summary></p>
 <p>Since the subsets have size <span class="math inline">\(5\)</span>, a middle element can range from <span class="math inline">\(3\)</span> to <span class="math inline">\(n+1\)</span>. Let us label middle elements as <span class="math inline">\(k+1\)</span>. Then, there are <span class="math inline">\({k \choose 2}\)</span> choises of elements for the left half of a subset and <span class="math inline">\({n+3-(k+1) \choose 2} = {n+2-k \choose 2}\)</span> choices for the right half.</p>
 <p>Taking the sum as <span class="math inline">\(k+1\)</span> ranges from <span class="math inline">\(3\)</span> to <span class="math inline">\(n+1\)</span>, we get the desired result. </details></p>
+</div>
+<div id="section-19" class="section level3">
+<h3><span class="header-section-number">1.2.6</span> </h3>
+<p>Solution provided by the author</p>
+</div>
+<div id="section-20" class="section level3">
+<h3><span class="header-section-number">1.2.7</span> </h3>
+<p>a. <strong>Intuition</strong></p>
+<p>Suppose there are <span class="math inline">\(n+1\)</span> people at a party, and we need to group them into <span class="math inline">\(k\)</span> non empty groups. Let us focus on a specific person. Call him Tony.</p>
+<p>Suppose Tony is in a group by himself. How many ways are there to group the remaining <span class="math inline">\(n\)</span> people?</p>
+<p>If Tony is not in a group by himself, how many groups can he join?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>Case 1: If Tony is in a group by himself, then we have to break the remaining <span class="math inline">\(n\)</span> people into <span class="math inline">\(k-1\)</span> groups. This can be done in <span class="math display">\[
+  \left\{
+    \begin{array}{cc}
+        n\\
+        k-1
+    \end{array}
+  \right\}
+  \]</span> ways.</p>
+<p>Case 2: If Tony is not in a group by himself, then we first break up the remaining <span class="math inline">\(n\)</span> people into <span class="math inline">\(k\)</span> groups. Then, Tony can join any of them. The number of possible groups then is <span class="math display">\[
+  k\left\{
+    \begin{array}{cc}
+        n\\
+        k
+    \end{array}
+  \right\}
+  \]</span></p>
+<p>Case 1 and 2 together count the number of ways to break up <span class="math inline">\(n+1\)</span> people into <span class="math inline">\(k\)</span> non empty groups, which is precisely what the left side of the equation counts.</p>
+<p></details></p>
+<p>b. <strong>Intuition</strong></p>
+<p>Suppose we would like to break the <span class="math inline">\(n+1\)</span> guests into <span class="math inline">\(k+1\)</span> groups instead of <span class="math inline">\(k\)</span>.</p>
+<p>Tony wants to have <span class="math inline">\(3\)</span> people in his group. How many ways are there to select them? For each such selection, how many ways are there to group the remaining people?</p>
+<p>What is the largest number of people Tony can have in his group?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>Say Tony wants to have <span class="math inline">\(m\)</span> in his group. That is to say he does not want <span class="math inline">\(n-m\)</span> people. These <span class="math inline">\(n-m\)</span> people must then be broken into <span class="math inline">\(k\)</span> groups.</p>
+<p>The number of people Tony wants to join his group can range from <span class="math inline">\(0\)</span> to <span class="math inline">\(n-k\)</span>. The reason for the upper bound is that at least <span class="math inline">\(k\)</span> people are required to make up the remaining <span class="math inline">\(k\)</span> groups.</p>
+<p>Taking the sum over the number of people in Tony’s group we get <span class="math display">\[\sum_{j=0}^{n-k}{n \choose j}\left\{
+    \begin{array}{cc}
+        n-j\\
+        k
+    \end{array}
+  \right\}
+  \]</span></p>
+<p>Now, instead of taking the sum over the number of people Tony wants in his group, we can equivalently take the sum over the number of people Tony does not want in his group. Hence,</p>
+<p><span class="math display">\[\sum_{j=0}^{n-k}{n \choose j}\left\{
+      \begin{array}{cc}
+          n-j\\
+          k
+      \end{array}
+    \right\} = \sum_{i=n}^{k}{n \choose i}\left\{
+      \begin{array}{cc}
+          i\\
+          k
+      \end{array}
+    \right\}
+  \]</span> Since the sum counts all possible ways to group <span class="math inline">\(n+1\)</span> people into <span class="math inline">\(k+1\)</span> groups, we have <span class="math display">\[
+\sum_{i=n}^{k}{n \choose i}\left\{
+      \begin{array}{cc}
+          i\\
+          k
+      \end{array}
+    \right\} = 
+    \left\{
+      \begin{array}{cc}
+          n+1\\
+          k+1
+      \end{array}
+    \right\}
+\]</span> as desired. </details></p>
 
 </div>
 </div>
