@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-03-07" />
+<meta name="date" content="2020-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,6 +97,7 @@
 <li class="chapter" data-level="1.2.1" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-14"><i class="fa fa-check"></i><b>1.2.1</b> </a></li>
 <li class="chapter" data-level="1.2.2" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-15"><i class="fa fa-check"></i><b>1.2.2</b> </a></li>
 <li class="chapter" data-level="1.2.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-16"><i class="fa fa-check"></i><b>1.2.3</b> </a></li>
+<li class="chapter" data-level="1.2.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-17"><i class="fa fa-check"></i><b>1.2.4</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -370,6 +371,16 @@
 <p>We can sample all <span class="math inline">\(n\)</span> objects from the first set, or <span class="math inline">\(1\)</span> object from the first set and <span class="math inline">\(n-1\)</span> objects from the second set, or <span class="math inline">\(2\)</span> objects from the first set and <span class="math inline">\(n-2\)</span> objects from the second set and so on.</p>
 <p>There are <span class="math inline">\({n \choose n}\)</span> ways to sample all <span class="math inline">\(n\)</span> objects from the first set, <span class="math inline">\({n \choose 1} {n \choose n-1}\)</span> ways to sample <span class="math inline">\(1\)</span> object from the first set and <span class="math inline">\(n-1\)</span> objects from the second set, <span class="math inline">\({n \choose 2} {n \choose n-2}\)</span> ways to sample <span class="math inline">\(2\)</span> objects from the first set and <span class="math inline">\(n-2\)</span> objects from the second set. The pattern is clear <span class="math display">\[ \sum_{k=0}^{n} {n \choose k} {n \choose n-k} = \sum_{k=0}^{n} {n \choose k}^{2}\]</span></p>
 <p></details></p>
+</div>
+<div id="section-17" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>If a person is selected for a committee chair, how many ways are there to select the remaining members?</p>
+<p>If <span class="math inline">\(m\)</span> members are selected from the first group and <span class="math inline">\(n-m\)</span> members are selected from the second group, how many ways are there to assign a chair?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>Consider the right hand side of the equation. Since a committe chair can only be selected from the first group, there are <span class="math inline">\(n\)</span> ways to choose them. Then, for each choice of a committee chair, there are <span class="math inline">\({2n-1 \choose n-1}\)</span> ways to choose the remaining members. Hence, the total number of committees is <span class="math inline">\(n{2n-1 \choose n-1}\)</span>.</p>
+<p>Now consider the left side of the equation. Suppose we pick <span class="math inline">\(k\)</span> people from the first group and <span class="math inline">\(n-k\)</span> people from the second group, then there are <span class="math inline">\(k\)</span> ways to assign a chair from the members of the first group we have picked. <span class="math inline">\(k\)</span> can range from <span class="math inline">\(1\)</span> to <span class="math inline">\(n\)</span> giving us a total of <span class="math inline">\(\sum_{k=1}^{n} k{n \choose k}{n \choose n-k} = \sum_{k=1}^{n} k{n \choose k}^{2}\)</span> possible committees.</p>
+<p>Since, both sides of the equation count the same thing, they are equal. </details></p>
 
 </div>
 </div>
