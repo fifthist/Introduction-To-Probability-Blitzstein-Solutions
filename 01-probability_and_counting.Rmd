@@ -470,3 +470,19 @@ If $m$ members are selected from the first group and $n-m$ members are selected 
   
   Since, both sides of the equation count the same thing, they are equal.
 </details>
+
+###
+
+__Intuition__
+
+Expanding on the hint provided by the author, think of elements in the subsets as ordered from lowest to largest. What is the smallest and the largest values a middle element can have?
+
+If the middle element is $k+1$, how many choices do we have for the left half of the subset? What about the right half?
+
+<details>
+  <summary>__Solution__</summary>
+  
+  Since the subsets have size $5$, a middle element can range from $3$ to $n+1$. Let us label middle elements as $k+1$. Then, there are ${k \choose 2}$ choises of elements for the left half of a subset and ${n+3-(k+1) \choose 2} = {n+2-k \choose 2}$ choices for the right half.
+  
+  Taking the sum as $k+1$ ranges from $3$ to $n+1$, we get the desired result.
+</details>
