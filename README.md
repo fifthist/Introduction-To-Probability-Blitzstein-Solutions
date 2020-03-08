@@ -8,7 +8,7 @@ The project uses R Markdown and **bookdown** (https://github.com/rstudio/bookdow
 
 The format for numbering solutions is [Chapter].[Section].[Exercise].
 
-For example, problem $19$ from the _Story Proofs_ exercise section ($2$) of the _Probability and Counting_ chapter ($1$) is numbered as $1.2.5$ since it is the fifth problem of the section.
+For example, problem 19 from the _Story Proofs_ exercise section (2) of the _Probability and Counting_ chapter (1) is numbered as 1.2.5 since it is the fifth problem of the section.
 
 ## License
 The project adopts the [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) license used by bookdown. Essentially, you are free to clone the repository and do with it as you please.
