@@ -452,3 +452,21 @@ Can we break up the original set into two sets of size $n$ and sample from both 
   There are ${n \choose n}$ ways to sample all $n$ objects from the first set, ${n \choose 1} {n \choose n-1}$ ways to sample $1$ object from the first set and $n-1$ objects from the second set, ${n \choose 2} {n \choose n-2}$ ways to sample $2$ objects from the first set and $n-2$ objects from the second set. The pattern is clear $$ \sum_{k=0}^{n} {n \choose k} {n \choose n-k} = \sum_{k=0}^{n} {n \choose k}^{2}$$
   
 </details>
+
+###
+
+__Intuition__
+
+If a person is selected for a committee chair, how many ways are there to select the remaining members?
+
+If $m$ members are selected from the first group and $n-m$ members are selected from the second group, how many ways are there to assign a chair?
+
+<details>
+  <summary>__Solution__</summary>
+  
+  Consider the right hand side of the equation. Since a committe chair can only be selected from the first group, there are $n$ ways to choose them. Then, for each choice of a committee chair, there are ${2n-1 \choose n-1}$ ways to choose the remaining members. Hence, the total number of committees is $n{2n-1 \choose n-1}$.
+  
+  Now consider the left side of the equation. Suppose we pick $k$ people from the first group and $n-k$ people from the second group, then there are $k$ ways to assign a chair from the members of the first group we have picked. $k$ can range from $1$ to $n$ giving us a total of $\sum_{k=1}^{n} k{n \choose k}{n \choose n-k} = \sum_{k=1}^{n} k{n \choose k}^{2}$ possible committees.
+  
+  Since, both sides of the equation count the same thing, they are equal.
+</details>
