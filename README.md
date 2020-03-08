@@ -6,7 +6,7 @@ The project uses R Markdown and **bookdown** (https://github.com/rstudio/bookdow
 
 ## Numbering
 
-The format for numbering solutions is [Chapter].[Section].[Exercise]
+The format for numbering solutions is **[Chapter].[Section].[Exercise]**
 
 For example, problem 19 from the _Story Proofs_ exercise section (2) of the _Probability and Counting_ chapter (1) is numbered as 1.2.5 since it is the fifth problem of the section.
 
