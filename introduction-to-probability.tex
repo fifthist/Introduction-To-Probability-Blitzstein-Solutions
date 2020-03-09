@@ -79,7 +79,7 @@
 
 \title{\emph{Introduction to Probability, Second Edition}}
 \author{Fifthist}
-\date{2020-03-08}
+\date{2020-03-09}
 
 \begin{document}
 \maketitle
@@ -790,6 +790,41 @@ Tony does not want in his group. Hence,
       \end{array}
     \right\}
 \] as desired.
+
+\subsection{}\label{section-21}
+
+a.~\textbf{Intuition}
+
+How many games are there in a round-robin tournament with \(n+1\)
+participants?
+
+What is wrong with the following line of thought? \(3\) people
+participate in a round-robin tournament. Player \(A\) participates in
+\(2\) games. So do players \(B\) and \(C\). Hence, the total number of
+games in the tournament is \(2 + 2 + 2 = 6\).
+
+ \textbf{Solution}
+
+Let us count the number of games in a round-robin tournament with
+\(n+1\) participants in two ways.
+
+Method 1: Since every player plays against all other players exactly
+once, the problem reduces to finding the number of ways to pair up
+\(n+1\) people. There are \({n+1 \choose 2}\) ways to do so.
+
+Method 2: The first player participates in \(n\) games. The second one
+also participates in \(n\) games, but we have already counted the game
+against the first player, so we only care about \(n-1\) games. The third
+player also participates in \(n\) games, but we have already counted the
+games against the first and second players, so we only care about
+\(n-2\) games.
+
+In general, player \(i\) will participate in \(n+1-i\) games that we
+care about. Taking the sum over \(i\) we get
+
+\[n + (n-1) + (n-2) + \dots + 2 + 1\]
+
+Since both methods count the same thing, they are equal.
 
 \bibliography{book.bib,packages.bib}
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-03-08" />
+<meta name="date" content="2020-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -101,6 +101,7 @@
 <li class="chapter" data-level="1.2.5" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-18"><i class="fa fa-check"></i><b>1.2.5</b> </a></li>
 <li class="chapter" data-level="1.2.6" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-19"><i class="fa fa-check"></i><b>1.2.6</b> </a></li>
 <li class="chapter" data-level="1.2.7" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-20"><i class="fa fa-check"></i><b>1.2.7</b> </a></li>
+<li class="chapter" data-level="1.2.8" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-21"><i class="fa fa-check"></i><b>1.2.8</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -463,6 +464,20 @@
       \end{array}
     \right\}
 \]</span> as desired. </details></p>
+</div>
+<div id="section-21" class="section level3">
+<h3><span class="header-section-number">1.2.8</span> </h3>
+<p>a. <strong>Intuition</strong></p>
+<p>How many games are there in a round-robin tournament with <span class="math inline">\(n+1\)</span> participants?</p>
+<p>What is wrong with the following line of thought? <span class="math inline">\(3\)</span> people participate in a round-robin tournament. Player <span class="math inline">\(A\)</span> participates in <span class="math inline">\(2\)</span> games. So do players <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>. Hence, the total number of games in the tournament is <span class="math inline">\(2 + 2 + 2 = 6\)</span>.</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>Let us count the number of games in a round-robin tournament with <span class="math inline">\(n+1\)</span> participants in two ways.</p>
+<p>Method 1: Since every player plays against all other players exactly once, the problem reduces to finding the number of ways to pair up <span class="math inline">\(n+1\)</span> people. There are <span class="math inline">\({n+1 \choose 2}\)</span> ways to do so.</p>
+<p>Method 2: The first player participates in <span class="math inline">\(n\)</span> games. The second one also participates in <span class="math inline">\(n\)</span> games, but we have already counted the game against the first player, so we only care about <span class="math inline">\(n-1\)</span> games. The third player also participates in <span class="math inline">\(n\)</span> games, but we have already counted the games against the first and second players, so we only care about <span class="math inline">\(n-2\)</span> games.</p>
+<p>In general, player <span class="math inline">\(i\)</span> will participate in <span class="math inline">\(n+1-i\)</span> games that we care about. Taking the sum over <span class="math inline">\(i\)</span> we get</p>
+<p><span class="math display">\[n + (n-1) + (n-2) + \dots + 2 + 1\]</span></p>
+<p>Since both methods count the same thing, they are equal.</p>
+<p></details></p>
 
 </div>
 </div>
