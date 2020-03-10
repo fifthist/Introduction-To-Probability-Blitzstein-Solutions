@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-03-09" />
+<meta name="date" content="2020-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -477,6 +477,22 @@
 <p>In general, player <span class="math inline">\(i\)</span> will participate in <span class="math inline">\(n+1-i\)</span> games that we care about. Taking the sum over <span class="math inline">\(i\)</span> we get</p>
 <p><span class="math display">\[n + (n-1) + (n-2) + \dots + 2 + 1\]</span></p>
 <p>Since both methods count the same thing, they are equal.</p>
+<p></details></p>
+<p>b. <strong>Intuition</strong></p>
+<p>Consider the scenario hinted by the author.</p>
+<p>If a person picks the number <span class="math inline">\(7\)</span>, how many choices do they have for the next <span class="math inline">\(3\)</span> numbers? Can we generalize the result?</p>
+<p>Now we consider the right side of the equation. Suppose the <span class="math inline">\(3\)</span> numbers a person has chosen with replacement are distinct, how many possible permutations are there? What if <span class="math inline">\(2\)</span> of the numbers are distinct? What if none of them are distinct?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>LHS: If <span class="math inline">\(n\)</span> is chosen first, then the subsequent <span class="math inline">\(3\)</span> numbers can be any of <span class="math inline">\(0, 1, \dots, n-1\)</span>. These <span class="math inline">\(3\)</span> numbers are chosen with replacement resulting in <span class="math inline">\(n^{3}\)</span> possibilities. Summing over possible values of <span class="math inline">\(n\)</span> we get <span class="math inline">\(1^{3} + 2^{3} + \dots + n^{3}\)</span> total number of possibilities.</p>
+<p>RHS: We can count the number of permutations of the <span class="math inline">\(3\)</span> numbers chosen with replacement from a different perspective. The <span class="math inline">\(3\)</span> numbers can either all be distinct, or all be the same, or differ in exactly <span class="math inline">\(1\)</span> value.</p>
+<p>Case 1: All <span class="math inline">\(3\)</span> numbers are distinct.</p>
+<p>Selecting <span class="math inline">\(4\)</span> (don’t forget the very first, largest selected number) distinct numbers can be done in <span class="math inline">\({n+1 \choose 4}\)</span> ways. The <span class="math inline">\(3\)</span> smaller numbers are free to permute amongst themselves. This gives us a total of <span class="math inline">\(6{n+1 \choose 4}\)</span> possibilities.</p>
+<p>Case 2: All <span class="math inline">\(3\)</span> numbers are the same.</p>
+<p>In this case, we have to select <span class="math inline">\(2\)</span> digits. The smaller digit will be sampled <span class="math inline">\(3\)</span> times and there are no ways to permute identical numbers, so the number of possiblities is <span class="math inline">\({n+1 \choose 2}\)</span>.</p>
+<p>Case 3: Two of the <span class="math inline">\(3\)</span> numbers are distinct.</p>
+<p>In this case, we have to select <span class="math inline">\(3\)</span> digits in total. One of the smaller <span class="math inline">\(2\)</span> digits will be sampled twice, giving us <span class="math inline">\(3\)</span> permutations. Since, there are <span class="math inline">\(2\)</span> choices for which digit gets sampled twice, we get a total of <span class="math inline">\(6\)</span> permutations. The total number of possibilities then is <span class="math inline">\(6{n+1 \choose 3}\)</span>.</p>
+<p>Adding up the number of possibilities in each of the cases we get a total of <span class="math display">\[6{n+1 \choose 4} + 6{n+1 \choose 3} + {n+1 \choose 2}\]</span> possibilities.</p>
+<p>Since the LHS and the RHS count the same set, they are equal.</p>
 <p></details></p>
 
 </div>
