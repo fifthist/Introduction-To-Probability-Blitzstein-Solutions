@@ -610,3 +610,36 @@ What is wrong with the following line of thought? $3$ people participate in a ro
   Since both methods count the same thing, they are equal.
   
 </details>
+
+b.\ __Intuition__
+
+Consider the scenario hinted by the author.
+
+If a person picks the number $7$, how many choices do they have for the next $3$ numbers? Can we generalize the result?
+
+Now we consider the right side of the equation. Suppose the $3$ numbers a person has chosen with replacement are distinct, how many possible permutations are there? What if $2$ of the numbers are distinct? What if none of them are distinct?
+
+<details>
+  <summary>__Solution__</summary>
+  
+  LHS: If $n$ is chosen first, then the subsequent $3$ numbers can be any of $0, 1, \dots, n-1$. These $3$ numbers are chosen with replacement resulting in $n^{3}$ possibilities. Summing over possible values of $n$ we get $1^{3} + 2^{3} + \dots + n^{3}$ total number of possibilities.
+  
+  RHS: We can count the number of permutations of the $3$ numbers chosen with replacement from a different perspective. The $3$ numbers can either all be distinct, or all be the same, or differ in exactly $1$ value.
+  
+  Case 1: All $3$ numbers are distinct.
+  
+  Selecting $4$ (don't forget the very first, largest selected number) distinct numbers can be done in ${n+1 \choose 4}$ ways. The $3$ smaller numbers are free to permute amongst themselves. This gives us a total of $6{n+1 \choose 4}$ possibilities.
+  
+  Case 2: All $3$ numbers are the same.
+  
+  In this case, we have to select $2$ digits. The smaller digit will be sampled $3$ times and there are no ways to permute identical numbers, so the number of possiblities is ${n+1 \choose 2}$.
+  
+  Case 3: Two of the $3$ numbers are distinct.
+  
+  In this case, we have to select $3$ digits in total. One of the smaller $2$ digits will be sampled twice, giving us $3$ permutations. Since, there are $2$ choices for which digit gets sampled twice, we get a total of $6$ permutations. The total number of possibilities then is $6{n+1 \choose 3}$.
+  
+  Adding up the number of possibilities in each of the cases we get a total of $$6{n+1 \choose 4} + 6{n+1 \choose 3} + {n+1 \choose 2}$$ possibilities. 
+  
+  Since the LHS and the RHS count the same set, they are equal.
+  
+</details>
