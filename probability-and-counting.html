@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-03-10" />
+<meta name="date" content="2020-03-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -102,6 +102,9 @@
 <li class="chapter" data-level="1.2.6" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-19"><i class="fa fa-check"></i><b>1.2.6</b> </a></li>
 <li class="chapter" data-level="1.2.7" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-20"><i class="fa fa-check"></i><b>1.2.7</b> </a></li>
 <li class="chapter" data-level="1.2.8" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-21"><i class="fa fa-check"></i><b>1.2.8</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#naive-definition-of-probability"><i class="fa fa-check"></i><b>1.3</b> Naive definition of probability</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-22"><i class="fa fa-check"></i><b>1.3.1</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -494,6 +497,24 @@
 <p>Adding up the number of possibilities in each of the cases we get a total of <span class="math display">\[6{n+1 \choose 4} + 6{n+1 \choose 3} + {n+1 \choose 2}\]</span> possibilities.</p>
 <p>Since the LHS and the RHS count the same set, they are equal.</p>
 <p></details></p>
+</div>
+</div>
+<div id="naive-definition-of-probability" class="section level2">
+<h2><span class="header-section-number">1.3</span> Naive definition of probability</h2>
+<div id="section-22" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>Suppose all three people are going to the same floor, how many choice are there?</p>
+<p>What if only two of them are going to the same floor? What if they are all going to different floors?</p>
+<p><strong>Solution</strong></p>
+<p>Case 1: All three go to the same floor.</p>
+<p>They can go to floors <span class="math inline">\(2\)</span> to <span class="math inline">\(10\)</span> for a total of <span class="math inline">\(9\)</span> choices.</p>
+<p>Case 2: Two of them go to the same floor.</p>
+<p>There are <span class="math inline">\(9 \choose 2\)</span> possibilities in this case.</p>
+<p>Case 3: They all go to different floors.</p>
+<p>There are <span class="math inline">\(9 \choose 3\)</span> possibilities in this case.</p>
+<p>We are interested in the case of <span class="math inline">\(3\)</span> consecutive floors. There are <span class="math inline">\(7\)</span> equally likely possibilities <span class="math display">\[(2, 3, 4), (3, 4, 5), (4, 5, 6), (5, 6, 7), (6, 7, 8), (7, 8, 9), (8, 9, 10).\]</span></p>
+<p>Hence, the probability that the buttons for <span class="math inline">\(3\)</span> consecutive floors are pressed is <span class="math display">\[\frac{7}{9 + {9 \choose 2} + {9 \choose 3}}.\]</span></p>
 
 </div>
 </div>
