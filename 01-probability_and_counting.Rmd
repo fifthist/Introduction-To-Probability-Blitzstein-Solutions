@@ -674,3 +674,34 @@ We are interested in the case of $3$ consecutive floors. There are $7$ equally l
 Hence, the probability that the buttons for $3$ consecutive floors are pressed is $$\frac{7}{9 + {9 \choose 2} + {9 \choose 3}}$$
 
 </details>
+
+### 
+
+Solution is provided by the author
+
+### 
+
+Solution is provided by the author
+
+###
+
+a\. __Intuition__
+
+In the birthday problem, we assume that every day is equally likely to be someone's birthday. Instead of $365$ days, we now have $1$ million people to sample from.
+
+<details>
+  <summary>__Solution__</summary>
+  
+  When sampling with replacement, the probability of any sample of size $1000$ is $$\frac{1}{K^{1000}}$$ where $K$ is the size of the population. However, if sampling is done without replacement, then the probability is $$\frac{1}{K(K-1) \dots (K-1000+1)}$$ which is different from the result in the birthday problem.
+</details>
+
+b\. __Intuition__
+
+Use the method from the birthday problem to compute the desired probability.
+
+<details>
+  <summary>__Solution__</summary>
+  
+  $$P(A) = 1 - P(A^{c}) = \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}$$ where $K = 1000000$.
+</details>
+
