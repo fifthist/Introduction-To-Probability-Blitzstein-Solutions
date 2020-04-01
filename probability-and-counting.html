@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-03-20" />
+<meta name="date" content="2020-04-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -105,6 +105,9 @@
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#naive-definition-of-probability"><i class="fa fa-check"></i><b>1.3</b> Naive definition of probability</a><ul>
 <li class="chapter" data-level="1.3.1" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-22"><i class="fa fa-check"></i><b>1.3.1</b> </a></li>
+<li class="chapter" data-level="1.3.2" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-23"><i class="fa fa-check"></i><b>1.3.2</b> </a></li>
+<li class="chapter" data-level="1.3.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-24"><i class="fa fa-check"></i><b>1.3.3</b> </a></li>
+<li class="chapter" data-level="1.3.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-25"><i class="fa fa-check"></i><b>1.3.4</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -516,6 +519,25 @@
 <p>We are interested in the case of <span class="math inline">\(3\)</span> consecutive floors. There are <span class="math inline">\(7\)</span> equally likely possibilities <span class="math display">\[(2, 3, 4), (3, 4, 5), (4, 5, 6), (5, 6, 7), (6, 7, 8), (7, 8, 9), (8, 9, 10).\]</span></p>
 <p>Hence, the probability that the buttons for <span class="math inline">\(3\)</span> consecutive floors are pressed is <span class="math display">\[\frac{7}{9 + {9 \choose 2} + {9 \choose 3}}\]</span></p>
 <p></details></p>
+</div>
+<div id="section-23" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> </h3>
+<p>Solution is provided by the author</p>
+</div>
+<div id="section-24" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> </h3>
+<p>Solution is provided by the author</p>
+</div>
+<div id="section-25" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> </h3>
+<p>a. <strong>Intuition</strong></p>
+<p>In the birthday problem, we assume that every day is equally likely to be someone’s birthday. Instead of <span class="math inline">\(365\)</span> days, we now have <span class="math inline">\(1\)</span> million people to sample from.</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>When sampling with replacement, the probability of any sample of size <span class="math inline">\(1000\)</span> is <span class="math display">\[\frac{1}{K^{1000}}\]</span> where <span class="math inline">\(K\)</span> is the size of the population. However, if sampling is done without replacement, then the probability is <span class="math display">\[\frac{1}{K(K-1) \dots (K-1000+1)}\]</span> which is different from the result in the birthday problem. </details></p>
+<p>b. <strong>Intuition</strong></p>
+<p>Use the method from the birthday problem to compute the desired probability.</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p><span class="math display">\[P(A) = 1 - P(A^{c}) = \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}\]</span> where <span class="math inline">\(K = 1000000\)</span>. </details></p>
 
 </div>
 </div>

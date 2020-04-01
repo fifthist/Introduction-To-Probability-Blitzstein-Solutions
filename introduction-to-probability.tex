@@ -79,7 +79,7 @@
 
 \title{\emph{Introduction to Probability, Second Edition}}
 \author{Fifthist}
-\date{2020-03-20}
+\date{2020-04-01}
 
 \begin{document}
 \maketitle
@@ -911,6 +911,40 @@ We are interested in the case of \(3\) consecutive floors. There are
 
 Hence, the probability that the buttons for \(3\) consecutive floors are
 pressed is \[\frac{7}{9 + {9 \choose 2} + {9 \choose 3}}\]
+
+\subsection{}\label{section-23}
+
+Solution is provided by the author
+
+\subsection{}\label{section-24}
+
+Solution is provided by the author
+
+\subsection{}\label{section-25}
+
+a. \textbf{Intuition}
+
+In the birthday problem, we assume that every day is equally likely to
+be someone's birthday. Instead of \(365\) days, we now have \(1\)
+million people to sample from.
+
+ \textbf{Solution}
+
+When sampling with replacement, the probability of any sample of size
+\(1000\) is \[\frac{1}{K^{1000}}\] where \(K\) is the size of the
+population. However, if sampling is done without replacement, then the
+probability is \[\frac{1}{K(K-1) \dots (K-1000+1)}\] which is different
+from the result in the birthday problem.
+
+b. \textbf{Intuition}
+
+Use the method from the birthday problem to compute the desired
+probability.
+
+ \textbf{Solution}
+
+\[P(A) = 1 - P(A^{c}) = \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}\] where
+\(K = 1000000\).
 
 \bibliography{book.bib,packages.bib}
 
