@@ -109,6 +109,9 @@
 <li class="chapter" data-level="1.3.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-24"><i class="fa fa-check"></i><b>1.3.3</b> </a></li>
 <li class="chapter" data-level="1.3.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-25"><i class="fa fa-check"></i><b>1.3.4</b> </a></li>
 <li class="chapter" data-level="1.3.5" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-26"><i class="fa fa-check"></i><b>1.3.5</b> </a></li>
+<li class="chapter" data-level="1.3.6" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-27"><i class="fa fa-check"></i><b>1.3.6</b> </a></li>
+<li class="chapter" data-level="1.3.7" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-28"><i class="fa fa-check"></i><b>1.3.7</b> </a></li>
+<li class="chapter" data-level="1.3.8" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-29"><i class="fa fa-check"></i><b>1.3.8</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -546,6 +549,23 @@
 <p>Can we relate this problem to the birthday problem?</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
 <p>For each of the <span class="math inline">\(k\)</span> names, we sample a memory location from <span class="math inline">\(1\)</span> to <span class="math inline">\(n\)</span> with equal probability, with replacement. This is exactly the setup of the birthday problem. Hence, the probability that at least one memory location has more than <span class="math inline">\(1\)</span> value is <span class="math display">\[P(A) = 1 - P(A^{c}) = 1 - \frac{n(n-1) \dots (n-k+1)}{n^{k}}\]</span> Also, <span class="math inline">\(P(A) = 1\)</span> if <span class="math inline">\(n &lt; k\)</span>. </details></p>
+</div>
+<div id="section-27" class="section level3">
+<h3><span class="header-section-number">1.3.6</span> </h3>
+<p>Solution provided by the author</p>
+</div>
+<div id="section-28" class="section level3">
+<h3><span class="header-section-number">1.3.7</span> </h3>
+<p>Solution provided by the author</p>
+</div>
+<div id="section-29" class="section level3">
+<h3><span class="header-section-number">1.3.8</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>Suppose a word consists of <span class="math inline">\(7\)</span> letters. If the word is a palindrome, how many of the letters are we actually free to choose?</p>
+<p>What if the word consists of <span class="math inline">\(8\)</span> letters?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>Suppose the word consists of <span class="math inline">\(7\)</span> letters. Once we choose the first letter, the seventh one has to be the same. Once we choose the second letter, the sixth one has to be the same. In general, we are free to choose <span class="math inline">\(4\)</span> letters. Hence, the probability that a <span class="math inline">\(7\)</span> letter word is a palindrome is <span class="math display">\[\frac{24^{4}}{24^{7}} = \frac{1}{24^{3}}\]</span></p>
+<p>If the word consists of <span class="math inline">\(8\)</span> letters, then there are <span class="math inline">\(24^{8}\)</span> possible words, but for a palindrome, the number of letters we are free to choose is still <span class="math inline">\(4\)</span>. Hence, the probability is <span class="math display">\[\frac{24^{4}}{24^{8}} = \frac{1}{24^{4}}\]</span> </details></p>
 
 </div>
 </div>
