@@ -702,6 +702,17 @@ Use the method from the birthday problem to compute the desired probability.
 <details>
   <summary>__Solution__</summary>
   
-  $$P(A) = 1 - P(A^{c}) = \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}$$ where $K = 1000000$.
+  $$P(A) = 1 - P(A^{c}) = 1 - \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}$$ where $K = 1000000$.
 </details>
 
+###
+
+__Intuition__
+
+Can we relate this problem to the birthday problem?
+
+<details>
+  <summary>__Solution__</summary>
+  
+  For each of the $k$ names, we sample a memory location from $1$ to $n$ with equal probability, with replacement. This is exactly the setup of the birthday problem. Hence, the probability that at least one memory location has more than $1$ value is $$P(A) = 1 - P(A^{c}) = 1 - \frac{n(n-1) \dots (n-k+1)}{n^{k}}$$ Also, $P(A) = 1$ if $n < k$.
+</details>
