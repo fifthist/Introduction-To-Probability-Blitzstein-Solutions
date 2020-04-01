@@ -108,6 +108,7 @@
 <li class="chapter" data-level="1.3.2" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-23"><i class="fa fa-check"></i><b>1.3.2</b> </a></li>
 <li class="chapter" data-level="1.3.3" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-24"><i class="fa fa-check"></i><b>1.3.3</b> </a></li>
 <li class="chapter" data-level="1.3.4" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-25"><i class="fa fa-check"></i><b>1.3.4</b> </a></li>
+<li class="chapter" data-level="1.3.5" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-26"><i class="fa fa-check"></i><b>1.3.5</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -537,7 +538,14 @@
 <p>b. <strong>Intuition</strong></p>
 <p>Use the method from the birthday problem to compute the desired probability.</p>
 <p><details> <summary><strong>Solution</strong></summary></p>
-<p><span class="math display">\[P(A) = 1 - P(A^{c}) = \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}\]</span> where <span class="math inline">\(K = 1000000\)</span>. </details></p>
+<p><span class="math display">\[P(A) = 1 - P(A^{c}) = 1 - \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}\]</span> where <span class="math inline">\(K = 1000000\)</span>. </details></p>
+</div>
+<div id="section-26" class="section level3">
+<h3><span class="header-section-number">1.3.5</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>Can we relate this problem to the birthday problem?</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>For each of the <span class="math inline">\(k\)</span> names, we sample a memory location from <span class="math inline">\(1\)</span> to <span class="math inline">\(n\)</span> with equal probability, with replacement. This is exactly the setup of the birthday problem. Hence, the probability that at least one memory location has more than <span class="math inline">\(1\)</span> value is <span class="math display">\[P(A) = 1 - P(A^{c}) = 1 - \frac{n(n-1) \dots (n-k+1)}{n^{k}}\]</span> Also, <span class="math inline">\(P(A) = 1\)</span> if <span class="math inline">\(n &lt; k\)</span>. </details></p>
 
 </div>
 </div>
