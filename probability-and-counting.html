@@ -24,7 +24,7 @@
 <meta name="author" content="Fifthist" />
 
 
-<meta name="date" content="2020-04-01" />
+<meta name="date" content="2020-04-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,6 +112,8 @@
 <li class="chapter" data-level="1.3.6" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-27"><i class="fa fa-check"></i><b>1.3.6</b> </a></li>
 <li class="chapter" data-level="1.3.7" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-28"><i class="fa fa-check"></i><b>1.3.7</b> </a></li>
 <li class="chapter" data-level="1.3.8" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-29"><i class="fa fa-check"></i><b>1.3.8</b> </a></li>
+<li class="chapter" data-level="1.3.9" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-30"><i class="fa fa-check"></i><b>1.3.9</b> </a></li>
+<li class="chapter" data-level="1.3.10" data-path="probability-and-counting.html"><a href="probability-and-counting.html#section-31"><i class="fa fa-check"></i><b>1.3.10</b> </a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -566,6 +568,27 @@
 <p><details> <summary><strong>Solution</strong></summary></p>
 <p>Suppose the word consists of <span class="math inline">\(7\)</span> letters. Once we choose the first letter, the seventh one has to be the same. Once we choose the second letter, the sixth one has to be the same. In general, we are free to choose <span class="math inline">\(4\)</span> letters. Hence, the probability that a <span class="math inline">\(7\)</span> letter word is a palindrome is <span class="math display">\[\frac{24^{4}}{24^{7}} = \frac{1}{24^{3}}\]</span></p>
 <p>If the word consists of <span class="math inline">\(8\)</span> letters, then there are <span class="math inline">\(24^{8}\)</span> possible words, but for a palindrome, the number of letters we are free to choose is still <span class="math inline">\(4\)</span>. Hence, the probability is <span class="math display">\[\frac{24^{4}}{24^{8}} = \frac{1}{24^{4}}\]</span> </details></p>
+</div>
+<div id="section-30" class="section level3">
+<h3><span class="header-section-number">1.3.9</span> </h3>
+<p>Solution provided by author</p>
+</div>
+<div id="section-31" class="section level3">
+<h3><span class="header-section-number">1.3.10</span> </h3>
+<p><strong>Intuition</strong></p>
+<p>Since every configuration of cards is equally likely by assumption, count the desired outcomes for each value of <span class="math inline">\(j\)</span>.</p>
+<p><details> <summary><strong>Solution</strong></summary></p>
+<p>Call the two black cards <span class="math inline">\(B_{1}, B_{2}\)</span> and the two red cards <span class="math inline">\(R_{1}, R_{2}\)</span>. Since every configuration of the <span class="math inline">\(4\)</span> cards is equally likely, each outcome has a probability of <span class="math inline">\(\frac{1}{24}\)</span> of occurance.</p>
+<p>Case 1: <span class="math inline">\(j = 0\)</span>.</p>
+<p>If both guesses are incorrect, then both of them are black cards. There are two choices for the configuration of the black cards and for each, there are two choices for the configuration of the red cards for a total of <span class="math inline">\(4\)</span> possibilities.</p>
+<p><span class="math display">\[P(j=0) = \frac{4}{24} = \frac{1}{6}\]</span></p>
+<p>Case 2: <span class="math inline">\(j = 4\)</span></p>
+<p>Notice that to guess all the cards correctly, we only need to guess correctly the two red cards, which, by symmetry, is as likely as guessing both of them wrong.</p>
+<p>Hence, <span class="math display">\[P(j=4) = P(j=0) = \frac{1}{6}\]</span></p>
+<p>Case 3: <span class="math inline">\(j=2\)</span></p>
+<p>One of the guesses is red the other is black. Like before, there are two choices for the red and two choices for the black cards. This undercounts the possibilities by a factor of 2, since we can switch the places of the red and the black cards. Hence, <span class="math display">\[P(j=2) = \frac{2}{6} = \frac{1}{3}\]</span></p>
+<p>Notice that getting both right, none right and one right are all the possible outcomes. Hence, <span class="math display">\[P(j=1) = P(j=3) = 0\]</span></p>
+<p></details></p>
 
 </div>
 </div>
