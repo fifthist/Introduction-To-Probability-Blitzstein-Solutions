@@ -1,6 +1,4 @@
-IMAGES=$(wildcard images/*.svg)
-
-all: src/* $(IMAGES)
+all: src/*
 	mkdir -p output/html
 	mkdir -p output/pdf
 	(cd src && exec pdflatex index.tex)
@@ -10,9 +8,6 @@ all: src/* $(IMAGES)
 	(cd src && exec mv *.css *.html ../output/html)
 	(cd src && exec mv *.pdf ../output/pdf)
 	find ./src -type f -not \( -name '*.tex' \) -delete
-
-$(IMAGES): %.svg: %.pdf
-	prep $@
 
 .PHONY: clean
 clean ::
