@@ -10,7 +10,8 @@ git config --global user.name "Fifthist"
 
 git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git site
 cd site
-git rm *
+git rm -rf .
+touch .nojekyll
 cp -r ../output/* ./
 git add --all *
 git commit -m"Update the site" || true
