@@ -6,6 +6,8 @@ node_js:
 
 before_install:
   - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full pandoc latexmk pdf2svg pandoc latexmk
+  - sudo apt-get install texlive-luatex
+  - luaotfload-tool --update
   - npm -g install mathjax-node-page
 
 before_script:
