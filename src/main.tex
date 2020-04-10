@@ -1,0 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	INTRODUCTION TO PROBABILITY	          %
+%	SOLUTION MANUAL			                  %
+%	@Fifthist			                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{preamble}
+
+\begin{document}
+\maketitle
+
+\frontmatter
+%\includegraphics[width=.8\textwidth]{images/icon}
+%tell tex4ht to make main toc show only chapters
+%thanks to Radhakrishnan CV for this solution
+\ifdefined\HCode
+\Configure{tableofcontents*}{chapter}
+\fi
+
+\tableofcontents
+
+\ifdefined\HCode
+\TocAt{chapter,section} %show section only in chapters TOC
+\TocAt{section,subsection} %show subsection only in sections TOC
+\fi
+
+\mainmatter
+
+\subimport*{chapters/1/}{index}
+
+\backmatter
+
+\end{document}

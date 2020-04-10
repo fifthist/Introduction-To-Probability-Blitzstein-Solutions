@@ -1,0 +1,9 @@
+#!/bin/bash
+set -x
+for file in $1; do
+    filename=${file%.*}
+    pdfcrop --margins 10 --clip "$filename.pdf" "$filename.pdf"
+    pdf2svg "$filename.pdf" "$filename.svg"
+    scour -i "$filename.svg" -o x000.svg
+    mv x000.svg "$filename.svg"
+done

@@ -8,9 +8,10 @@ set -e
 git config --global user.email "Overseer.O5.X@gmail.com"
 git config --global user.name "Fifthist"
 
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
-cd book-output
-cp -r ../_book/* ./
+git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git site
+cd site
+git rm *
+cp -r ../output/* ./
 git add --all *
-git commit -m"Update the book" || true
+git commit -m"Update the site" || true
 git push -q origin gh-pages
