@@ -10,7 +10,7 @@ before_script:
 script:
   - make clean
   - make all
-  - cd output/html && mv main.htm index.html && cd ../../
+  - cd output/html && cd ../../
   - ./travis/_deploy.sh
 
 
