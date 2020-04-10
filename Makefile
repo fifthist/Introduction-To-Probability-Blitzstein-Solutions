@@ -9,12 +9,12 @@ all: src/* $(IMAGES)
 	(cd src && exec make4ht -u -c ../my.cfg -e ../main.mk4 main.tex "htm,3,pic-align,notoc*" " -cunihtf -utf8")
 	(cd src && exec mv *.svg *.css *.htm ../output/html)
 	(cd src && exec mv *.pdf ../output/pdf)
-	find ./src -type f -not \( -name '*.tex' -or -name '*.toc' \) -delete
+	find ./src -type f -not \( -name '*.tex' \) -delete
 
 $(IMAGES): %.svg: %.pdf
 	prep $@
 
 .PHONY: clean
 clean ::
-	find ./src -type f -not \( -name '*.tex' -or -name '*.toc' \) -delete
+	find ./src -type f -not \( -name '*.tex' \) -delete
 	-rm -rf output
