@@ -142,6 +142,7 @@ mtd.align-even{margin-right:2em; text-align:left;}
 .boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
 mo.qopname + mi{margin-left:0.3em}
 mi + mo.qopname{margin-left:0.3em}
+dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
 body{ margin-top: 2em; margin-left: 2em; max-width:36em; line-height:1.6; font-size:1em; 0.88em; color:#444; padding:0 10px;}
 h1,h2,h3{line-height:1.2}
 div.maketitle, h2.titleHead, div.author, div.date{text-align:left;}
