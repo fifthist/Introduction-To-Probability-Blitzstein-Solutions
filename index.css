@@ -151,5 +151,6 @@ p.indent{text-indent:0;}
 @media (min-width: 29.63em){ :root { font-size: 3vw; } }
 @media (min-width: 40.74em){ :root { font-size: 1.375em; } }
 body { font-family: STIXGeneral, "Linux Libertine O", Gentium, Georgia, "Times New Roman", "Iowan Old Style", Palatino Linotype, Palatino, serif; }
+dt.enumerate-enumitem { margin-left: 0; }
 /* end css.sty */
 
