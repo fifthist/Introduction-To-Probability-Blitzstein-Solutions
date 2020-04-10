@@ -1,9 +1,23 @@
  
 /* start css.sty */
-.ec-lmr-17x-x-120{font-size:170%;}
-.ec-lmr-12x-x-120{font-size:120%;}
+.lmbsy-10x-x-120{font-weight:bold;}
+.lmbsy-10x-x-120{font-weight:bold;}
+.lmbsy-10x-x-120{font-weight:bold;}
+.lmbsy-10x-x-80{font-size:66%;font-weight:bold;}
+.lmbsy-10x-x-80{font-weight:bold;}
+.lmbsy-10x-x-80{font-weight:bold;}
+.lmbsy-7x-x-85{font-size:49%;font-weight:bold;}
+.lmbsy-7x-x-85{font-weight:bold;}
+.lmbsy-7x-x-85{font-weight:bold;}
 .lmex-10{font-size:83%;}
 .rm-lmr-8{font-size:66%;}
+.rm-lmr-6{font-size:50%;}
+.lmmi-8{font-size:66%;}
+.lmmi-6{font-size:50%;}
+.lmsy8-{font-size:66%;}
+.lmsy6-{font-size:50%;}
+.ec-lmr-17x-x-120{font-size:170%;}
+.ec-lmr-12x-x-120{font-size:120%;}
 p.noindent { text-indent: 0em }
 td p.noindent { text-indent: 0em; margin-top:0em; }
 p.nopar { text-indent: 0em; }
@@ -13,7 +27,7 @@ a img { border-top: 0; border-left: 0; border-right: 0; }
 center { margin-top:1em; margin-bottom:1em; }
 td center { margin-top:0em; margin-bottom:0em; }
 .Canvas { position:relative; }
-img.math{vertical-align:middle;}
+math { text-indent: 0em; }
 li p.indent { text-indent: 0em }
 li p:first-child{ margin-top:0em; }
 li p:last-child, li div:last-child { margin-bottom:0.5em; }
@@ -48,6 +62,8 @@ div.flushleft {text-align: left;}
 .framebox-r {text-align:right;}
 span.thank-mark{ vertical-align: super }
 span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+div.footnotes{border-top:solid 1px black; border-bottom:solid 1px black; padding-bottom:1ex; padding-top:0.5ex; margin-right:15%; margin-top:2ex; font-style:italic; font-size:85%;}
+div.footnotes p{margin-top:0; margin-bottom:0; text-indent:0;}
 div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
 table.tabular td p{margin-top:0em;}
 table.tabular {margin-left: auto; margin-right: auto;}
@@ -75,22 +91,22 @@ div.float img {text-align:center;}
 div.figure img {text-align:center;}
 .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
 .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
-table.equation {width:100%;}
-.equation td{text-align:center; }
-td.equation { margin-top:1em; margin-bottom:1em; } 
-td.equation-label { width:5%; text-align:center; }
-td.eqnarray4 { width:5%; white-space: normal; }
-td.eqnarray2 { width:5%; }
-table.eqnarray-star, table.eqnarray {width:100%;}
-div.eqnarray{text-align:center;}
-div.array {text-align:center;}
-div.pmatrix {text-align:center;}
-table.pmatrix {width:100%;}
-span.pmatrix img{vertical-align:middle;}
-div.pmatrix {text-align:center;}
-table.pmatrix {width:100%;}
-span.bar-css {text-decoration:overline;}
-img.cdots{vertical-align:middle;}
+.equation td{text-align:center; vertical-align:middle; }
+td.eq-no{ width:5%; }
+table.equation { width:100%; } 
+div.math-display, div.par-math-display{text-align:center;}
+mtr.hline mtd{ border-bottom:black solid 1px; padding-top:2px; padding-bottom:0em; }
+mtr.hline mtd mo{ display:none }
+math .texttt { font-family: monospace; }
+math .textit { font-style: italic; }
+math .textsl { font-style: oblique; }
+math .textsf { font-family: sans-serif; }
+math .textbf { font-weight: bold; }
+table.tabular{border-collapse: collapse; border-spacing: 0;}
+mo.MathClass-op + mi{margin-left:0.3em}
+mi + mo.MathClass-op{margin-left:0.3em}
+ math mi[mathvariant="bold"] { font-weight: bold; font-style: normal; } 
+ math mi[mathvariant="normal"] { font-weight: normal; font-style: normal; } 
 .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
 .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
 .index-item, .index-subitem, .index-subsubitem {display:block}
@@ -108,7 +124,6 @@ h2.titleHead{text-align:center;}
 div.maketitle{ margin-bottom: 2em; }
 div.author, div.date {text-align:center;}
 div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
-div.author{white-space: nowrap;}
 .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
 h1.partHead{text-align: center}
  .chapterToc, .likechapterToc {margin-left:0em;}
@@ -120,16 +135,20 @@ h1.partHead{text-align: center}
 .likesectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .likesectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .likesectionToc ~ .subsectionToc ~ .likesubsubsectionToc, .likesectionToc ~ .subsectionToc ~ .subsubsectionToc, .sectionToc ~ .likesubsectionToc ~ .likesubsubsectionToc, .sectionToc ~ .likesubsectionToc ~ .subsubsectionToc, .sectionToc ~ .subsectionToc ~ .likesubsubsectionToc, .sectionToc ~ .subsectionToc ~ .subsubsectionToc {margin-left:4em;}
  .likesubsectionToc, .subsectionToc {margin-left:0em;}
  .likesubsectionToc ~ .subsubsectionToc, .subsectionToc ~ .subsubsectionToc {margin-left:2em;}
-.figure img.graphics {margin-left:10%;}
-.equation td{text-align:center; }
-.equation-star td{text-align:center; }
-table.equation-star { width:100%; }
-table.equation { width:100%; }
-div.align {text-align: center;}
-table.multline, table.multline-star {width:100%;}
-td.gather {text-align:center; }
-table.gather {width:100%;}
-div.gather-star {text-align:center;}
-body {margin-top: 2em; margin-left: 2em; font-family: arial, sans-serif; color: #444; } h2 { font-size: 1.5em; } div.maketitle, h2.titleHead, div.author, div.date { text-align: left; } div.date, div.author { font-size: 0.7em; } 
+.equation-star td{text-align:center; vertical-align:middle; }
+table.equation-star { width:100%; } 
+mtd.align-odd{margin-left:2em; text-align:right;}
+mtd.align-even{margin-right:2em; text-align:left;}
+.boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
+mo.qopname + mi{margin-left:0.3em}
+mi + mo.qopname{margin-left:0.3em}
+body{ margin-top: 2em; margin-left: 2em; max-width:36em; line-height:1.6; font-size:1em; 0.88em; color:#444; padding:0 10px;}
+h1,h2,h3{line-height:1.2}
+div.maketitle, h2.titleHead, div.author, div.date{text-align:left;}
+div.author, div.date{font-size:0.7em;}
+p.indent{text-indent:0;}
+@media (min-width: 29.63em){ :root { font-size: 3vw; } }
+@media (min-width: 40.74em){ :root { font-size: 1.375em; } }
+body { font-family: STIXGeneral, "Linux Libertine O", Gentium, Georgia, "Times New Roman", "Iowan Old Style", Palatino Linotype, Palatino, serif; }
 /* end css.sty */
 
