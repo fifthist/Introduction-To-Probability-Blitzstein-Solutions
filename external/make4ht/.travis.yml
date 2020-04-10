@@ -1,0 +1,19 @@
+dist: bionic
+
+install:
+  # Local
+  - sudo apt-get install -qq luatex texlive-base texlive-luatex luarocks
+  # Global 
+  - sudo apt-get install -qq pandoc latexmk texlive texlive-xetex  texlive-fonts-recommended fonts-lmodern tex-gyre fonts-texgyre fonts-noto
+
+script:
+  # Already runs locally
+  - ./make4ht -v
+  # - luarocks --local install busted
+  - git fetch --tags
+  - make
+  - make justinstall
+  # - sudo ln -s /home/travis/texmf/scripts/lua/make4ht/make4ht /usr/local/bin/make4ht
+  # - make test
+  # Now runs globally
+  - make4ht -v

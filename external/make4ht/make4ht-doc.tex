@@ -1,0 +1,27 @@
+\documentclass{ltxdoc}
+
+
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\newcommand\authormail[1]{\footnote{\textless\url{#1}\textgreater}}
+\ifdefined\HCode
+\renewcommand\authormail[1]{\space\textless\Link[#1]{}{}#1\EndLink\textgreater}
+\fi
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{upquote}
+
+\usepackage{microtype}
+\providecommand\tightlist{\relax}
+
+\title{The \texttt{make4ht} build system}
+\author{Michal Hoftich\authormail{michal.h21@gmail.com}}
+\date{Version \version\\\gitdate}
+\begin{document}
+\maketitle
+\tableofcontents
+\input{readme}
+
+\input{changelog}
+\end{document}

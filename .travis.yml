@@ -5,9 +5,7 @@ node_js:
   - node
 
 before_install:
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full pandoc latexmk pdf2svg pandoc latexmk
-  - sudo apt-get install texlive-luatex
-  - luaotfload-tool --update
+  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full pandoc latexmk pdf2svg
   - npm -g install mathjax-node-page
 
 before_script:
@@ -15,7 +13,7 @@ before_script:
   - chmod +x ./travis/_deploy.sh
 
 script:
-  - ./travis/_make4ht.sh
+  - cd external/make4ht && make && make install && cd ../../
   - echo make4ht --version
   - make clean
   - make all
