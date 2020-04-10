@@ -9,6 +9,7 @@ git config --global user.email "Overseer.O5.X@gmail.com"
 git config --global user.name "Fifthist"
 
 git clone https://github.com/michal-h21/make4ht.git make4ht-latest
+cp external/make4ht/make4ht-doc.tex make4ht-latest
 cd make4ht-latest
 make
 make install

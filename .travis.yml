@@ -13,7 +13,7 @@ before_script:
   - chmod +x ./travis/_deploy.sh
 
 script:
-  - cd external/make4ht && make && make install && cd ../../
+  - ./travis/_make4ht.sh
   - echo make4ht --version
   - make clean
   - make all
