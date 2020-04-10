@@ -12,7 +12,7 @@ git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git s
 cd site
 git rm -rf .
 touch .nojekyll
-cp -r ../output/html ./
+cp -r ../output/html/* ./
 git add --all *
 git commit -m"Update the site" || true
 git push -q origin gh-pages
