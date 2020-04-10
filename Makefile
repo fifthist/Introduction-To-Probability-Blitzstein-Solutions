@@ -6,8 +6,8 @@ all: src/* $(IMAGES)
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
-	(cd src && exec make4ht -u -c ../my.cfg -e ../main.mk4 index.tex "html,3,pic-align,notoc*" " -cunihtf -utf8")
-	(cd src && exec mv *.svg *.css *.html ../output/html)
+	(cd src && exec make4ht -uf html5+mathjaxnode -c ../my.cfg index.tex "html,3")
+	(cd src && exec mv *.css *.html ../output/html)
 	(cd src && exec mv *.pdf ../output/pdf)
 	find ./src -type f -not \( -name '*.tex' \) -delete
 
