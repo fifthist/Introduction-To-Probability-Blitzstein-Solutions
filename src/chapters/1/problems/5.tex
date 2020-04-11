@@ -1,0 +1,20 @@
+\begin{enumerate}[label=(\alph*)]
+\item By the end of each round, half of the players participating in the round are eliminated. So, the problem reduces to finding out how many times the number of players can be halved before a single player is left.
+
+  The number of times $N$ can be divided by two is $$\log_{2}{N}$$
+
+\item The number of games in a given round is $\frac{N_{r}}{2}$. We can sum up these values for all the rounds.
+
+  \begin{equation} 
+  \begin{split}
+   f(N) & = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
+   & =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
+   & =N \times \frac{N-1}{N}\\
+   & =N-1
+  \end{split}
+  \end{equation} 
+
+\item Tournament is over when a single player is left. Hece, $N-1$ players need to be eliminated. As a result of a match, exactly one player is eliminated. Hence, the number of matches needed to eliminate $N-1$ people is
+
+  $$ N-1 $$
+\end{enumerate}
