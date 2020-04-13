@@ -1,0 +1,5 @@
+\begin{enumerate}[label=(\alph*)]
+\item  When sampling with replacement, the probability of any sample of size $1000$ is $$\frac{1}{K^{1000}}$$ where $K$ is the size of the population. However, if sampling is done without replacement, then the probability is $$\frac{1}{K(K-1) \dots (K-1000+1)}$$ which is different from the result in the birthday problem.
+
+\item $$P(A) = 1 - P(A^{c}) = 1 - \frac{K(K-1) \dots (K-1000+1)}{K^{1000}}$$ where $K = 1000000$.
+\end{enumerate}
