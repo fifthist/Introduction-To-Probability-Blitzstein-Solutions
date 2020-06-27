@@ -1,0 +1,14 @@
+Let $A_{i}$ be the event that the $i$-th student takes the same seat on both days.
+
+The desired probability then is $1 - P(\bigcup\limits_{i=1}^{20}A_{i}).$
+
+By inclusion exclusion principle, $P(\bigcup\limits_{i=1}^{20}A_{i}) = \sum_{i}P(A_{i}) - \sum_{i<j}P(A_{i} \cap A_{j}) + \sum_{i<j<k}P(A_{i} \cap A_{j} \cap A_{k}) - \cdots + (-1)^{21}P(A_{1} \cap \cdots \cap A_{20}).$
+
+Thus,
+\begin{flalign}
+P(\bigcup\limits_{i=1}^{20}A_{i}) & = \sum_{i=1}^{20}\frac{1}{20} - \sum_{1\leq i<j\leq 20}\frac{1}{20*19} + \sum_{1 \leq i<j<k \leq 20}\frac{1}{20*19*18} - \cdots + \frac{1}{20!} \nonumber && \\
+& = 1 - \binom{20}{2}\frac{1}{20*19} + \binom{20}{3}\frac{1}{20*19*18} - \cdots + \frac{1}{20!} \nonumber && \\
+& = 1 - \frac{1}{2!} + \frac{1}{3!} - \cdots + \frac{1}{20!} \nonumber && \\
+& = 1 - e^{-1} \nonumber
+\end{flalign}
+
