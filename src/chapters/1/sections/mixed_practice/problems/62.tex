@@ -1,0 +1,28 @@
+\begin{enumerate}[label=(\alph*)]
+\item $1 - k!e_{k}\left(\overrightarrow{p}\right)$
+
+\item Consider the extreme case where $p_{1} = 1$ and $p_{i} = 0$ for $i \neq 1$. Then, the probability that there is at least one birthday match is $1$. In general, if $p_{i} > \frac{1}{365}$ for a particular $i$, then a birthday match is more likely, since that particular day is more likely to be sampled multiple times. Thus, it makes intuitive sense that the probability of at least one birthday match is minimized when $p_{i} = \frac{1}{365}$.
+
+\item First, consider $e_{k}\left(x_{1},...,x_{n}\right)$. We can break up this sum into the sum of three disjoint cases.
+  \begin{enumerate}
+    \item Sum of terms that contain both $x_{1}$ and $x_{2}$. This sum is given by $x_{1}x_{2}e_{k-2}\left(x_{3},...,x_{n}\right)$
+
+    \item Sum of terms that contain either $x_{1}$ or $x_{2}$ but not both. This sum is given by $\left(x_{1} + x_{2}\right)e_{k-1}\left(x_{3},...,x_{n}\right)$
+
+    \item Sum of terms that don't contain either $x_{1}$ or $x_{2}$. This sum is give by $e_{k}\left(x_{3},...,x_{n}\right)$
+  \end{enumerate}
+
+  Thus, 
+
+  $$e_{k}(x_{1},...,x_{n}) = x_{1}x_{2}e_{k-2}(x_{3},...,x_{n}) + (x_{1} + x_{2})e_{k-1}(x_{3},...,x_{n}) + e_{k}(x_{3},...,x_{n})$$
+
+  Next, compare $e_{k}\left(\overrightarrow{p}\right)$ and $e_{k}\left(\overrightarrow{r}\right)$. Expanding the elementary symmetric polynomials, it is easy to see that the only difference between the two are the terms that contain either the first, the second or both terms from $\overrightarrow{p}$ and $\overrightarrow{r}$ respectively. 
+
+  Notice that because $r_{1} = r_{2} = \frac{p_{1} + p_{2}}{2}$, the sum of the terms with only $r_{1}$ and only $r_{2}$ but not both is exactly equal to $(p_{1} + p_{2})e_{k-1}(x_{3},...,x_{n})$. Thus, the only difference between $e_{k}\left(\overrightarrow{p}\right)$ and $e_{k}\left(\overrightarrow{r}\right)$ are the terms $p_{1}p_{2}e_{k-2}(x_{3},...,x_{n})$ and $r_{1}r_{2}e_{k-2}(x_{3},...,x_{n})$.
+
+  By the arithmetic geometric mean inequailty, $r_{1}r_{2}e_{k-2}(x_{3},...,x_{n}) \geq p_{1}p_{2}e_{k-2}(x_{3},...,x_{n})$. Hence, $1 - k!e_{k}(\overrightarrow{p}) \geq 1 - k!e_{k}(\overrightarrow{r})$.
+
+  In other words, given birthday probabilities $\overrightarrow{p}$, we can potentially reduce the probability of having at least one birthday match by taking any two birthday probabilities and replacing them with their average. For a minimal probability of at least one birthday match then, all  values $p_{i}$ in $\overrightarrow{p}$ must be equal, so that averaging any $p_{i}$ and $p_{j}$ does not change anything. 
+
+
+\end{enumerate}
