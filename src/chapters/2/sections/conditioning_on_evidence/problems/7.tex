@@ -1,0 +1,17 @@
+\begin{enumerate}[label=(\alph*)]
+
+\item 
+\begin{flalign}
+P(D|H) & = \frac{P(D)P(H|D)}{P(H)} \nonumber \\
+& = \frac{P(D)P(H|D)}{P(D)P(H|D) + P(D^{c})P(H|D^{c})} \nonumber \\
+& = \frac{\frac{1}{2}(\frac{1}{100} + \frac{99}{100}\left(\frac{1}{2}\right)^{7})}{\frac{1}{2}(\frac{1}{100} + \frac{99}{100}\left(\frac{1}{2}\right)^{7}) + \frac{1}{2}\left(\frac{1}{2}\right)^{7}} \nonumber \\
+& = 0.69 \nonumber
+\end{flalign}
+
+\item Let $C$ be the event that the chosen coin is double-headed. 
+\begin{flalign}
+P(C|H) & = P(D|H)P(C|D,H) + P(D^{c}|H)P(C|D^{c},H) \nonumber \\
+& = 0.69*\frac{1}{100} \nonumber \\
+& = 0.0069 \nonumber
+\end{flalign}
+\end{enumerate}
