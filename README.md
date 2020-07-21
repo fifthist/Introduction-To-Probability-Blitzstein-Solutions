@@ -34,7 +34,7 @@ This repository contains contributed solutions to end of chapter exercises in _I
 The book contains many fantastic exercises that help develop intuition for thinking probabilistically. The authors provide solutions to some of these exercises on the book [website](https://projects.iq.harvard.edu/stat110/home), but most don't have published solutions. This repository aims to provide said solutions for self-learners.
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
 * [LaTeX](https://www.latex-project.org/)
 * [tex4ht](https://ctan.org/pkg/tex4ht)
 * [make4ht](https://github.com/michal-h21/make4ht)
