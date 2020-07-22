@@ -1,11 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Fifthist/Introduction-To-Probability-Blitzstein-Solutions">
-    <img src="img/banner.jpg" alt="Banner">
-  </a>
-
   <h3 align="center">Introduction To Probability</h3>
+  <h5 align="center" style="font-weight: normal;">Joseph K. Blitzstein, Jessica Hwang</h5>
   <h3 align="center">Solutions</h3>
 
   <p align="center">
