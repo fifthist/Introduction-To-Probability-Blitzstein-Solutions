@@ -1,11 +1,16 @@
-The desired event can be expressed as $\bigcup\limits_{i=1}^{10^{22}}A_{i}$, where $A_{i}$ is the event that the $i$-th molecule in my breath is shared with Caesar. We can compute the desired probability using inclusion exclusion.
+The desired event can be expressed as $\bigcup\limits_{i=1}^{10^{22}}A_{i}$, 
+where $A_{i}$ is the event that the $i$-th molecule in my breath is shared 
+with Caesar. We can compute the desired probability using inclusion exclusion.
 
-Since every molecule in the universe is equally likely to be shared with Caesar, and we assume our breath samples molecules with replacement, $P(\bigcap\limits_{i=1}^{n}A_{i}) = (\frac{1}{10^{22}})^{n}$. 
+Since every molecule in the universe is equally likely to be shared with Caesar, 
+and we assume our breath samples molecules with replacement, 
+$P(\bigcap\limits_{i=1}^{n}A_{i}) = (\frac{1}{10^{22}})^{n}$. 
 
 Thus,
 
 \begin{flalign}
-P(\bigcup\limits_{i=1}^{10^{22}}A_{i}) & = \sum_{i=1}^{10^{22}}(-1)^{i+1}\left(\frac{1}{10^{22}}\right)^{i} \nonumber && \\
+P(\bigcup\limits_{i=1}^{10^{22}}A_{i}) & = 
+\sum_{i=1}^{10^{22}}(-1)^{i+1}\left(\frac{1}{10^{22}}\right)^{i} \nonumber && \\
 & = \left(1 - \frac{1}{10^{22}}\right)^{10^{22}} \nonumber && \\
 & \approx e^{-1} \nonumber 
 \end{flalign}

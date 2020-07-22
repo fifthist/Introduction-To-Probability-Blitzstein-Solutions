@@ -1,3 +1,8 @@
-There are a total of $\binom{2N}{K}$ possible committees of $K$ people. There are $\binom{N}{j}$ ways to select $j$ couples for the committee. $K-2j$ people need to be selected from the remaining $N-j$ couples such that only one person is selected from a couple. First, we select $K-2j$ couples from the remaining $N-j$ couples. Then, for each of the selected couples, there are $2$ choices for committee membership.
+There are a total of $\binom{2N}{K}$ possible committees of $K$ people. 
+There are $\binom{N}{j}$ ways to select $j$ couples for the committee. 
+$K-2j$ people need to be selected from the remaining $N-j$ couples such 
+that only one person is selected from a couple. First, we select $K-2j$ 
+couples from the remaining $N-j$ couples. Then, for each of the selected 
+couples, there are $2$ choices for committee membership.
 
 $$\frac{\binom{N}{j}\binom{N-j}{K-2j}2^{K-2j}}{\binom{2N}{K}}$$

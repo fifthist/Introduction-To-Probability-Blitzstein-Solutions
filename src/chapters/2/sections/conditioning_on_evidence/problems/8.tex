@@ -1,7 +1,13 @@
-Let $A_{1}$ be the event that the screen is produced by company $A$, $B_{1}$ be the event that the screen is produced by company $B$, and $C_{1}$ be the event that the screen is produced by company $C$. Let $D$ be the event that the screen is defective. 
+Let $A_{1}$ be the event that the screen is produced by company $A$, 
+$B_{1}$ be the event that the screen is produced by company $B$, and 
+$C_{1}$ be the event that the screen is produced by company $C$. 
+Let $D$ be the event that the screen is defective. 
 \begin{flalign}
-P(A_{1}|D) & = \frac{P(A_{1})P(D|A_{1})}{P(A_{1})P(D|A_{1}) + P(A_{1}^{c})P(D|A_{1}^{c})} \nonumber \\
-& = \frac{P(A_{1})P(D|A_{1})}{P(A_{1})P(D|A_{1}) + P(A_{1}^{c})(P(B_{1}|A_{1}^{c})P(D|B_{1},A_{1}^{c}) + P(C_{1}|A_{1}^{c})P(D|C_{1},A_{1}^{c}))} \nonumber \\
+P(A_{1}|D) & = \frac{P(A_{1})P(D|A_{1})}{P(A_{1})P(D|A_{1}) + 
+P(A_{1}^{c})P(D|A_{1}^{c})} \nonumber \\
+& = \frac{P(A_{1})P(D|A_{1})}{P(A_{1})P(D|A_{1}) + 
+P(A_{1}^{c})(P(B_{1}|A_{1}^{c})P(D|B_{1},A_{1}^{c}) + 
+P(C_{1}|A_{1}^{c})P(D|C_{1},A_{1}^{c}))} \nonumber \\
 & = \frac{0.5 * 0.01}{0.5 * 0.01 + 0.5 * (0.6 * 0.02 + 0.4 * 0.03)} \nonumber \\
 & = 0.29 \nonumber
 \end{flalign}

@@ -1,12 +1,18 @@
 \begin{enumerate}[label=(\alph*)]
 \item $${52 \choose 13}$$
 
-\item The number of ways to break $52$ cards into $4$ groups of size $13$ is $$\frac{{52 \choose 13}{39 \choose 13}{26 \choose 13}{13 \choose 13}}{4!}$$.
+\item The number of ways to break $52$ cards into $4$ groups of size $13$ is 
+$$\frac{{52 \choose 13}{39 \choose 13}{26 \choose 13}{13 \choose 13}}{4!}$$.
   
-  The reason for dividision by $4!$ is that all permutations of specific $4$ groups describe the same way to group $52$ cards.
+  The reason for dividision by $4!$ is that all permutations of specific $4$ 
+  groups describe the same way to group $52$ cards.
   
-  Since we do care about the order of the $4$ groups, we should not divide by ${4!}$. The final answer then is 
+  Since we do care about the order of the $4$ groups, we should not divide by 
+  ${4!}$. The final answer then is 
   $${52 \choose 13}{39 \choose 13}{26 \choose 13}{13 \choose 13}$$
 
-\item The key is to notice that the sampling is done without replacement. ${52 \choose 13}^{4}$ assumes that all four players have ${52 \choose 13}$ choices of hands available to them. This would be true if sampling was done with replacement.
+\item The key is to notice that the sampling is done without replacement. 
+${52 \choose 13}^{4}$ assumes that all four players have ${52 \choose 13}$ 
+choices of hands available to them. This would be true if sampling was done 
+with replacement.
 \end{enumerate}

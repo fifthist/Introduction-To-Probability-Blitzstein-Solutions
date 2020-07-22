@@ -1,9 +1,11 @@
 \begin{enumerate}[label=(\alph*)]
 
-\item Let $A_{i}$ be the event that Alice sends bit $i$. Let $B_{j}$ be the event that Bob recieves bit $j$.
+\item Let $A_{i}$ be the event that Alice sends bit $i$. Let $B_{j}$ be the 
+event that Bob recieves bit $j$.
 
 \begin{flalign}
-P(A_{1}|B_{1}) & = \frac{P(A_{1})P(B_{1}|A_{1})}{P(A_{1})P(B_{1}|A_{1}) + P(A_{0})P(B_{1}|A_{0})} \nonumber \\
+P(A_{1}|B_{1}) & = \frac{P(A_{1})P(B_{1}|A_{1})}{P(A_{1})P(B_{1}|A_{1}) + 
+P(A_{0})P(B_{1}|A_{0})} \nonumber \\
 & = \frac{0.5 * 0.9}{0.5 * 0.9 + 0.5 * 0.05} \nonumber \\
 & = 0.95 \nonumber
 \end{flalign}
@@ -11,7 +13,8 @@ P(A_{1}|B_{1}) & = \frac{P(A_{1})P(B_{1}|A_{1})}{P(A_{1})P(B_{1}|A_{1}) + P(A_{0
 \item Let $B_{j,k,l}$ be the event that Bob recieves bit tuple $j, k, l$.
 
 \begin{flalign}
-P(A_{1}|B_{110}) & = \frac{P(A_{1})P(B_{110}|A_{1})}{P(A_{1})P(B_{110}|A_{1}) + P(A_{0})P(B_{110}|A_{0})} \nonumber \\
+P(A_{1}|B_{110}) & = \frac{P(A_{1})P(B_{110}|A_{1})}{P(A_{1})P(B_{110}|A_{1}) + 
+P(A_{0})P(B_{110}|A_{0})} \nonumber \\
 & = \frac{0.5 * 0.9^{2} * 0.1}{0.5 * 0.9^{2} * 0.1 + 0.5 * 0.05^{2} * 0.95} \nonumber \\
 & = 0.97 \nonumber
 \end{flalign}

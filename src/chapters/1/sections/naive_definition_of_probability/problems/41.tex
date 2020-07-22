@@ -1,2 +1,10 @@
-We can treat this problem as sampling numbers $1$ to $n$ with replacement with each number being equally likely. There are $n^{n}$ possible sequences. To count the number of sequences with exactly one of the numbers missing, we first select the missing number. There are $n$ ways to do this. The rest of the numbers have to be sampled at least once with one number being sampled exactly twice. There are $n-1$ choice to select the number that will be sampled twice. Finally, we have $n$ sampled numbers which can be ordered in any of $\frac{n!}{2}$ ways, since one of the numbers is repeated. Thus, the answer is
+We can treat this problem as sampling numbers $1$ to $n$ with replacement 
+with each number being equally likely. There are $n^{n}$ possible sequences. 
+To count the number of sequences with exactly one of the numbers missing, 
+we first select the missing number. There are $n$ ways to do this. The rest of 
+the numbers have to be sampled at least once with one number being sampled 
+exactly twice. There are $n-1$ choice to select the number that will 
+be sampled twice. Finally, we have $n$ sampled numbers which can be ordered in 
+any of $\frac{n!}{2}$ ways, since one of the numbers is repeated. 
+Thus, the answer is
 $$\frac{n(n-1)\frac{n!}{2}}{n^{n}} = \frac{n(n-1)n!}{2n^{n}}$$
