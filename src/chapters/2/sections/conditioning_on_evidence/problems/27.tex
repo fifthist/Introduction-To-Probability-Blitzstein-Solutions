@@ -1,0 +1,11 @@
+Let $G$ be the event that the suspect is guilty. Let $T$ be the event that
+one of the criminals has blood type $1$ and the other has blood type $2$.
+
+Thus,
+$$P(G|T) = \frac{P(G)P(T|G)}{P(G)P(T|G) + P(G^{c})P(T|G^{c})} = 
+\frac{pp_{2}}{pp_{2} + (1-p)2p_{1}p_{2}} = \frac{p}{p + 2p_{1}(1 - p)}$$
+
+For $P(G|T)$ to be larger than $p$, $p_{1}$ has to be smaller than $\frac{1}
+{2}$. This result makes sense, since if $p_{1} = \frac{1}{2}$, then half of the
+population has blood type $1$, and finding it at the crime scene gives us no
+information as to whether the suspect is guilty.
