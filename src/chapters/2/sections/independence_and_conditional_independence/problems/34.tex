@@ -1,0 +1,13 @@
+\begin{enumerate}[label=(\alph*)]
+
+\item $A$ and $B$ are not independent, since knowing that $A$ occured makes $G^
+{c}$ more likely, which in turn makes $B$ makes more likely.
+
+\item $P(G|A^{c}) = \frac{P(G)P(A^{c}|G)}{P(G)P(A^{c}|G) + P(G^{c})P(A^{c}|G^
+{c})} = \frac{g(1-p_{1})}{g(1-p_{1}) + (1-g)(1-p_{2})}$
+
+\item $P(B|A^{c}) = P(G|A^{c})P(B|G, A^{c}) + P(G^{c}|A^{c})P(B|G^{c}, A^{c}) = 
+\frac{g(1-p_{1})}{g(1-p_{1}) + (1-g)(1-p_{2})}p_{1} + 
+(1 - \frac{g(1-p_{1})}{g(1-p_{1}) + (1-g)(1-p_{2})})p_{2}$
+
+\end{enumerate}
