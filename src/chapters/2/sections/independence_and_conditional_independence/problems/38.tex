@@ -1,0 +1,11 @@
+Let $S$ be the event that an email is spam. Let $L = W_{1}^{c},...,W_{22}^{c},
+W_{23},W_{24}^{c},...,W_{64}^{c},W_{64},W_{65},W_{66}^{c},...,W_{100}^{c}$
+
+
+Let $q = \prod_{j}(1-p_{j})$ where $1 \leq j \leq 100: j \notin 23, 64,
+65$.
+
+Let $x = \prod_{j}(1-r_{j})$ where $1 \leq j \leq 100: j \notin 23, 64, 65$.
+
+$$P(S|L) = \frac{P(S)P(L|S)}{P(L)} = \frac{pp_{23}p_{64}p_{65}q}{pp_{23}p_{64}p_
+{65}q + (1-p)r_{23}r_{64}r_{65}x}.$$
