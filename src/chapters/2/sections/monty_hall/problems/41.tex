@@ -1,0 +1,24 @@
+Let $G_{i}$ be the event that the $i$-th door contains a goat, and let
+$D_{i}$ be the event that Monty opens door $i$.
+
+$$P(G_{1}|D_{2}, G_{2}) = \frac{P(G_{1})P(D_{2}, G_{2} | G_{1})}{P(D_{2}, G_
+{2})}.$$
+
+\begin{align*}
+P(G_{1})P(D_{2}, G_{2} | G_{1}) &= \frac{2}{3}\left(P(G_{2} | G_{1})P(D_
+{2} | G_{1}, G_{2})\right) \\ 
+&= \frac{2}{3}\left(\frac{1}{2}(p + (1 - p)\frac{1}{2})\right) \\
+&= \frac{2}{3}\left(\frac{1}{2}p + \frac{1}{4} - \frac{1}{4}p\right) \\
+&= \frac{1}{6}(p + 1).
+\end{align*}
+
+Thus,
+
+\begin{align*}
+P(G_{1}|D_{2}, G_{2}) &= \frac{\frac{1}{6}(p+1)}{\frac{1}{6}(p+1) + \frac{1}
+{3} \times \frac{1}{2}} \\
+&= \frac{p + 1}{p + 2}.
+\end{align*}
+
+Note that when $p=1$, the result matches that of the basic Monty Hall
+problem.
