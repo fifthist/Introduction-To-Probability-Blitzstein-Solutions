@@ -1,0 +1,29 @@
+Let $G_{i}$ be the event that the $i$-th door contains a goat, and let
+$D_{i}$ be the event that Monty opens door $i$. Let $S$ be the event that the
+contestant is successful under his strategy.
+
+\begin{enumerate}[label=(\alph*)]
+\item There are two scenarios which result in the contestant selecting door $3$
+and Monty opening door $2$. Either the car is behind door $3$ and Monty randomly
+opens door $2$, or doors $3$ and $2$ contain goats, and Monty opens door $2$.
+Only the latter scenario results in a win for the contestant.
+
+Thus, $$P(S|D_{2}, G_{2}) = \frac{(p_{1} + p_{2})\frac{p_{1}}{p_{1} + p_{2}}}{p_
+{3}\frac{1}{2} + (p_{1} + p_{2})\frac{p_{1}}{p_{1} + p_{2}}} = \frac{p_{1}}{p_
+{1} + \frac{1}{2}p_{3}}.$$
+
+\item We can slightly modify the scenario in part $a$ where doors $3$ and $2$
+contain goats by multiplying the probability of the scenario by $\frac{1}{2}$ to
+accomodate the chance that Monty might open the door with the car behind it.
+
+$$P(S|D_{2}, G_{2}) = \frac{\frac{1}{2}(p_{1} + p_{2})\frac{p_{1}}{p_{1} + p_{2}}}
+{p_{3}\frac{1}{2} + \frac{1}{2}(p_{1} + p_{2})\frac{p_{1}}{p_{1} + p_{2}}p} = 
+\frac{\frac{1}{2}p_{1}}{\frac{1}{2}p_{1} + \frac{1}{2}p_{3}} = \frac{p_{1}}
+{p_{1} + p_{3}}.$$
+
+\item
+$$P(S|D_{2}, G_{2}) = \frac{p_{3}}{p_{3} + \frac{1}{2}p_{1}}.$$
+
+\item
+$$P(S|D_{2}, G_{2}) = \frac{p_{3}}{p_{3} + p_{1}}.$$
+\end{enumerate}
