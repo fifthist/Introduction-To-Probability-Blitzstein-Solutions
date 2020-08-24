@@ -1,0 +1,43 @@
+\begin{enumerate}[label=(\alph*)]
+\item Contestant wins under the "stay-stay" strategy if and only if the Car is
+behind Door $1$.
+
+$$P(S) = \frac{1}{4}$$
+
+\item If the Car is not behind Door $1$, Monty opens one of the two doors
+revealing a Goat. Contestant stays. Then, Monty opens the other door with a Goat
+behind it. Finally, contestant switches to the Door concealing the Car.
+
+$$P(S) = P(C_{1})P(S|C_{1}) + P(C_{1}^{c})P(S|C_{1}^{c})$$
+
+$$P(S) = 0 + \frac{3}{4} * 1 = \frac{3}{4}$$
+
+\item Under the "switch-stay" strategy, if the Car is behind Door $1$ the
+contestant loses. Given that the Car is not behind Door $1$, Monty opens one of
+the Doors containing a Goat. The contestant will win if they switch to the Door
+containing the Car and will lose if they switch to the Door containing the last
+remaining Goat.
+
+Thus,
+
+$$P(S) = P(C_{1})P(S|C_{1}) + P(C_{1}^{c})P(S|C_{1}^{c}) = 0 + \frac{3}{4} * 
+\frac{1}{2} = \frac{3}{8}$$
+
+\item Under the "switch-switch" strategy, if the car is behind Door $1$, then
+Monty opens a door with a Goat behind it. The contestant switches to a door
+with a Goat behind it. Monty then opens the last door containing a Goat, at
+which point the contestant switches back to the door containing the Car.
+
+If Door $1$ contains a Goat, Monty opens another Door containing a Goat and
+presents the contestant with a choice. If the contestant switches to the
+remaining door containing a Goat, then Monty is forced to open Door $1$,
+revealing the final Goat. The contestant switches to the one remaining Door
+which contains the Car. If, on the other hand, the contestant switches to the
+door containing the Car, then on the subsequent switch they lose the game.
+
+Thus,
+
+$$P(S) = \frac{1}{4}*1 + \frac{3}{4}* \frac{1}{2} = \frac{5}{8}$$
+
+\item "Stay-Switch" is the best strategy.
+\end{enumerate}
