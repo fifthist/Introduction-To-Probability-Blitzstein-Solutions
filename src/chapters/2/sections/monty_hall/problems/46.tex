@@ -1,0 +1,31 @@
+Let $S$ be the event of successfully getting the Car under the specified
+strategy. Let $C_{i}$ be the event that Door $i$ contains the Car. Let $A$ be
+the event that Monty reveals the Apple, and let $A_{i}$ be the event that Door
+$i$ contains the Apple.
+
+\begin{enumerate}[label=(\alph*)]
+\item
+\begin{align*}
+P(S) &= P(S \cap C_{1}) + P(S \cap C_{2}) + P(S \cap C_{3}) + P(S \cap C_{4}) \\
+&= P(C_{1})P(S|C_{1}) + P(C_{2})P(S|C_{2}) + P(C_{3})P(S|C_{3}) + P(C_{4})P(S|C_
+{4}) \\
+&= \frac{1}{4}*0 + 3*\frac{1}{4}*(p+q)\frac{1}{2} \\
+&= 3 * \frac{1}{4} * \frac{1}{2} \\
+&= \frac{3}{8}
+\end{align*}
+
+\item
+\begin{align*}
+P(A) &= P(A \cap G_{1}) + P(A \cap A_{1}) + P(A \cap B_{1}) + P(A \cap C_{1}) \\
+&= P(G_{1})P(A|G_{1}) + P(A_{1})P(A|A_{1}) + P(B_{1})P(A|B_{1}) + P(C_{1})P
+(A|C_{1}) \\ 
+&= \frac{1}{4}p + 0 + \frac{1}{4}q + \frac{1}{4}q \\
+&= \frac{1}{4}(1 + q)
+\end{align*}
+
+\item
+$$P(S|A) = \frac{P(S \cap A)}{P(A)} = 
+\frac{\frac{1}{4}*p*\frac{1}{2} + \frac{1}{4}*q*\frac{1}{2}}{\frac{1}{4}(1 +
+q)} = \frac{\frac{1}{8}}{\frac{1}{4}(1 + q)}$$
+
+\end{enumerate}
