@@ -1,0 +1,32 @@
+Let $R_{i}$, $G_{i}$, and $B_{i}$ be the events that the $i$-th drawn ball is
+red, green or blue respectively. Let $A$ be the event that a green ball is drawn
+before a blue ball.
+
+\begin{enumerate}[label=(\alph*)]
+\item 
+
+Note that if a red ball is drawn, it is placed back, as if the experiment never
+happened. Draws continue until a green or a blue ball is drawn. The red
+balls are irrelevant in the experiment. Thus, the problem reduces to removing
+all the red balls, and finding the probability of the first, randomly drawn ball
+being green.
+\begin{align*}
+P(A) &= P(R_{1})P(A|R_{1}) + P(R_{1}^{c})P(A|R_{1}^{c}) \\
+&= rP(A) + (g + b)\frac{g}{g + b} \\
+&= rP(A) + g
+\end{align*}
+
+Thus, $$P(A) = \frac{g}{1-r} = \frac{g}{g + b}.$$ 
+
+\item We are interested in draws in which the first ball is green. Each
+completed sequence of $g+b+r$ draws is equally likely. Since the red balls are
+once again irrelevant, we focus on the $g+b$ draws of green or blue balls.
+
+Thus,
+
+$$P(A) = \frac{\binom{g+b-1}{g-1}}{\binom{g+b}{g}} = \frac{g}{g+b}.$$
+
+\item Let $A_{i,j}$ be the event that type $i$ occurs before type
+$j$. Generalizing part $a$, we get 
+$$P(A_{i,j}) = \frac{p_{i}}{p_{i}+p_{j}}.$$
+\end{enumerate}
