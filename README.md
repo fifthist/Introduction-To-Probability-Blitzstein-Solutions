@@ -1,6 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
+  <img src="cover.webp"/>
   <h3 align="center">Introduction To Probability</h3>
   <h5 align="center" style="font-weight: normal;">Joseph K. Blitzstein, Jessica Hwang</h5>
   <h3 align="center">Solutions</h3>
