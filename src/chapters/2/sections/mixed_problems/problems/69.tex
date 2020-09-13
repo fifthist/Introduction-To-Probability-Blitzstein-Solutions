@@ -1,0 +1,23 @@
+\begin{enumerate}[label=(\alph*)]
+\item $$y = dp + (1-d)(1-p)$$
+
+\item The worst choice for $p$ is $\frac{1}{2}$, because then the fraction of
+"yes" responses is $\frac{1}{2}$ irrespective of the fraction of drug users. In
+other words, the number of "yes" responses tells us nothing.
+
+\item We can extend the result from part $a$. 
+
+A drug user says "yes" either if they get a "Have you used drugs" slip, or
+if they get a "I was born in winter" slip and they are, in fact, born in winter.
+
+A person who has not used drugs says "yes" only in the case that
+they get a "I was born in winter" slip and they were, in fact,
+born in winter.
+
+$$y = d(p + \frac{1}{4}(1-p)) + (1-d)(1-p)\frac{1}{4}$$
+
+Thus,
+
+$$d = \frac{4y + p - 1}{2p}$$
+
+\end{enumerate}
