@@ -1,0 +1,23 @@
+Let $S_{i, k}$ be the event that sum after $i$ rolls of the die is $k$. Let $l$
+denote the roll after which $k \geq 100$. Let $X_{i}$ be the event that the die
+lands on $i$.
+
+$$P(S_{l, 100}) = \sum_{i=94}^{99}P(S_{l-1, i})P(X_{100-i}|S_{l-1, i}) = 
+\frac{1}{6}\sum_{i=94}^{99}P(S_{l-1, i})$$
+
+$$P(S_{l, 101}) = \sum_{i=95}^{99}P(S_{l-1, i})P(X_{101-i}|S_{l-1, i}) = 
+\frac{1}{6}\sum_{i=95}^{99}P(S_{l-1, i})$$
+
+$$P(S_{l, 102}) = \sum_{i=96}^{99}P(S_{l-1, i})P(X_{102-i}|S_{l-1, i}) = 
+\frac{1}{6}\sum_{i=96}^{99}P(S_{l-1, i})$$
+
+$$P(S_{l, 103}) = \sum_{i=97}^{99}P(S_{l-1, i})P(X_{103-i}|S_{l-1, i}) = 
+\frac{1}{6}\sum_{i=97}^{99}P(S_{l-1, i})$$
+
+$$P(S_{l, 104}) = \sum_{i=98}^{99}P(S_{l-1, i})P(X_{104-i}|S_{l-1, i}) = 
+\frac{1}{6}\sum_{i=98}^{99}P(S_{l-1, i})$$
+
+$$P(S_{l, 105}) = \sum_{i=99}^{99}P(S_{l-1, i})P(X_{105-i}|S_{l-1, i}) = 
+\frac{1}{6}\sum_{i=99}^{99}P(S_{l-1, i})$$
+
+Thus, $S_{l, 100}$ is the most likely.
