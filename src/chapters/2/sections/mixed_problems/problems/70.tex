@@ -1,0 +1,24 @@
+Let $F$ be the event that the coin is fair, and let $H_{i}$ be the even that the
+$i$-th toss lands Heads.
+
+\begin{enumerate}[label=(\alph*)]
+\item Both Fred and his friend are correct. Fred is correct in that the
+probability of there being no Heads in the entire sequence is very small. For
+example, there are $\binom{92}{45}$ sequences with $45$ Heads and $47$ Tails,
+but only $1$ sequence of all Heads.
+
+On the other hand, Fred's friend is correct in his assessment that any
+particular sequence has the same likelihood of occurance as any other sequence.
+
+\item 
+$$P(F|H_{1 \leq i \leq 92}) = \frac{P(F)P(H_{1 \leq i \leq 92}|F)}{P(F)P(H_{1
+\leq i \leq 92}|F) + P(F^{c})P(H_{1\leq i \leq 92}|F^{c})} = \frac{p\left
+(\frac{1}{2}\right)^{92}}{p\left(\frac{1}{2}\right)^{92} + (1-p)}$$
+
+\item For $P(F|H_{1 \leq i \leq 92})$ to be larger than $\frac{1}{2}$, $p$ must be
+greater than $\frac{2^{92}}{2^{92} + 1}$, which is approximately equal to $1$,
+where as for $P(F|H_{1 \leq i \leq 92})$ to be less than $\frac{1}{20}$, $p$
+must be less than $\frac{2^{92}}{2^{92} + 19}$, which is also approximately
+equal to $1$. In other words, unless we know for a fact that the coin is fair,
+$92$ Heads in a row will convince us otherwise.
+\end{enumerate}
