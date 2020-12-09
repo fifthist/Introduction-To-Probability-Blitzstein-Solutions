@@ -10,6 +10,8 @@
     A repository of unofficial, contributed solutions to end of chapter exercises.
     <br />
     <a href="https://fifthist.github.io/Introduction-To-Probability-Blitzstein-Solutions/"><strong>Explore solutions »</strong></a>
+    <br />
+    <a href="https://fifthist.github.io/solved-problems-in-probability/"><strong>Solved Problems: Part I »</strong></a>
   </p>
 </p>
 
