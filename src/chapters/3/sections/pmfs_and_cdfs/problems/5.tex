@@ -1,0 +1,17 @@
+\begin{enumerate}[label=(\alph*)]
+
+\item $p(n)$ is clearly non-negative. Also, 
+
+$$\sum_{n=0}^{\infty}p(n) = \frac{1}{2}\sum_{n=0}^{\infty}\frac{1}{2^{n}} = 
+\frac{1}{2} * \frac{1}{1 - \frac{1}{2}} = 1.$$
+
+Thus, $p(n)$ is a valid PMF.
+
+\item $$F(x) = \sum_{n=0}^{\lfloor x \rfloor}p(n) = \frac{1}{2}\sum_{n=0}^
+{\lfloor x \rfloor}\frac{1}{2^{n}} = \frac{1}{2} * \frac{1 - \frac{1}{2^{\lfloor
+x \rfloor + 1}}}{1 - \frac{1}{2}} = 1 - \frac{1}{2^{\lfloor x \rfloor + 1}}$$
+
+for $x \geq 0$ and $0$ for $x < 0$.
+
+
+\end{enumerate}
