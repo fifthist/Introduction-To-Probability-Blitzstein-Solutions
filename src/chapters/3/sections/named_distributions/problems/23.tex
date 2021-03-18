@@ -1,3 +1,8 @@
-$$P(X = k) = \binom{n}{r}p_{1}^{r}(1-p_{1})^{n-r}\binom{r}{v}p_{2}^{v}(1-p_{2})^
-{r-v}\binom{v}{k}p_{3}^{k}(1-p_{3})^
-{v-k}$$ for $0 \leq k \leq v \leq r \leq n$.
+Let $I_{i}$ be the indicator of the $i$-th person voting for Kodos.
+Then, $P(I_{i}=1) = p_{1}p_{2}p_{3}.$ Since the voters make their decisions
+independently, we have $n$ independent Bernoulli trials, which is precisely the
+story for a Binomial distribution.
+
+Thus,
+
+$$P(X = k) = \binom{n}{k}(p_{1}p_{2}p_{3})^{k}(1- p_{1}p_{2}p_{3})^{n-k}$$
