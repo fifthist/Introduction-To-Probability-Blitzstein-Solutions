@@ -1,0 +1,39 @@
+\begin{enumerate}[label=(\alph*)]
+\item Since tosses are independent, we expect information about two of the
+tosses to not provide any information about the remaining tosses. In other
+words, we expect the required probability to be
+
+$$\binom{8}{k}(0.5)^{k}(0.5)^{8-k} = \binom{8}{k}(0.5)^{8}$$
+for $0 \leq k \leq 8$.
+
+To prove this, let $X$ be the number of Heads out of the $10$ tosses, and let
+$X_{1, 2}$ be the number of Heads out of the first two tosses.
+
+\begin{flalign}
+P(X = k | X_{1, 2} = 2) & = \frac{P(X = k \cap X_{1, 2} = 2)}{P(X_{1, 2} = 2)}
+\nonumber && \\
+& = \frac{(0.5)^{2}\binom{8}{k-2}(0.5)^{k-2}(0.5)^{8-k+2}}{(0.5)^{2}}
+\nonumber && \\
+& = \binom{8}{k-2}(0.5)^{k-2}(0.5)^{8-k+2} \nonumber && \\ 
+& = \binom{8}{k-2}(0.5)^{8} \nonumber
+\end{flalign}
+
+
+for $2 \leq k \leq 10$, which is equivalent to $\binom{8}{k}(0.5)^{8}$ for
+$0 \leq k \leq 8$.
+
+\item Let $X_{\geq 2}$ be the event that at least two tosses land Heads.
+
+\begin{flalign}
+P(X = k | X_{\geq 2}) & = \frac{P(X = k \cap X_{\geq 2})}{X_{\geq 2}}
+\nonumber && \\
+& = \frac{\binom{10}{k}(0.5)^{k}(0.5)^{10-k}}{1 - (0.5^{10} +
+10*0.5^{10})} \nonumber
+\end{flalign}
+
+for $2 \leq k \leq 10$.
+
+To see that this answer makes sense, notice that if we over all values of $k$
+from $2$ to $10$, we get exactly the denominator, which means the said sum
+equals to $1$.
+\end{enumerate}
