@@ -6,6 +6,9 @@ node_js:
 
 before_install:
   - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full pandoc latexmk pdf2svg
+  - sudo apt-get install python3 python3-pip python3-setuptools
+  - pip3 install --upgrade pip
+  - pip3 install beautifulsoup4
   - npm -g install mathjax-node-page
 
 before_script:
