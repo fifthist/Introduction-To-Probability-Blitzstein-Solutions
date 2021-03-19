@@ -1,20 +1,15 @@
 <!-- ABOUT THE PROJECT -->
-## About The Project
 <img src="https://www.travis-ci.com/fifthist/Introduction-To-Probability-Blitzstein-Solutions.svg?branch=master">
-This repository contains contributed solutions to end of chapter exercises in _Introduction to Probability_, 2nd edition by Joe Blitzstein and Jessica Hwang. 
+This repository contains contributed solutions to end of chapter exercises in <i>Introduction to Probability</i>, 2nd edition by Joe Blitzstein and Jessica Hwang. 
 
-The book contains many fantastic exercises that help develop intuition for thinking probabilistically. The authors provide solutions to some of these exercises on the book [website](https://projects.iq.harvard.edu/stat110/home), but most don't have published solutions. This repository aims to provide said solutions for self-learners.
+The book contains many fantastic exercises that help develop intuition for thinking probabilistically. The authors provide solutions to some of these exercises on the book [website](https://projects.iq.harvard.edu/stat110/home), but most don't have published solutions. This repository aims to provide solutions for self-learners.
 
   <p>
-    <a href="https://fifthist.github.io/Introduction-To-Probability-Blitzstein-Solutions/"><strong>Explore solutions »</strong></a>
-    <br />
-    <a href="https://fifthist.github.io/solved-problems-in-probability/"><strong>Solved Problems: Part I »</strong></a>
+    <a href="https://fifthist.github.io/solved-problems-in-probability/"><strong>Solved Problems (Recordings): Part I »</strong></a>
   </p>
 
 <!-- CONTRIBUTING -->
-## Contributing
-
-Any contributions are **greatly appreciated**.
+## How to Contribute
 
 1. If adding a new chapter, add a reference entry to `chapters/index.tex`
 ```
