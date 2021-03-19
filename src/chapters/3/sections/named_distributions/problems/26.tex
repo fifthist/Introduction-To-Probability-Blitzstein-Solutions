@@ -1,0 +1,10 @@
+If $X \sim HGeom(w, b, n)$, then $n - X \sim HGeom(b, w, n)$.
+
+If $X$ counts the number of items sampled from the set of $w$ items in a
+sample of size $n$, then $n - X$ counts the number of items from the set of $b$
+items in the same sample.
+
+To see this, notice that
+
+$$P(n - X = k) = P(X = n - k) = \frac{\binom{w}{n-k}\binom{b}{k}}{\binom{w+b}
+{n}}$$
