@@ -1,0 +1,10 @@
+$X$ is not Binomial becuase the outcome of a card is not independent of the
+previous cards' outcomes. For instance, if the first $n-1$ cards match, then the
+probability of the last card matching is $1$.
+
+The Hypergeometric story requires sampling from two finite sets, but
+the matching cards isn't a set of predetermined size, so the story doesn't fit.
+
+$$P(X = k) = \frac{\binom{n}{k}!(n-k)}{n!}$$
+
+where $!(n-k)$ is a subfactorial.
