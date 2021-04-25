@@ -1,0 +1,30 @@
+\begin{enumerate}[label=(\alph*)]
+\item The distribution is hypergeometric. We select a sample of $t$ employees
+and count the number of women in the sample.
+
+$$P(X = k) = \frac{\binom{n}{k}\binom{m}{t-k}}{\binom{n+m}{t}}$$
+
+\item Decisions to be promoted or not are independent from employee to employee.
+Thus, we are dealing with Binomial distributions.
+
+Let $X$ be the number of women who are promoted. Then, $P(X=k) = \binom{n}{k}p^
+{k}(1-p)^{n-k}$. The number of women who are not promoted is $Y=n-X$ and so is
+also Binomial.
+
+Distribution of the number of employees who are promoted is also Binomial, since
+each employee is equally likely to be promoted and promotions are independent of
+each other.
+
+\item Once the total number of promotions is fixed, they are no longer
+independent. For instance, if the first $t$ people are promoted, the
+probability of the $t+1$-st person being promoted is $0$.
+
+The story fits that of the hypergeometric distribution. $t$ promoted
+employees
+are picked and we count the number of women among them.
+
+$$P(X = k | T = t) = \frac{\binom{n}{k}p^
+{k}(1-p)^{n-k}\binom{m}{t-k}p^
+{t-k}(1-p)^{m-t+k}}{\binom{n+m}{t}p^{t}(1-p)^{n+m-t}} = \frac{\binom{n}{k}
+\binom{m}{t-k}}{\binom{n+m}{t}}$$
+\end{enumerate}
