@@ -1,0 +1,12 @@
+\begin{enumerate}[label=(\alph*)]
+\item Let $Y$ be the number of Statistics students in the sample of size $m$.
+
+$$P(Y=k) = \sum_{i=k}^{n}P(X=i)P(Y=k|X=i) = \sum_{i=k}^{n}\binom{n}{i}p^{i}
+(1-p)^{n-i}\frac{\binom{i}{k}\binom{n-i}{m-k}}{\binom{n}{m}}$$
+
+\item Consider a student in a random sample of size $m$. Independently of
+other students, the student has
+probability $p$ of being a statistics major. Then, the probability of $k$
+students in the sample being statistics majors is $\binom{m}{k}p^{k}(1-p)^
+{m-k}$. Thus, $Y \sim Binom(m,p)$.
+\end{enumerate}
