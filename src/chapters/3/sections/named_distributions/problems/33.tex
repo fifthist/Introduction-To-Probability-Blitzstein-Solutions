@@ -1,0 +1,16 @@
+\begin{enumerate}[label=(\alph*)]
+\item The probability of a typo being caught is $p_{1} + p_{2} - p_{1}p_{2}$.
+Then, $$P(X = k) = \binom{n}{k}(p_{1} + p_{2} - p_{1}p_{2})^{k}(1 - (p_{1} + p_
+{2} - p_{1}p_{2}))^{n-k}$$
+
+\item When we know the total number of caught typos in advance, the typos caught
+by the first proofreader are no longer independent. For example, if we know that
+first proofreader has caught the first $t$ typos, and the total number of caught
+typos is $t$, then the probability of the first proofreader catching subsequent
+typos is $0$, since the total number of caught typos was $t$.
+
+Thus, we employ a Hypergeometric distribution. Since $p_{1} = p_{2}$, all $\binom{2n}{t}$ $t$-tuples of caught typos are equally likely. Hence,
+
+$$P(X_{1} = k | X_{1} + X_{2} = t) = \frac{\binom{n}{k}\binom{n}{t-k}}{
+\binom{2n}{t}}$$
+\end{enumerate}
