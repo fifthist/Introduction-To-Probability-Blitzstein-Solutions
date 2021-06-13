@@ -1,0 +1,26 @@
+\begin{enumerate}[label=(\alph*)]
+\item $P(X \bigoplus Y) \sim$ Bern$(\frac{p}{2})$
+
+\item If $p \neq \frac{1}{2}$, $X \bigoplus Y$ and $Y$ are not independent.
+Imagine that $X=0$ is extremely unlikely. Then, knowing that $Y=0$ makes it very
+likely that $X \bigoplus Y = 1$. If $p = \frac{1}{2}$, then $X \bigoplus Y$ and
+$Y$ are independent.
+
+$X \bigoplus Y$ and $X$ are
+independent, since knowledge of $X$ still keeps the probability of $Y = 1$ at
+$\frac{1}{2}$
+
+\item
+
+Let the largest element in $J$ be $m$.
+
+\begin{flalign}
+P(Y_{J}=1) & = P(X_{m}=1)P(Y_{J\setminus \{m\}}=0) + P(X_{m}=0)P(Y_{J
+\setminus \{m\}}=1) \nonumber && \\
+ & = \frac{1}{2}(P(Y_{J\setminus \{m\}}=0) + P(Y_{J
+\setminus \{m\}}=1)) \nonumber && \\
+ & = \frac{1}{2} \nonumber
+\end{flalign}
+
+Thus, $Y_{J} \sim Bern(\frac{1}{2})$
+\end{enumerate}
