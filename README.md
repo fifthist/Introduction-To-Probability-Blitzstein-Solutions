@@ -13,7 +13,7 @@ The book contains many fantastic exercises that help develop intuition for think
 
 1. If adding a new chapter, add a reference entry to `chapters/index.tex`
 ```
-\subimport*{chapters/2/}{index}
+\subimport*{chapters/[chapter number]/}{index}
 ```
 2. If adding a new section, add a reference entry to `chapters/[chapter number]/sections/index.tex`
 ```
