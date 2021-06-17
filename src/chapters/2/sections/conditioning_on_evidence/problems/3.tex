@@ -1,9 +1,17 @@
-Let $A$ be the event that a man in the U.S. is a smoker. Let $B$ be the event 
-that a an in the U.S. develops cancer.
-
-\begin{flalign}
-P(A|B) & = \frac{P(A)P(B|A)}{P(B)} \nonumber \\
-& = \frac{P(A)P(B|A)}{P(A)P(B|A) + P(A^{c})P(B|A^{c})} \nonumber \\
-& = \frac{P(A)P(B|A)}{P(A)P(B|A) + \frac{1}{23}P(A^{c})P(B|A)} \nonumber \\
-& = \frac{0.22}{0.22 + 0.09} = 0.71 \nonumber
-\end{flalign}
+Let $S$ be event that a man in the US is a smoker and $C$ be event man has
+cancer.
+From problem conditions:
+\begin{flalign*}
+	&P(S) = 0.216\\
+	&P(C|S) = 23P(C|S^c)\\
+	&P(C|S^c) = \frac{1}{23} P(C|S)\\
+\end{flalign*}
+Lets use Bayes' theorem
+\begin{flalign*}
+	P(S|C) & = \frac{P(S)P(C|S)}{P(C)}\\
+	       & = \frac{P(S)P(C|S)}{P(S)P(C|S) + P(S^c)P(C|S^c)}\\
+	       & = \frac{P(S) \cdot 23P(C|S^c)}{P(S)\cdot 23P(C|S^c) + P(S^c)P(C|S^c)}\\
+	       & = \frac{P(S)}{23P(S) + P(S^c)}\\
+	       & = \frac{23 \cdot 0.216}{23 \cdot 0.216 + 0.784}\\
+	       & \approx 0.864
+\end{flalign*}
