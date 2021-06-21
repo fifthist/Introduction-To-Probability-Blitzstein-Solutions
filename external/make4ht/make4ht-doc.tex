@@ -8,12 +8,8 @@
 \renewcommand\authormail[1]{\space\textless\Link[#1]{}{}#1\EndLink\textgreater}
 \fi
 
-\usepackage{fontspec}
-\setmainfont{TeX Gyre Schola}
-% \setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
-\IfFontExistsTF{Noto Sans Mono Regular}{%
-  \setmonofont[Scale=MatchLowercase]{Noto Sans Mono Regular}
-}{\setmonofont{NotoMono-Regular.ttf}}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{upquote}
 
 \usepackage{microtype}
