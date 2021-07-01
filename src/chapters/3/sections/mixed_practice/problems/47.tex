@@ -1,0 +1,31 @@
+\begin{enumerate}[label=(\alph*)]
+
+\item 
+Consider the simple case of $m < \frac{n}{2}$. Then, the trays don't have enough
+pages to print $n$ copies. Desired probability is $0$.
+
+On the other hand, if $m \geq n$, then desired probability is $1$, since each
+tray individually has enough pages.
+
+Now, consider the more interesting case that $\frac{n}{2} \leq m < n$.
+Associate $n$ pages being taken from the trays with $n$ independent Bernoulli
+trials. Sample from the first tray on success, and sample from the second tray
+on failure. Thus, the assignment of trays can be modeled as a Binomial random
+variable, $X \sim $ Bin$(n, p)$. As long as not too few pages are sampled from
+the first tray, the remaining pages can be sampled from the second tray. What is
+too few? $n-m-1$ is too few, because $n-m-1 + m < n$.
+
+Hence,
+
+\[ P = \begin{cases} 
+      0 & m < \frac{n}{2} \\
+      pbinom(m,n,p) - pbinom(n-m-1,n,p) & \frac{n}{2} \leq m < n \\
+      1 & m \geq n
+   \end{cases}
+\]
+
+\item Typing out the hinted program in the R language, we get that the smallest
+number of papers in each tray needed to have $95$ percent confidence that there
+will be enough papers to make $100$ copies is $60$.
+
+\end{enumerate}
