@@ -1,0 +1,40 @@
+If a failure is seen on the first trial, then there are $0$ successes and
+$1$ failure, so it is clearly possible that there are more than twice as many
+failures as successes.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item If we think of the Bernoulli trial success as a win for player $A$, and
+the Bernoulli trial failure as a loss for player $A$, then have more than twice
+as many failures as successes is analogous to $A$ losing the Gambler's Ruin
+starting with $1$ dollar. For instance, if $A$ wins the first gamble, then $A$ has $3$ dollars, and $B$
+needs $2*1 + 1$ gamble wins for $A$ to lose the entire game.
+
+Thus, we need to find $p_{1}$.
+
+\item $p_{k} = \frac{1}{2}p_{k+2} + \frac{1}{2}p_{k-1}$ with conditions $p_{0} =
+1$ and
+$\lim_{k \rightarrow \infty} p_{k} = 0$
+
+The characteristic equation is $\frac{1}{2}t^{3} - t + \frac{1}{2} = 0$ with
+roots $1$ and $\frac{-1 \pm \sqrt{5}}{2}$.
+
+Thus,
+
+$$p_{k} = c_{1} + c_{2}(\frac{-1+\sqrt{5}}{2})^{k} + c_{3}(\frac{-1-\sqrt{5}}
+{2})^{k}$$
+
+Using the hint that $\lim_{k \rightarrow \infty} p_{k} = 0$, $c_{1}$ and $c_{3}$
+must be $0$. Thus, 
+
+$$p_{k} = c_{2}(\frac{-1+\sqrt{5}}{2})^{k}$$
+
+Using $p_{0} = 0$, we get that $c_{2} = 1$. Thus,
+
+$$p_{k} = (\frac{-1+\sqrt{5}}{2})^{k}$$
+
+
+\item
+$$p_{1} = \frac{-1+\sqrt{5}}{2}$$
+
+\end{enumerate}
