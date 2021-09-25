@@ -2,8 +2,6 @@
 
 set -e
 
-# [ -z "${GITHUB_PAT}" ] && exit 0
-
 git config --global user.email "Overseer.O5.X@gmail.com"
 git config --global user.name "Fifthist"
 

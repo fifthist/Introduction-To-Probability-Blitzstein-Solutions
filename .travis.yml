@@ -1,4 +1,4 @@
-if: (type = push AND branch IN (master, dev)) OR (type = pull_request AND NOT branch =~ /no-ci/)
+if: (type = push AND branch = master) OR (type = pull_request)
 
 sudo: required
 dist: bionic
@@ -23,4 +23,4 @@ script:
   - make clean
   - make all
   - cd output/html && cd ../../
-  - ./travis/_deploy.sh
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_EVENT_TYPE" = "push" ]; then ./travis/_deploy.sh; fi
