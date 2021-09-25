@@ -1,0 +1,18 @@
+Key idea is that the expected value of a die roll is $3.5$. If the value of a
+roll is less than $4$, one should roll again.
+
+For the winnings to be $1$, $2$ or $3$ under the above strategy, the first two
+dice need to land on a value less than $4$, and the last die needs to land on
+$1$, $2$, and $3$ respectively.
+
+Thus, $P(W = i) = (\frac{3}{6})^2 * \frac{1}{6} = \frac{1}{24}$ for $i \in {1,
+2, 3}$.
+
+For the winnings to be $i \geq 4$, either the first die lands on $i$, or the
+first die lands on a value less than $4$, and the second die lands on $i$, or the
+first two dice land on values less than $4$, and the third die lands on $i$.
+
+Thus, $P(W = i) = \frac{1}{6} + \frac{3}{6} * \frac{1}{6} + (\frac{3}{6})^{2} * 
+\frac{1}{6} = \frac{7}{24}$ for $i \in {4, 5, 6}$.
+
+Thus, $$E(W) = (1 + 2 + 3) * \frac{1}{24} + (4 + 5 + 6) * \frac{7}{24} = 4.625$$
