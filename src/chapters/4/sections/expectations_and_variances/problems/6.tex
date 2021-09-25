@@ -1,0 +1,11 @@
+Let $N$ be the number of games played. Then the probability than $N=i$ is the
+probability of exactly $3$ wins in the first $i-1$ games, and the last game
+being a win. $P(N=i) = 2\binom{i-1}{3}(\frac{1}{2})^{3}(\frac{1}{2})^{i-1-3}
+\frac{1}{2} = 2\binom{i-1}{3}(\frac{1}{2})^{i}.$ Note that the factor of $2$ in
+$P(N=i)$ is to account for either of the two players winning after $i$ games.
+
+Then, $$\text{E}(N) = 2\sum_{i=4}^{7} i\binom{i-1}{3}(\frac{1}{2})^{i}
+\approx
+5.81$$
+
+$$\text{Var}(N) = \text{E}(N^{2}) - (\text{E}(N))^{2} \approx 1.06$$
