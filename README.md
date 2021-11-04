@@ -5,7 +5,7 @@ Contributed solutions to end of chapter exercises in <i>Introduction to Probabil
 The book contains many fantastic exercises that help develop intuition for thinking probabilistically. The authors provide solutions to some of these exercises on the book [website](https://projects.iq.harvard.edu/stat110/home), but most don't have published solutions. This repository aims to provide solutions for self-learners.
 
   <p>
-    <a href="https://fifthist.github.io/solved-problems-in-probability/"><strong>Solved Problems (Recordings): Part I »</strong></a>
+    <a href="https://fifthist.github.io/Introduction-To-Probability-Blitzstein-Solutions/"><strong>Solutions »</strong></a>
   </p>
 
 <!-- CONTRIBUTING -->
