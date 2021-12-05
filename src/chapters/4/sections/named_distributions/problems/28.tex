@@ -1,0 +1,17 @@
+Let $I_{k}$ be the indicator variable for the $k$-th location, so that $I_{k}=1$
+if
+$k$-th location has a treasure and $I_{k}=0$ otherwise.
+
+Let $X$ be number of locations William checks to get $t$ treasures, and $X_{j}
+\sim \text{HGeom}
+(t-1,n-1-(t-1),j)$ be the number of treasures found within $j$ checked
+locations.
+
+By symmetry. $P(I_{k}=1) = \frac{t}{n}$. Then,
+
+$$P(X = k) = P(I_{k}=1)P(X_{k-1}=t-1) = \frac{t}{n}\frac{\binom{t-1}
+{t-1}\binom{n-1-t+1}{k-1-t+1}}{
+\binom{n-1}{k-1}} = \frac{t}{n}\frac{\binom{n-t}{k-t}}{\binom{n-1}{k-1}}$$
+
+$$\text{E}(X) = \sum_{k=t}^{n}k P(I_{k}=1)P(X_{k-1}=t-1) = \sum_{k=t}^{n}(k
+\frac{t}{n}\frac{\binom{n-t}{k-t}}{\binom{n-1}{k-1}}) = \frac{(n+1)t}{t+1}$$
