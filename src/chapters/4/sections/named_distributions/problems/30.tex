@@ -1,0 +1,23 @@
+\begin{enumerate}[label=(\alph*)]
+\item 
+\begin{align*}
+\text{E}(Xg(X)) &= \sum_{x=0}^{\infty}xg(x)\frac{\text{e}^{-\lambda}
+(\lambda)^{x}}{x!} \\
+&= \sum_{x=1}^{\infty}xg(x)\frac{\text{e}^{-\lambda}
+(\lambda)^{x}}{x!} \\
+&= \lambda\sum_{x=1}^{\infty}g(x)\frac{\text{e}^{-\lambda}
+(\lambda)^{x-1}}{(x-1)!} \\
+&= \sum_{x=0}^{\infty}g(x+1)\frac{\text{e}^{-\lambda}
+(\lambda)^{x}}{(x)!} = \lambda\text{E}(g(X+1))
+\end{align*}
+
+\item 
+\begin{align*}
+\text{E}(X^{3}) &= \text{E}(XX^{2}) \\
+&= \lambda\text{E}((X+1)^{2}) \\
+&= \lambda(\text{E}(X^{2}) + \text{E}(2X) + 1) \\
+&= \lambda(\lambda\text{E}(X+1) +
+2\lambda + 1) = \lambda(\lambda(\lambda + 1) + 2\lambda + 1) \\
+&= \lambda(\lambda^{2} + 3\lambda + 1)
+\end{align*}
+\end{enumerate}
