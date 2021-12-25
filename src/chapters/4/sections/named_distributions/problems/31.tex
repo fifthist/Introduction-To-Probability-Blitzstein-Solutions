@@ -1,0 +1,26 @@
+\begin{enumerate}[label=(\alph*)]
+\item
+\begin{equation*}
+P(X) = 
+    \left\{
+        \begin{array}{ll}
+            p + (1-p)\text{Poiss}(X = k) & \quad k = 0 \\
+            (1-p)\text{Poiss}(X = k) & \quad k > 0
+        \end{array}
+    \right.
+\end{equation*}
+
+\item First, notice that $(1-I)Y \in \{0,1,2,\dots\}$. $(1-I)Y = 0$ if $I=1$, or
+$Y=0$. Thus $P((1-I)Y = 0) = p + (1-p)P(Y=0)$. For any other value $k$ of $
+(1-I)Y$, it is achieved if $I = 0$ and $Y = k$. Thus, $P((1-I)Y = k) = (1-p)P(Y
+= k)$.
+\item $\text{E}(X) = (1-p)\sum_{k=1}^{\infty}k\frac{e^{-\lambda}\lambda^{k}}{k!}
+= (1-p)\text{E}(\text{Poss}(\lambda)) = (1-p)\lambda$.
+
+$\text{E}(X) = \text{E}((1-I)Y) = \text{E}(1-I)\text{E}(Y) = (1-p)\lambda$.
+
+\item $\text{Var}(X) = \text{E}(X^{2}) - (\text{E}(X))^{2}$. $\text{E}(X^{2}) =
+(1-p)e^{-\lambda}\sum_{k=1}^{\infty}k^{2}\frac{\lambda^{k}}{k!} = (1-p)\lambda
+(1+\lambda)$. Thus, $\text{Var}(X) = (1-p)\lambda(1+\lambda) - ((1-p)\lambda)^
+{2} = (1-p)\lambda(1 + p\lambda)$.
+\end{enumerate}
