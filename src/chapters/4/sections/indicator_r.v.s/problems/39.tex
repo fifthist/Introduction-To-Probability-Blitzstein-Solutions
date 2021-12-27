@@ -1,0 +1,13 @@
+Let $I_{j,1}$ and $I_{j,2}$ be the indicator random variables for the $j$-th
+person being sampled by the first and second researchers respectively.
+
+$P(I_{j,1} = 1) = \frac{\binom{N-1}{m-1}}{\binom{N}{m}}$. $P(I_{j,2} = 1) = 
+\frac{\binom{N-1}{n-1}}{\binom{N}{n}}$. Since sampling is done independently by
+the two researchers, $P(I_{j,1} = 1, I_{j,2} = 1) = \frac{\binom{N-1}{m-1}\binom{N-1}{n-1}}{
+\binom{N}{m}\binom{N}{n}}$.
+
+Let $X = \sum_{j=1}^{n}(I_{j,1}I_{j,2})$ be the number of people sampled by
+both researchers. Then, $$\text{E}(X) = \text{E}(\sum_{j=1}^{n}(I_{j,1}I_{j,2})) =
+\sum_{j=1}^{n}\text{E}(I_{j,1}I_{j,2}) = \sum_{j=1}^{n}\frac{\binom{N-1}{m-1}\binom{N-1}{n-1}}{
+\binom{N}{m}\binom{N}{n}} = n\frac{\binom{N-1}{m-1}\binom{N-1}{n-1}}{
+\binom{N}{m}\binom{N}{n}}$$
