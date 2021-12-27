@@ -1,0 +1,13 @@
+Notice that $$I(A_{1} \cap A_{2} \cdots \cap A_{n}) \geq \sum_{i=1}^{n}I(A_{i})
+- n + 1$$ because the left-hand side is either $0$, or $1$, so the question
+reduces to whether the left-hand side is ever $0$, while the right-hand side is
+$1$. Notice that this is not possible, becuase if the left-hand side is $0$,
+then $A_{j} = 0$ for some $j$. Thus, $\sum_{i=1}^{n}I(A_{i}) < n \implies \text
+{R.H.S.} < 1$.
+
+Then,
+
+$$I(\bigcap_{i=1}^{n}A_{i}) \geq \sum_{i=1}^{n}I(A_{i})
+- n + 1 \implies \text{E}(I(\bigcap_{i=1}^{n}A_{i})) \geq \text{E}
+(\sum_{i=1}^{n}I(A_{i}) - n + 1) \implies P(\bigcap_{i=1}^{n}A_{i})
+\geq \sum_{i=1}^{n}P(A_{i}) - n + 1$$
