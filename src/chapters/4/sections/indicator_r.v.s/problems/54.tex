@@ -1,0 +1,23 @@
+\begin{enumerate}[label=(\alph*)]
+\item Since $P(W_{j} = y_{k})$
+for $1 \leq k \leq N$ is $\frac{\binom{N-1}{n-1}}{\binom{N}{n}}\frac{1}{n} =
+\frac{n}{N}\frac{1}{n} = \frac{1}{N}$,
+$$\text{E}(W_{j}) = \frac{1}{N}\sum_{k=1}^{N}y_{k}.$$
+Thus,
+
+\begin{align*}
+\text{E}(\overline{W}) &= \frac{1}{n}\sum_{j=1}^{n}(\frac{1}{N}\sum_{k=1}^{N}y_{k}) \\
+&= \frac{1}{N}\sum_{k=1}^{N}y_{k} \\
+&= \overline{y}
+\end{align*}
+
+\item Since $$\overline{W} = \frac{1}{n}\sum_{j=1}^{N}(I_{j}y_{j})$$ where $I_{j}$
+is the
+indicator variable for the $j$-th person being in the sample. Then, 
+
+\begin{align*}
+\text{E}(\overline{W}) &= \frac{1}{n}\sum_{j=1}^{N}\frac{n}{N}y_{j}\\
+&= \frac{1}{N}\sum_{k=1}^{N}y_{k} \\
+&= \overline{y}
+\end{align*}
+\end{enumerate}
