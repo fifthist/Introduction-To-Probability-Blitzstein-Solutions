@@ -1,0 +1,12 @@
+\begin{enumerate}[label=(\alph*)]
+\item Let $I_{j}$ be the indicator variable for shots $j$ to $j+6$ being
+successful. The total number of succesful, consecutive, $7$ shots is $X = \sum_
+{i=1}^{n}I_{j}$. Then, $$\text{E}(X) = \sum_{i=1}^{n}\text{E}(I_{j}) = \sum_
+{i=1}^{n}P(I_{j}=1) = \sum_{i=1}^{n}p^{7} = np^{7}$$
+
+\item Thinking of each block of $7$ shots as a single trial with probability $p^
+{7}$ of success, let $Y \sim \text{Geom}(p^{7})$ be the number of
+failed $7$-block shots taken until the first succesful $7$-shot block. Then, $$
+\text{E}(X) = 7(1 + \text{E}(Y)) = 7 + \frac{7-7p^{7}}{p^{7}} = \frac{7p^{7} + 7
+- 7p^{7}}{p^{7}} = \frac{7}{p^{7}}$$
+\end{enumerate}

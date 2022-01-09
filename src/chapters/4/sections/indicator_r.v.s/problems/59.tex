@@ -1,0 +1,39 @@
+\begin{enumerate}[label=(\alph*)]
+\item WLOG, let $m_{1} > m$
+be the second median of $X$. Then, by the
+definition of medians, $P(X \leq m) \geq \frac{1}{2}$ and $P(X \geq m_{1}) \geq 
+\frac{1}{2}$. Then, $P(X \in (m,m_{1})) = 0$. If $m_{1} > m + 1$, then
+there exists an $m_{2} \in (m, m_{1})$, such that $P(X = m_{2}) = 0$. This
+implies that $m_{2} = 1$, since that is the only value of $X$ with
+probability $0$. However, then $m < 1$, which precludes $m$ from being a
+median. Thus, $m_{1}$ must be $1 + m$. Since we know $23$ to be a median of $X$,
+we need to check whether $22$ or $24$ are medians of $X$. Computation via the
+CDF of $X$ shows that niether $22$, nor $24$ are medians. Hence, $23$ is the
+only median of $X$.
+
+\item Let $I_{j}$ be the indicator variable for the event $X \geq j$. Notice
+that the event $X = k$ (the first occurance of a birthday match happens when
+there are $k$ people) implies that $I_{j}=1$ for $j \leq k$ and vice versa.
+Thus, $$X = \sum_{j=1}^{366}I_{j}$$. 
+
+Then, $$\text{E}(X) = \sum_{j=1}^{366}P(I_{j}=1) = 1 + 1 + \sum_{j=3}^{366}P(I_
+{j}=1) = 2 + \sum_{j=3}^{366}p_{j}$$
+
+\item $2 + 22.61659 = 24.61659$
+
+\item $\text{E}(X^{2}) =
+\text{E}(I_{1}^{2} + \dots + I_{366}^{2} + 2\sum_{j=2}^
+{366}\sum_{i=1}^{j-1}(I_{i}I_{j}))$. Note that $I_{i}^{2} = I_{i}$ and $I_{i}I_
+{j} = I_{j}$ for $i < j$. Thus,
+
+\begin{align*}
+\text{E}(X^{2}) &= \text{E}(I_{1} + \dots + I_{366} + 2\sum_{j=2}^
+{366}\sum_{i=1}^{j-1}I_{j}) \\
+&= 2 + \sum_{j=3}^{366}p_{j} + 2\sum_{j=2}^{366}((j-1)\text{E}(I_{j})) \\
+&= 2 + \sum_{j=3}^{366}p_{j} + 2\sum_{j=2}^{366}((j-1)p_{j}) \\
+&\approx 754.61659
+\end{align*}
+
+$\text{Var}(X) \approx 754.61659 - (\text{E}(X))^{2} \approx 754.61659 - 605.98 =
+148.63659$.
+\end{enumerate}
