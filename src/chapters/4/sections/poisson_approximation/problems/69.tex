@@ -1,0 +1,12 @@
+Let $I_{j}$ be the event that the $j$-th person in the sample is picked
+exactly once. 
+
+Let $X = \sum_{j=0}^{1000}I_{j}$ be the total number of people that
+are sampled once. Since $P(I_{j}=1) = (\frac{10^{6}-1}{10^{6}})^{999}$,
+$\text{E}(X) = \sum_{j=0}^{1000}P(I_{j}=1) = \sum_{j=0}^{1000}
+\frac{10^{6}-1}{10^{6}}^{999} \approx 999$. Thus, the expected number of
+people sampled more than once is $1$.
+
+Let $Z \sim \text{Poiss}(1)$ approximate the number of people sampled more than
+once. Then, $P(\text{a person is sampled more than once}) \approx P(Z > 0) = 1 -
+e^{-1} \approx 0.63$.
