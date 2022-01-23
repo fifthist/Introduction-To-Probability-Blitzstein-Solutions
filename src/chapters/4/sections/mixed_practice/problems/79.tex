@@ -1,0 +1,24 @@
+\begin{enumerate}[label=(\alph*)]
+\item Let $X \sim FS(\frac{1}{m})$ be the number of guesses made by the hacker.
+Then, $\text{E}(X) = m$.
+
+\item Suppose $w_{1}, w_{2}, w_{3}, \dots, w_{m}$ is the sequence of passwords
+sampled by the hacker. Since, every permutation of the $m$ words is equally
+likely, the probability that the correct password is $w_{i}$ is $\frac{(m-1)!}
+{m!} = \frac{1}{m}$. Then $\text{E}(X) = \frac{1}{m}\sum_{i=1}^{m}i = \frac{1}
+{m}\frac{m(m+1)}{2} = \frac{m+1}{2}$.
+
+\item Both $m$ and $\frac{m+1}{2}$ are positively sloped lines, intersecting at
+$m=1$. For $m=2$, $m > \frac{m+1}{2}$. Thus, $m > \frac{m+1}{2}$ for all $m >
+1$. This makes intuitive sense since when the hacker samples passwords without
+replacement, the number of possible passwords reduces.
+
+\item With replacement, $P(X = k) = (\frac{m-1}{m})^{k-1}\frac{1}{m}$ for $1
+\leq k < n$ and $P(X=n) = (\frac{m-1}{m})^{n-1}\frac{1}{m} + (\frac{m-1}{m})^
+{n}$.
+
+In the case of sampling without replacement, since all orderings of the passwords
+sampled by the hacker are equally likely, $P(\text{hacker samples k passwords})
+= \frac{1}{m}$ for $1 \leq k < n$, and $P(\text{hacker samples n passwords}) =
+\frac{1}{m} + \frac{m-n}{m}$.
+\end{enumerate}
