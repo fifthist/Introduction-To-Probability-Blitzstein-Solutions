@@ -1,0 +1,55 @@
+\begin{enumerate}[label=(\alph*)]
+\item Suppose the population consists of $n$ people (excluding me). Let $I_{j}$
+be the indicator variable for the $j$-th person having the same birthday as me.
+Then, the expected number of people with the same birthday as me is $\text{E}(X)
+= \sum_{i=1}^{n}P(I_{j}=1) = \sum_{i=1}^{n}\frac{1}{365} = \frac{n}{365}$.
+
+Let $Z \sim \text{Poss}(\frac{n}{365})$ model the distribution of the number of
+people in the population with the same birthday as me. Then, the probability
+that there is at least one person with the same birthday as me is $1 - P(Z=0) =
+1 - e^{-\frac{n}{365}}$.
+
+$$1 - e^{-\frac{n}{365}} >= 0.5 \implies \frac{n}{365} > -\ln(0.5) \implies n >
+252$$
+
+\item By similar logic to part $a$, $\text{E}(X) = \frac{\binom{n}{2}}{365
+\times 24}$. $1
+- P(Z=0) = 1 - e^{-\frac{\binom{n}{2}}{365 \times 24}}$.
+
+$$1 - e^{-\frac{\binom{n}{2}}{365 \times 24}} >= 0.5 \implies \frac{\binom{n}
+{2}}{365 \times 24} > -\ln(0.5) \implies n > 110$$
+
+\item Since Poisson approximation is completely determined by the expectation of
+the underlying random variable, we need to increase the population size so
+that the expectation of the number of pairs
+with the desired property is the same as the expectation of the number of pairs
+with the same birthday when population size is $23$. Since, $\text{E}(X) = 
+\frac{1}{24}\text{E}(Y)$, where $Y$ is the number of pairs of people that share a
+birthday, the population needs to be increased to have $24$ times
+more pairs.
+
+$$\binom{n}{2}= 24 * \binom{23}{2} \implies n \approx 110$$.
+
+\item Let $X$ be the number of triplets with the same birthday. Let $I_{j}$ be
+the indicator random variable for triplet $j$ having the same birthday. Then,
+$\text{E}(X) = \binom{100}{3}(\frac{1}{365})^{2} \approx 1.21$. Then, $X$ can
+be approximated
+with $Z \sim \text{Poiss}(1.21)$. $P(\text{at
+least one triplet with the same birthday}) \approx 1 - P(Z=0) = 1 - e^{-1.21}
+\approx
+0.7.$
+
+Another way to approximate the desired probability is to let $I_{j}$ be the
+indicator variable that there is a triplet born on day $j$. $P(I_{j}=1) = 1 - ((
+\frac{364}{365})^{100} + 100\frac{1}{365}(\frac{364}{365})^{99} + \binom{100}{2}
+\frac{1}{365^{2}}(\frac{364}{365})^{98}) \approx 0.003$. Then, the expected
+number of days for which there is a triplet born on that day is approximately
+equal to $365 * 0.003 = 1.095$.
+
+Then, the probability that there is at least one triplet born on the same day
+can be approximated using $Z \sim \text{Poiss}(1.095)$ - the number of days for
+which there is a triplet born on that day. The desired probability is $1 - P
+(Z=0) = 1 - e^{-1.095} \approx 0.66$.
+
+Thus, the second method is a closer approximation for the desired probability.
+\end{enumerate}

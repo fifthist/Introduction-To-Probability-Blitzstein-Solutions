@@ -1,0 +1,12 @@
+Let $I_{j}$ be the indicator random variable for pair $j$ having the
+aforementioned property. $P(I_{j}=1) = \frac{1}{365^{2}}$, under the assumption
+that the probability of being born on a particular day is $\frac{1}{365}$. Note
+that since we don't know anything about the age of the kids, we are assuming
+their mothers are also equally likely to be born on any of the $365$ days.
+
+Then, the expected number of pairs with the aforementioned property is $\text{E}
+(X) = \binom{90}{2}\frac{1}{365^{2}} \approx 0.03$.
+
+Let $Z \sim \text{Poiss}(0.03)$ model the distribution of pairs with the desired
+property. Then, probability that there is at least one such pair is $1 - P(Z=0)
+= 1 - e^{-0.03} \approx 1 - (1 - 0.03) = 0.03 = \frac{3}{100}$.
