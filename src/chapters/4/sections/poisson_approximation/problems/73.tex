@@ -1,0 +1,22 @@
+\begin{enumerate}[label=(\alph*)]
+\item Let $X$ be the number of people that play the same opponent in both
+rounds. Let $I_{j}$ be the indicator variable that person $j$ plays against the
+same opponent twice. $P(I_{j}=1) = \frac{1}{100}$. Then, $\text{E}(X) = \sum_
+{j=1}^{100}P(I_{j}=1) = 1$.
+
+\item There is a strong dependence between trials. For instance, if we know that
+the first $50$ players played the same opponent twice, then all of the players
+played the same opponents twice.
+
+\item Consider the $50$ pairs that played each other in round one. Let $I_{j}$
+be the indicator variable for pair $j$ playing each other again in the second
+round. $P(I_{j}=1) = \frac{1}{100}$. Then, the expected number of pairs that
+play the same opponent twice is $\text{E}(X) = \frac{50}{100} = \frac{1}{2}$.
+
+We can approximate the number of pairs that play against one another in both
+rounds, $X$,  with $Z \sim \text{Poiss}(\frac{1}{2})$. $P(X = 0) \approx P(Z =
+0) = e^{-\frac{1}{2}} \approx 0.6$.
+
+$P(X = 2) \approx P(Z = 2) = \frac{(\frac{1}{2})^{2}e^{-\frac{1}{2}}}{2!}
+\approx 0.08$.
+\end{enumerate}
