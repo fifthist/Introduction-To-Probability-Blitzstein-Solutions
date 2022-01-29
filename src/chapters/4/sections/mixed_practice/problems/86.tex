@@ -1,0 +1,20 @@
+\begin{enumerate}[label=(\alph*)]
+\item $P(X=x,Y=y,Z=z) = \frac{\binom{n_{A}}{x}\binom{n_{B}}{y}\binom{n_{C}}{z}}
+{\binom{n}{m}}$
+
+\item Let $I_{j}$ be the indicator variable for person $j$ in the sample being a
+member of party $A$. Then, $X = \sum_{i=1}^{m}I_{i} \implies \text{E}(X) =
+m\frac{n_{A}}{n}$ by symmetry.
+
+\item $\text{Var}(X) = \text{E}(X^{2}) - (\text{E}(X))^{2} = \sum_{i=1}^{n_{A}}
+(i^{2}
+\frac{\binom{n_{A}}{i}\binom{n - n_{A}}{m-i}}{\binom{n}{m}}) - (m\frac{n_{A}}
+{n})^{2}$
+
+When $m=1$, $\text{Var}(X) = \frac{n_{A}}{n} - (\frac{n_{A}}{n})^{2} = \frac{n_
+{A}}{n}(1 - \frac{n_{A}}{n}) = \frac{n_{A}}{n} \times \frac{n_{B} + n_{C}}{n}$.
+
+When $m=n$, then $\text{Var}(X)$ should be $0$, since all $n_{A}$ members of
+party $A$ are sampled. However, the above expression for $\text{Var}(X)$
+doesn't equal $0$ when $m=n$, so it is probably incorrect.
+\end{enumerate}
