@@ -1,0 +1,22 @@
+\begin{enumerate}[label=(\alph*)]
+\item Let $S$ be the sum of the ranks of the dishes we eat during both phases.
+$S = (m-k)X + \sum_{j=1}^{k}R_{j}$, where $R_{j}$ is the rank of dish $j$,
+from the exploration phase. Since $\text{E}
+(R_{j}) = \frac{n+1}{2}$, $\text{E}(S) = (m-k)\text{E}(X) + k\frac{n+1}{2}.$
+
+\item $P(X = x) = \frac{\binom{x-1}{k-1}}{\binom{n}{k}}.$
+
+\item 
+\begin{flalign}
+\text{E}(X) & = \frac{1}{\binom{n}{k}}\sum_{i=k}^{n}i\binom{i-1}{k-1} \nonumber \\
+& = \frac{1}{\binom{n}{k}}\sum_{i=k}^{n}k\binom{i}{k} \nonumber \\
+& = \frac{k}{\binom{n}{k}}\sum_
+{i=k}^{n}\binom{i}{k} \nonumber \\
+& = \frac{k}{\binom{n}{k}}\binom{n+1}{k+1} \nonumber \\
+& = \frac{k(n+1)}{k+1} \nonumber
+\end{flalign}
+
+\item Derivating $(m-k)\frac{k(n+1)}{k+1} + k\frac{n+1}{2}$ with respect to $k$
+provides an extremum of $k = \sqrt{2(m+1)} - 1$.
+
+\end{enumerate}

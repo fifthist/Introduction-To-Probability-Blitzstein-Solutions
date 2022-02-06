@@ -1,0 +1,12 @@
+\begin{enumerate}[label=(\alph*)]
+\item If $F=G$, Then, $X_{j}$ is equally likely to be in any of the $m + n$
+positions in the ordered list. 
+$$\text{E}(R) = \sum_{j=1}^{m}\text{E}(R_{j}) = \sum_{j=1}^{m}\frac{(m+n)
+(m+n+1)}{2}\frac{1}{m+n} = m\frac{m+n+1}{2}.$$
+
+\item $R_{j} = (\sum_{k=1}^{m+n-1}I_{k} + 1)$ where $I_{k}$ is the indicator
+random
+variable for $X_{j}$ being larger than the sample at index $k$ in the ordered
+list. Then $\text{E}(R_{j}) = (m+n-1)p + 1$.Thus, $\text{E}(R) = m((m+n-1)p +
+1)$.
+\end{enumerate}
