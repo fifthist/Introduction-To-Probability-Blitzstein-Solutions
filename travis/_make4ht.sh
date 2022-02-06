@@ -2,13 +2,7 @@
 
 set -e
 
-git config --global user.email "Overseer.O5.X@gmail.com"
-git config --global user.name "Fifthist"
-
-git clone https://github.com/michal-h21/make4ht.git make4ht-latest
-cp external/make4ht/make4ht-doc.tex make4ht-latest
-cd make4ht-latest
-git checkout 3d97d23
+cd external/make4ht
 make
 make install
-cd ../
+cd -
