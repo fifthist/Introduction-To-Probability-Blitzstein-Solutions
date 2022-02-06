@@ -1,8 +1,12 @@
 \begin{enumerate}[label=(\alph*)]
 \item Let $S$ be the sum of the ranks of the dishes we eat during both phases.
-$S = (m-k)X + \sum_{j=1}^{k}R_{j}$, where $R_{j}$ is the rank of dish $j$,
-from the exploration phase. Since $\text{E}
-(R_{j}) = \frac{n+1}{2}$, $\text{E}(S) = (m-k)\text{E}(X) + k\frac{n+1}{2}.$
+$S = (m-k+1)X + \sum_{j=1}^{k-1}R_{j}$, where $R_{j}$ is the rank of dish $j$,
+excluding the highest ranked dish, from the exploration phase. Since $\text{E}
+(R_{j}) = \frac{(X-1)X}{2} \times \frac{\binom{X-2}{k-2}}{(k-1)\binom{X-1}{k-1}}
+=
+\frac{(X-1)X}{2} \times \frac{1}{X-1} = \frac{X}{2}$, $
+\text{E}(S) = (m-k+1)\text{E}(X) + (k-1)\frac{\text{E}(X)}{2} = (m-k)\text{E}
+(X) + (k+1)\frac{\text{E}(X)}{2}.$
 
 \item $P(X = x) = \frac{\binom{x-1}{k-1}}{\binom{n}{k}}.$
 
@@ -16,7 +20,8 @@ from the exploration phase. Since $\text{E}
 & = \frac{k(n+1)}{k+1} \nonumber
 \end{flalign}
 
-\item Derivating $(m-k)\frac{k(n+1)}{k+1} + k\frac{n+1}{2}$ with respect to $k$
+\item Plugging $\frac{k(n+1)}{k+1}$ into the result of part $b$ and derivating $
+(m-k)\frac{k(n+1)}{k+1} + k\frac{n+1}{2}$ with respect to $k$
 provides an extremum of $k = \sqrt{2(m+1)} - 1$.
 
 \end{enumerate}
