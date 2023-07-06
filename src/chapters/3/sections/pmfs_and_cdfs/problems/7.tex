@@ -1,5 +1,12 @@
-$P(X=k) = \prod_{i=1}^{k-1}p_{i}$ for $2 \leq k \leq 7.$
+To find the probability mass function (PMF) of $X$, we need to determine the probabilities of Bob reaching each level from 1 to 7.
 
-$P(X=1)$ since Bob starts at level $1$.
+$P(X = 1)$ is simply the probability of Bob reaching level 1, which is 1 since he starts at level 1.
 
-$P(X=0)$ otherwise. 
+For $2 \leq j \leq 6$, $P(X = j)$ is the probability of reaching level $j$ but not reaching level $j+1$. 
+This can be calculated as 
+
+$P(X = j) = p_1 p_2 \cdots p_{j-1} * (1 - p_j)$.
+
+Since the game has only $7$ levels,
+
+$P(X = 7) = p_1  p_2 p_3  p_4  p_5  p_6$.
