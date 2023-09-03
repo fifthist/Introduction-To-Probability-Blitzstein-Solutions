@@ -18,6 +18,9 @@ jobs:
       with:
         node-version: '16.20'
     
+    - name: Install local version of make4ht
+      run: ./travis/_make4ht.sh
+
     - name: Build project
       run: make
 
