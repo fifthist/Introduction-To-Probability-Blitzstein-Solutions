@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.PAT }}
 
     - uses: actions/setup-node@v3
       with:
@@ -26,10 +24,8 @@ jobs:
     - name: Deploy project to website
       run: ./travis/_deploy.sh
       env:
-        GITHUB_PAT: ${{ secrets.PAT }}
-        TRAVIS_REPO_SLUG: ${{ github.repository }}
+        GITHUB_ACTOR: ${{ github.actor}}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
       if: github.ref_name == 'master' && github.event_name == 'push'
 
-    - name: Run clean-up
-      run: make clean
-      

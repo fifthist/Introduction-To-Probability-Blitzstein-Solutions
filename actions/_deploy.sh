@@ -5,7 +5,8 @@ set -e
 git config --global user.email "Overseer.O5.X@gmail.com"
 git config --global user.name "Fifthist"
 
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git site
+#git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git site
+git clone -b gh-pages https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git site
 cd site
 git rm -rf .
 touch .nojekyll
