@@ -1,5 +1,5 @@
 <!-- ABOUT THE PROJECT -->
-<img src="https://www.travis-ci.com/fifthist/Introduction-To-Probability-Blitzstein-Solutions.svg?branch=master">
+![workflow status](https://github.com/fifthist/Introduction-To-Probability-Blitzstein-Solutions/actions/workflows/makefile.yml/badge.svg)
 Contributed solutions to end of chapter exercises in <i>Introduction to Probability</i>, 2nd edition by Joe Blitzstein and Jessica Hwang. 
 
 The book contains many fantastic exercises that help develop intuition for thinking probabilistically. The authors provide solutions to some of these exercises on the book [website](https://projects.iq.harvard.edu/stat110/home), but most don't have published solutions. This repository aims to provide solutions for self-learners.
