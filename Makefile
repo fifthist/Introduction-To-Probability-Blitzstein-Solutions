@@ -1,4 +1,4 @@
-all: before_install before_script src/*
+all: before_install src/*
 	mkdir -p output/html
 	mkdir -p output/pdf
 	(cd src && exec pdflatex index.tex)
