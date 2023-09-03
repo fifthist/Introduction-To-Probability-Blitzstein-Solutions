@@ -28,7 +28,7 @@ jobs:
       env:
         GITHUB_PAT: ${{ secrets.PAT }}
         TRAVIS_REPO_SLUG: ${{ github.repository }}
-      if: github.ref_name == 'master' and github.event_name == 'push'
+      if: github.ref_name == 'master' && github.event_name == 'push'
 
     - name: Run clean-up
       run: make clean
