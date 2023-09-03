@@ -31,12 +31,3 @@ jobs:
         publish_dir: ./output/html
         enable_jekyll: false
       if: github.ref_name == 'master' && github.event_name == 'push'
-
-     #- name: Deploy project to website
-     # run: ./scripts/_deploy.sh
-     # env:
-     #   GITHUB_ACTOR: ${{ github.actor}}
-     #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     #   GITHUB_REPOSITORY: ${{ github.repository }}
-     # if: github.ref_name == 'master' && github.event_name == 'push'
-
