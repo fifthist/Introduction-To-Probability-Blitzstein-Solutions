@@ -4,7 +4,7 @@ all: before_install before_script src/*
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
-	(cd src && exec make4ht -uf html5+mathjaxnode -c ../my.cfg index.tex "html,4")
+	(cd src && exec make4ht -uf html5+mjcli+common_domfilters -c ../my.cfg index.tex "html,4")
 	(cd src && exec mv *.css *.html ../output/html)
 	(cd src && exec cp index.pdf ../output/html)
 	find ./src -type f -not \( -name '*.tex' \) -delete
@@ -16,9 +16,6 @@ before_install:
 	pip3 install --upgrade pip
 	pip3 install beautifulsoup4
 	npm -g install mathjax-node-page
-
-before_script:
-	chmod +x ./scripts/_make4ht.sh
 
 .PHONY: clean
 clean ::
