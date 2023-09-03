@@ -22,7 +22,7 @@ jobs:
       run: make
 
     - name: Deploy project to website
-      run: ./travis/_deploy.sh
+      run: ./actions/_deploy.sh
       env:
         GITHUB_ACTOR: ${{ github.actor}}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
