@@ -1,4 +1,5 @@
 all: before_install before_script src/*
+	./scripts/_make4ht.sh
 	mkdir -p output/html
 	mkdir -p output/pdf
 	(cd src && exec pdflatex index.tex)
@@ -20,7 +21,6 @@ before_install:
 before_script:
 	chmod +x ./scripts/_make4ht.sh
 	chmod +x ./scripts/_deploy.sh
-	./scripts/_make4ht.sh
 
 .PHONY: clean
 clean ::

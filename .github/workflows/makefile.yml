@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Prepare environment
+      run: make clean
+
     - uses: actions/checkout@v3
 
     - uses: actions/setup-node@v3
