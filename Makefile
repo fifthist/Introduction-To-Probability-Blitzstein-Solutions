@@ -4,7 +4,7 @@ all: before_install src/*
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
-	(cd src && exec make4ht -uf html5+mjcli+common_domfilters -c ../my.cfg index.tex "html,4")
+	(cd src && exec make4ht -uf html5+mjcli -c ../my.cfg index.tex "html,4")
 	(cd src && exec mv *.css *.html ../output/html)
 	(cd src && exec cp index.pdf ../output/html)
 	find ./src -type f -not \( -name '*.tex' \) -delete
@@ -15,6 +15,7 @@ before_install:
 	sudo apt-get install python3 python3-pip python3-setuptools
 	pip3 install --upgrade pip
 	pip3 install beautifulsoup4
+	(git clone https://github.com/michal-h21/mjcli.git && cd mjcli && npm install)
 	npm -g install mathjax-node-page
 
 .PHONY: clean
