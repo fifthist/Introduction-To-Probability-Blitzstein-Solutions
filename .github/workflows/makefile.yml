@@ -19,13 +19,13 @@ jobs:
         node-version: '16.20'
     
     - name: Install local version of make4ht
-      run: ./travis/_make4ht.sh
+      run: ./scripts/_make4ht.sh
 
     - name: Build project
       run: make
 
     - name: Deploy project to website
-      run: ./actions/_deploy.sh
+      run: ./scripts/_deploy.sh
       env:
         GITHUB_ACTOR: ${{ github.actor}}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
