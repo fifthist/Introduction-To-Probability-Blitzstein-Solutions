@@ -1,0 +1,35 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.PAT }}
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16.20'
+    
+    - name: Build project
+      run: make
+
+    - name: Deploy project to website
+      run: ./travis/_deploy.sh
+      env:
+        GITHUB_PAT: ${{ secrets.PAT }}
+        TRAVIS_REPO_SLUG: ${{ github.repository }}
+      if: github.ref_name == 'master' and github.event_name == 'push'
+
+    - name: Run clean-up
+      run: make clean
+      
