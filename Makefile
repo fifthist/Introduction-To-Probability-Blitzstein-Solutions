@@ -4,7 +4,7 @@ all: before_install src/*
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
 	(cd src && exec pdflatex index.tex)
-	(cd src && exec make4ht -uf html5+mathjaxode -c ../my.cfg index.tex "html,4")
+	(cd src && exec make4ht -uf html5+mathjaxnode -c ../my.cfg index.tex "html,4")
 	(cd src && exec mv *.css *.html ../output/html)
 	(cd src && exec cp index.pdf ../output/html)
 	find ./src -type f -not \( -name '*.tex' \) -delete
