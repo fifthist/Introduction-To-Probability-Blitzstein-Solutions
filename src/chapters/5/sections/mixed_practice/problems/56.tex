@@ -1,0 +1,31 @@
+\begin{flalign}
+    \mathbb{E}[Z^2 \Phi(z)] & = \ri x^2 \int_{-\infty}^{x} e^{-\frac{x^2}{2}} dx
+\end{flalign}
+Now
+\[\ri f(z) dz \ri f(z) dz\]
+if \(\ri f(z) dz\) is meant to be \(\lim_{a \rightarrow \infty} \int_{-a}^{a} f(z) dz\)
+So 
+\begin{flalign}
+    \mathbb{E} [z^2 \Phi(z)] & = \int x^2 \Phi(x) e^{-\frac{x^2}{2}} dx \\
+    & = \int x^2 \Phi(-x) e^{-\frac{x^2}{2}} dx \\
+    & = \int x^2 (1 - \Phi(x)) e^{-\frac{x^2}{2}} dx
+\end{flalign}
+
+So 
+\begin{flalign}
+    E[\Phi(z) z^2]  & = \int x^2 \Phi(x) e^(-\frac{x^2}{2}) dx \\
+    & = \frac{1}{2} \int x^2 e^{- \frac{x^2}{2}} \\
+    & = \frac{1}{2}
+\end{flalign}
+
+
+(b)
+\[
+    P(\Phi(z) \leq \frac{2}{3}) = P (z \leq \Phi^{-1} (\frac{2}{3})) = \Phi(\Phi^{-1} (\frac{2}{3}))
+\]
+
+(c)
+\[
+    \frac{1}{3!}
+\]
+
