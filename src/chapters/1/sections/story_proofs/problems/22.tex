@@ -19,6 +19,16 @@ participants in two ways.
   
   Since both methods count the same thing, they are equal.
 
+  \textbf{An Alternative Approach}
+  The RHS expression counts number of ways to pair two people from a group of 
+  $n+1$ people of different ages. Let's say the eldest person in the 
+  subgroup of two is also the eldest person in the whole group. Then, we would
+  have $n$ people to choose from as the second person of the sub group. If 
+  subgroup's eldest is the second-eldest in the whole group, we'd have $n-1$ 
+  people to choose from, and so on all the way to $1$. By adding these cases,
+  we get the LHS expression which covers all possibilities of pairing two people
+  from group of $n+1$, and hence is equivalent to RHS.
+
 \item LHS: If $n$ is chosen first, then the subsequent $3$ numbers can be any 
 of $0, 1, \dots, n-1$. These $3$ numbers are chosen with replacement resulting 
 in $n^{3}$ possibilities. Summing over possible values of 
