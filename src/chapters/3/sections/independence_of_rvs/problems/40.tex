@@ -1,17 +1,14 @@
 \begin{enumerate}[label=(\alph*)]
-\item $X$ and $Y$ need not have the same PMF. For example, let $Y$ represent my
-answer to the question, "What is the capital of Zimbabwe?" I believe it to be
-Harare with probability $\frac{3}{4}$, but I am not certain, so with probability
-$\frac{1}{4}$, I think it may be Bulawayo.
+\item Suppose X and Y do not have the same PMF. Then there is at least one k in the support of X such that $P(X=k)$ and $P(Y=k)$ are not equal. In particular, this means $P(X=Y| X=k)$ is less than 1 for these values of k. If it were equal to 1, we would have $P(X=Y|X=k) = P(Y=k |X=k) = P(X=k|Y=k) = 1$. Then, Bayes' Theorem would tell us that $1 = P(X=k)/P(Y=k)$, which is false if these probabilities are not equal. 
 
-Tom on the other hand knows for a fact (probability of $1$) that the captial of
-Zimbabwe is Harare.
+Having established there must exist at least one k such that $P(X=Y| X=k)$ is less than 1, we examine the LOTP:
 
-Suppose Tom gets asked first. I trust Tom, so I will always go with Tom's answer
-once I hear it. Letting $X$ and $Y$ be my and Tom's answers to the question, $P
-(X=Y) = 1$, but the PMFs of $X$ and $Y$ are different.
+$1 = P(X=Y) = \sum P(X=Y | X=k)P(X=k)$
+
+with the sum taken across values k in the support of X. Note that the sum on the right side can only equal 1 if $P(X=Y|X=k)=1$ for all k, since probabilities are less than or equal to 1 and $\sum P(X=k) = 1$. However, we've established that there must be at least one k with $P(X=Y|X=k)<1$, which means the right hand side must be less than 1. This is a contradiction of $P(X=Y)=1$ - therefore, the r.v.s must have the same PMF. 
 
 
-\item If $P(X=Y) = 1$, then $X$ and $Y$ can not be independent,
-the outcome of one fixes the outcome of the other.
+\item Let X, Y be r.v.s with probability 1 of equalling 1, and probability 0 of equalling any other value.
+
+Then for $x=y=1$ $P(X = x \wedge Y = y) = 1 = P(X=x)P(Y=y)$, and for all other possible pairs of values $x,y$, $P(X=x \wedge Y = y) = 0 = P(X=x)P(Y=y)$. Therefore, X, Y can be independent in this extreme case.
 \end{enumerate}
