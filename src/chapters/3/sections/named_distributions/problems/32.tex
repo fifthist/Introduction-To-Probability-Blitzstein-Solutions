@@ -7,8 +7,8 @@ for $0 \leq k \leq s$.
 \item 
 \begin{verbatim}
 > x = 75
-> y_phyper <- phyper(x, m = 75, n = 25, k = 10)
-> y_phyper
-[1] 1
+> y_interval <- sum(dhyper(7:10, x, 100-x, 10))
+> y_interval
+[1] 0.7853844
 \end{verbatim}
 \end{enumerate}
