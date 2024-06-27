@@ -1,14 +1,11 @@
 \begin{enumerate}[label=(\alph*)]
-\item Suppose X and Y do not have the same PMF. Then there is at least one k in the support of X such that $P(X=k)$ and $P(Y=k)$ are not equal. In particular, this means $P(X=Y| X=k)$ is less than 1 for these values of k. If it were equal to 1, we would have $P(X=Y|X=k) = P(Y=k |X=k) = P(X=k|Y=k) = 1$. Then, Bayes' Theorem would tell us that $1 = P(X=k)/P(Y=k)$, which is false if these probabilities are not equal. 
-
-Having established there must exist at least one k such that $P(X=Y| X=k)$ is less than 1, we examine the LOTP:
-
-$1 = P(X=Y) = \sum P(X=Y | X=k)P(X=k)$
-
-with the sum taken across values k in the support of X. Note that the sum on the right side can only equal 1 if $P(X=Y|X=k)=1$ for all k, since probabilities are less than or equal to 1 and $\sum P(X=k) = 1$. However, we've established that there must be at least one k with $P(X=Y|X=k)<1$, which means the right hand side must be less than 1. This is a contradiction of $P(X=Y)=1$ - therefore, the r.v.s must have the same PMF. 
-
-
+\item Suppose, toward a contradiction, that X and Y do not have the same PMF. Then there is at least one k in the support of X such that $P(X=k)$ and $P(Y=k)$ are not equal. 
+\\
+Note that if $P(X=Y)=1$, then $P(X=Y|X=k) = P(X=Y|Y=k) = P(X=k|Y=k) = P(Y=k | X=k) = 1$, as an event with probability 1 will still have probability 1 conditioned on any non-zero event.
+\\
+Using the above and examining Bayes' theorem, we have $P(X=k|Y=k) = P(Y=k|X=k)*P(X=k)/P(Y=k)$, which simplifies to $1 = P(X=k)/P(Y=k)$ as the conditional probabilities equal 1 as previously shown. However, this equality is impossible if $P(X=k) =/= P(Y=k)$. This contradicts the assumption that $P(X=Y)=1$ - therefore, X and Y must have the same PMF if they are always equal. 
+\\
 \item Let X, Y be r.v.s with probability 1 of equalling 1, and probability 0 of equalling any other value.
-
+\\
 Then for $x=y=1$ $P(X = x \wedge Y = y) = 1 = P(X=x)P(Y=y)$, and for all other possible pairs of values $x,y$, $P(X=x \wedge Y = y) = 0 = P(X=x)P(Y=y)$. Therefore, X, Y can be independent in this extreme case.
 \end{enumerate}
