@@ -1,4 +1,9 @@
-Since the expected number of rounds is $2$, if the winnings is the
-number of rounds, a fair amount is $2$ dollars. Similarly, if the
-winnings is the square of the number of rounds, then the fair amount is
-$4$ dollars.
+The probability that the game lasts \(n\) rounds is \(1/2^{n}\).\\\\
+
+Thus, if the winnings for \(n\) rounds is \(n\), we must compute \(\sum_{i=1}^{\infty}(i/2^{i})\).\\\\
+
+We know that \(\sum_{i=1}^{\infty}(x^{i})=\frac{x}{1-x}\). Deriving both sides with respect to x gives \(\sum_{i=1}^{\infty}(ix^{i-1})=\frac{1}{(1-x)^{2}}\). Multiplying by both sides gives \(\sum_{i=1}^{\infty}(ix^{i})=\frac{x}{(1-x)^{2}}\). Plugging in \(x=1/2\) gives the answer \(2\). \\\\
+
+For the second part of the problem we need to find \(\sum_{i=1}^{\infty}(i^{2}/2^{i})\).\\\\
+
+We know \(\sum_{i=1}^{\infty}(ix^{i})=\frac{x}{(1-x)^{2}}\). Deriving both sides with respect to x again, using the quotient rule, gives \(\sum_{i=1}^{\infty}(i^{2}x^{i-1})=\frac{1+x}{(1-x)^{3}}\). Multiplying both sides by \(x\) gives \(\sum_{i=1}^{\infty}(i^{2}x^{i})=\frac{x+x^{2}}{(1-x)^{3}}\). Plugging in \(x=1/2\) gives the answer of \(6\). 
