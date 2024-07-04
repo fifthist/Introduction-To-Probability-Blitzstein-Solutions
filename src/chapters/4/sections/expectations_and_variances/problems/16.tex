@@ -8,12 +8,38 @@ only two data points with a large number of students. However, when surveying
 students, there are two hundred data points with a large number of students.
 In a sense, the student's perspective overcounts the classes.
 
-\item Let $C$ be a set of $n$ classes with $c_{i}$ students for $1 \leq i \leq
-n$. The dean's view of average class size then is $\text{E}(X) = \sum_{i=1}^
-{n}\frac{c_{i}}{n}$. The students' view of average class size is $\text{E}
-(X) = \sum_{i=1}^{n}(c_{i}\frac{c_{i}}{\sum_{i=1}^{n}c_{i}})$. In the dean's
-perspective, all $c_{i}$ are equally weighted - $\frac{1}{n}$. However, in the
-students' perspective, weights scale with the size of the class. Thus, the
-students' perspective will always be larger than the dean's, unless all classes
-have the same number of students.
+\item Let the university consist of classes of size \(c_{1}, c_{2},...,c_{k}\), of which there are \(n_{1}\) classes of size \(c_{1}\), \(n_{2}\) classes of size \(c_{2}\), etc, up to \(n_{k}\) classes of size \(c_{k}\). \\
+
+Let N be the total number of classes, with \(N = \sum\limits_{i=1}^{i=k}n_{i}\), and P be the total population of the university, with \(P = \sum\limits_{i=1}^{i=k}n_{i}c_{i}\).\\
+
+Let \(X\) be the number of students in a random class. Let \(Y\) be the size of a random student's class.\\
+
+We have \textbf{Equation 1: }\(E(X) = \sum\limits_{i=1}^{i=k}\frac{n_{i}}{N}c_{i}\).\\
+
+We also have \textbf{Equation 2: }\(E(Y) = \sum\limits_{i=1}^{i=k}\frac{n_{i}*c_{i}}{P}c_{i}\). \\
+
+We must prove \(E(X) >= E(Y)\).\\
+
+Since variance is non-negative, we know \(E(X^{2}) \geq (E(X))^{2}\). This will give us
+
+\[\sum\limits_{i=1}^{i=k}\frac{n_{i}}{N}c_{i}^{2} \geq (\sum\limits_{i=1}^{i=k}\frac{n_{i}}{N}c_{i})^2\]\\
+
+Noting that N is a constant, and noting that \(\sum\limits_{i=1}^{i=k}n_{i}c_{i}=P\), this rearranges to \textbf{Inequality 3: }\[N*\sum\limits_{i=1}^{i=k}(n_{i}c_{i}^{2}) \geq P*\sum\limits_{i=1}^{i=k}(n_{i}c_{i})\]
+
+If we divide both sides by \(N*P\) and then compare to Equations 1 and 2, we realize that Inequality 3 is equivalent to \(E(X) \geq E(Y)\). \\
+
+Next, we shall prove that equality only occurs if all the \(c_{i}\) are equal. If we expand \(N\) and \(P\) in Inequality 3 and expand out terms, we get:
+
+\[\sum\limits_{i=1}^{i=k}(n_{i}^{2}c_{i}^{2}) + \sum\limits_{i\neq j}(n_{i}n_{j}c_{i}^{2}) \geq \sum\limits_{i=1}^{i=k}(n_{i}^{2}c_{i}^{2}) + \sum\limits_{i\neq j}(n_{i}n_{j}c_{i}c_{j})\]
+
+which simplifies to:
+
+\[\sum\limits_{i\neq j}(n_{i}n_{j}c_{i}^{2}) \geq \sum\limits_{i\neq j}(n_{i}n_{j}c_{i}c_{j})\]
+
+Subtracting the right side from both sides of the equation, we observe that this is equivalent to:
+
+\[\sum\limits_{i\neq j}(n_{i}n_{j}(c_{i}-c_{j})^{2}) \geq 0\]
+
+Assuming that the \(n_{i},n_{j}\) are positive, equality only holds here if \(c_{i}=c_{j}\) for all distinct \(i,j\), concluding our proof. 
+
 \end{enumerate}
