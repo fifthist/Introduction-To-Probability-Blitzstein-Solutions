@@ -1,12 +1,3 @@
-Let $I_{j}$ be the event that the $j$-th person in the sample is picked
-exactly once. 
+There are \({1000\choose 2}\) pairs of sampled individuals - each pair has a \(\frac{1}{10^{6}}\) chance of being the same person. Therefore, we can estimate the "rate of occurrence" of a pair being the same person as \({1000\choose 2}*\frac{1}{10^{6}} = \frac{1000*999}{2*10^{6}} \approx \frac{10^{6}}{2*10^{6}} = 1/2\). Therefore, the number of pairs in the sample that are the same person can be approximated by Pois(1/2).\\
 
-Let $X = \sum_{j=0}^{1000}I_{j}$ be the total number of people that
-are sampled once. Since $P(I_{j}=1) = (\frac{10^{6}-1}{10^{6}})^{999}$,
-$\text{E}(X) = \sum_{j=0}^{1000}P(I_{j}=1) = \sum_{j=0}^{1000}
-\frac{10^{6}-1}{10^{6}}^{999} \approx 999$. Thus, the expected number of
-people sampled more than once is $1$.
-
-Let $Z \sim \text{Poiss}(1)$ approximate the number of people sampled more than
-once. Then, $P(\text{a person is sampled more than once}) \approx P(Z > 0) = 1 -
-e^{-1} \approx 0.63$.
+Then the probability that there is at least one pair in the sample that are the same person is \(1-e^{-0.5} = 0.393\). This can be verified as a close approximation in R - the probability that every individual in the sample is unique is the last value resulting from the command cumprod(1-(0:999)/1000000), which is .6067. 1 minus this value gives .3933, the actual probability some two sampled individuals are the same person, which is very close to our Poisson approximation. 
