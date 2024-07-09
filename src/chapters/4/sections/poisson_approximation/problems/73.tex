@@ -1,26 +1,24 @@
 \begin{enumerate}[label=(\alph*)]
 \item Let $X$ be the number of people that play the same opponent in both
 rounds. Let $I_{j}$ be the indicator variable that person $j$ plays against the
-same opponent twice. $P(I_{j}=1) = \frac{1}{100}$. Then, $\text{E}(X) = \sum_
-{j=1}^{100}P(I_{j}=1) = 1$.
+same opponent twice. $P(I_{j}=1) = \frac{1}{99}$. Then, $\text{E}(X) = \sum_
+{j=1}^{100}P(I_{j}=1) = 100/99$.
 
 \item There is a strong dependence between trials. For instance, if we know that
 the first $50$ players played the same opponent twice, then all of the players
-played the same opponents twice.
+played the same opponents twice. Moreover, knowing each of the $I_{i}$ gives us perfect information about one other $I$ - they are strongly pairwise dependent.
 
 \item Consider the $50$ pairs that played each other in round one. Let $I_{j}$
 be the indicator variable for pair $j$ playing each other again in the second
-round. $P(I_{j}=1) = \frac{1}{100}$. Then, the expected number of pairs that
-play the same opponent twice is $\text{E}(X) = \frac{50}{100} = \frac{1}{2}$.
+round. $P(I_{j}=1) = \frac{1}{99}$. Then, the expected number of pairs that
+play the same opponent twice is $\text{E}(Z) = \frac{50}{99} \approx \frac{1}{2}$.
 
 We can approximate the number of pairs that play against one another in both
-rounds, $X$,  with $Z \sim \text{Poiss}(\frac{1}{2})$. $P(X = 0) \approx P(Z =
+rounds with $Z \sim \text{Poiss}(\frac{1}{2})$. Note that $X=2Z$. $P(X = 0) \approx P(Z =
 0) = e^{-\frac{1}{2}} \approx 0.6$.
 
-$P(X = 2) \approx P(Z = 2) = \frac{(\frac{1}{2})^{2}e^{-\frac{1}{2}}}{2!}
-\approx 0.08$.
+$P(X = 2) \approx P(Z = 1) = \frac{(\frac{1}{2})^{1}e^{-\frac{1}{2}}}{1!}
+\approx 0.32$.
 
-This solution doesn't seem correct to me, because the trials are dependent. For
-instance, in the extreme case, if we know that $49$ of the $50$ pairs play
-together again, then the last pair also play again.
+Note that the approximation in part C is more accurate - the independence of the same pairs playing against each other is much stronger than the independence of individuals who play the same opponent. Knowing that the players in Game 1 of round 2 played against each other in round 1 gives us very little information about whether players in any other games also played against each other. Whereas, knowing that Player 1 in round 2 plays against the same player (say, player 71) guarantees that we know that that player 71 also plays against the same player.  
 \end{enumerate}
