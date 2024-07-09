@@ -6,15 +6,19 @@
 member of party $A$. Then, $X = \sum_{i=1}^{m}I_{i} \implies \text{E}(X) =
 m\frac{n_{A}}{n}$ by symmetry.
 
-\item $\text{Var}(X) = \text{E}(X^{2}) - (\text{E}(X))^{2} = \sum_{i=1}^{n_{A}}
-(i^{2}
-\frac{\binom{n_{A}}{i}\binom{n - n_{A}}{m-i}}{\binom{n}{m}}) - (m\frac{n_{A}}
-{n})^{2}$
+\item Let's find \(E(X^{2})\). If we square the expression for the sum of \(X\)'s constituent indicator r.v.s, we get\\
+
+\(E(X^{2}) = \sum_{i=1}^{m}E(I_{i}^{2}) + 2*\sum_{i < j, 1 \leq j \leq m}E(I_{i}I_{j})\)\\
+
+
+Since \(I_{i}^{2} = I_{i}\), we have \(\sum_{i=1}^{m}E(I_{i}^{2}) = \frac{m*n_{A}}{n}\)\\
+
+Additionally, for any pair \(i,j\), the r.v. \(I_{i}I_{j}\) equals 1 only when some pair of samples are both members of party A, which occurs with probability \(\frac{n_{A}(n_{A}-1)}{n(n-1)}\). There are \({m \choose 2}\) pairs \(i,j\). Therefore, the expression \(2*\sum_{i < j, 1 \leq j \leq m}E(I_{i}I_{j})\) evaluates to \(\frac{n_{A}m(m-1)(n_{A}-1)}{n(n-1)}\).\\
+
+Finally, we have \(E(X^{2})\), so now we can write \[Var(X) = E(X^{2})-EX^{2}= \frac{m*n_{A}}{n} + \frac{n_{A}m(m-1)(n_{A}-1)}{n(n-1)} - \frac{m^{2}n_{A}^{2}}{n^{2}}\]
 
 When $m=1$, $\text{Var}(X) = \frac{n_{A}}{n} - (\frac{n_{A}}{n})^{2} = \frac{n_
 {A}}{n}(1 - \frac{n_{A}}{n}) = \frac{n_{A}}{n} \times \frac{n_{B} + n_{C}}{n}$.
 
-When $m=n$, then $\text{Var}(X)$ should be $0$, since all $n_{A}$ members of
-party $A$ are sampled. However, the above expression for $\text{Var}(X)$
-doesn't equal $0$ when $m=n$, so it is probably incorrect.
+When $m=n$, Var(X) = 0. This makes sense, as if the sample is the entire population, we always get the same number of members of party A in our sample (all of them), so there is no variation. 
 \end{enumerate}
