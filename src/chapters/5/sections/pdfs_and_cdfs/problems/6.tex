@@ -1,0 +1,14 @@
+a. For \(X \sim Unif(0,1)\), \(F(k) = k\) for \(0<k<1\), \(E(X) = 1/2\), \(Var(X) = 1/12\), \(STD(X) = 1/2\sqrt{3}\).\\
+Then the probability X is within one standard deviation of its mean is \(P(\frac{\sqrt{3}-1}{2\sqrt{3}} < X < \frac{\sqrt{3}+1}{2\sqrt{3}}) = F(\frac{\sqrt{3}+1}{2\sqrt{3}}) - F(\frac{\sqrt{3}-1}{2\sqrt{3}}) = \frac{1}{\sqrt{3}}\). \\
+
+The probability that X is within two standard deviations of its mean is 1, as the mean plus two standard deviations \(1/2+1/\sqrt{3}\) exceeds 1 and the mean minus two standard deviations is less than 0 - since X always takes values between 0 and 1, X is always within 2 standard deviations of its mean. Similarly, it is always within 3 standard deviations of the mean. \\
+
+b. We have \(E(X) = 1\) and \(Var(X) = 1\). \(F(k) = 1-e^{-k}\). Also note that \(P(X<0) = 0\) for an exponential distribution. \\
+
+1 standard deviation: \(P(0<X<2) = F(2)-F(0) = F(2) = 1-e^{-2}\)\\
+2 standard deviation: \(P(-1<X<3) =P(0<X<3) =F(3)-F(0) = F(3) = 1-e^{-3}\)\\
+3 standard deviation: \(P(-2<X<4) =P(0<X<4) =F(4)-F(0) = F(4) = 1-e^{-4}\)\\
+
+c. If \(Y \sim Expo(1/2)\), then \(Y=2X\) where \(X\sim Expo(1)\), \(E(Y)=2\), \(Var(Y)=4\), \(STD(Y) = 4\). In general, we note that if \(Y \sim Expo(\lambda)\) then \(Y = X/\lambda\) and \(E(Y) = 1/\lambda\) and \(STD(Y) = 1/\lambda\). \\
+
+Then we can realize the following pattern: the probability that Y is \(n\) standard deviations away from its mean is \(P(-(n-1)/\lambda < Y < (n+1)\lambda) = P(0<Y<(n+1)/\lambda) = F((n+1)/\lambda) = 1-e^{\lambda(n+1)/\lambda} = 1-e^{n+1}\)
