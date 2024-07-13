@@ -1,0 +1,20 @@
+Recall from problem 12 that the CDF of Y, the length of the longer piece, is \(F(k) = 2k-1\).
+
+a. Let us find the CDF of \(X/Y\). 
+
+\[P(X/Y < k) = P(\frac{1-Y}{Y} < k )= P(Y>\frac{1}{k+1}) = 1 - (\frac{2}{k+1} - 1) = \frac{2k}{k+1}\]
+
+To find the PDF, we derive the CDF using the quotient rule:
+
+\[\frac{d}{dk}(\frac{2k}{k+1}) = 2(k+1)^{-2}\]
+
+b. Note that \(X/Y\) is minimized at when X is 0 and Y is 1 and maximized at 1 when X and Y are both 1/2. So, to find \(E(X/Y)\), we must find \(\int_{0}^{1}2k(k+1)^{-2}dk\). This can be done with integration by parts, factoring out the constant 2, with \(u = k\), \(dv = (k+1)^{-2}dk\), \(du = 1\), and \(v = -(k+1)^{-1}\):
+
+\[\int_{0}^{1}2k(k+1)^{-2}dk = 2((\frac{-k}{k+1})|^{1}_{0} - \int_{0}^{1}-(k+1)^{-1}dk) =2(-\frac{1}{2} + ln(2)) = 2ln(2)-1 \]
+
+c. Following similar steps as in part A, the CDF of \(Y/X\) is \(P(\frac{Y}{1-Y}<k) = P(Y<\frac{k}{k+1}) = \frac{k-1}{k+1}\). Then the PDF using the quotient rule is \(2(k+1)^{-2}\), the same as the PDF for X/Y! \\
+
+Then, we need to evaluate the same integral as in part b to find \(E(Y/X)\), but now with the limits set from 1 to infinity, since \(Y/X\) is minimized when X=Y and maximized when Y=1 and X=0:
+
+\[\int_{1}^{\infty}2k(k+1)^{-2}dk = 2((\frac{-k}{k+1})|^{\infty}_{1} - \int_{1}^{\infty
+}-(k+1)^{-1}dk) = 2((-1/2) + ln(\infty) - ln(2)) = \infty\]
