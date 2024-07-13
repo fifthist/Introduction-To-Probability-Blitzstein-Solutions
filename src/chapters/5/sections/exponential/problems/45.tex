@@ -1,0 +1,8 @@
+Let N be the number of emails received within the first 0.1 hours. Then 
+
+\(P(T>0.1) = 1 - P(T<0.1) = 1 - P(N \geq 3) = \newline 1 - (1 - P(N=0) - P(N=1) - P(N=2)) = P(N=0)+P(N=1)+P(N=2)\)\\
+
+That is, to find the probability that it takes longer than 0.1 hours for 3 emails to arrive, we find the probability it takes less than 0.1 hours for 3 emails to arrive. To do this, we realize that this is equivalent to at least 3 emails arriving in the first 0.1 hours. And to find that probability, we realize we can find the probabilities of exactly 0, 1, or 2 emails arriving in the first 0.1 hours.\\
+
+Next, we note that \(N \sim Pois(0.1*\lambda) = Pois(2)\), per the definition of a Poisson process. Then we get
+\[P(T>0.1) = P(N=0)+P(N=1)+P(N=2) = e^{-2} + 2e^{-2} + 4e^{-2}/2 = 5e^{-2} \approx 0.68\]
