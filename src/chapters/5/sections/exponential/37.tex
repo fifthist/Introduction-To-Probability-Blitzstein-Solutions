@@ -1,0 +1,11 @@
+a. We need to find the value of \(t\) such that \(F(t) = 1/2\) - this will indicate that there is a 1/2 chance that the particle has decayed before time t.\\
+
+\(1-e^{-\lambda t} = 1/2\) implies \(ln(2) = \lambda t\), so \(t = ln(2)/\lambda\)\\
+
+b. We need to compute \(P(t < T < t+\epsilon | T > t) = P(t < T < t+\epsilon)/ P(T > t)\). This is \(\frac{(1-e^{-\lambda(t+\epsilon)})-(1-e^{-\lambda t})}{e^{-\lambda t}} = 1 - e^{-\lambda\epsilon}\). Using the approximation given in the hint and the assumption that \(\epsilon\) is small enough that \(\epsilon\lambda \approx 0\), this is about \(1-(1-\epsilon\lambda) = \epsilon\lambda\).\\
+
+c. \(P(L > t) = P(T_{1}>t)P(T_{2}>t)...P(T_{n}>t) = e^{-n\lambda t}\), so \(L \sim Expo(n\lambda)\). Therefore, if \(X \sim Expo(1)\), we have \(L = X/n\lambda\). Then since \(E(X) = 1\) and \(Var(X)=1\), we can get \(E(L) = 1/(n\lambda)\) and \(Var(L) = 1/(n^{2}\lambda^{2})\)\\
+
+d. M must be equal to the sum of \(D_{1} + D_{2} + D_{3} +...+D_{n}\), where \(D_{i}\) is the amount of time between the \(i-1\)th and \(i\)th decay event. We observe that \(D_{i}\) must then be the minimum of \(n-i+1\) \(Expo(\lambda)\) variables - for example, \(D_{1}\) is the first particle to decay out of n particles, \(D_{2}\) is the first particle to decay out of the remaining n-1 particles, etc. Since \(Expo\) is memoryless, \(D_{i+1}\) is independent of \(D_{i}\) as the amount of time it takes for the next particle to decay is not affected by the amount of time it took the previous particle to decay. Therefore, \(D_{i} \sim Expo((n-i+1)\lambda)\).\\
+
+Then \(E(M) = E(D_{1}) + E(D_{2}) +... +E(D_{n}) = \frac{1}{\lambda}(\sum_{i=1}^{n}(1/n)) = \frac{1}{\lambda}(ln(n) + 0.577) \)
