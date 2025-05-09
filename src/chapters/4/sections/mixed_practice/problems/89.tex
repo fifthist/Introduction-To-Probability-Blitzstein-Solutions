@@ -1,13 +1,10 @@
 \begin{enumerate}[label=(\alph*)]
-\item Since $\text{E}(N_{C}) = 115p_{C}$, $\text{Var}(N_{C}) = \sum_{k=0}^
-{115}k^{2}p_{C}^{k} - (115p_{C})^{2}$.
+\item $N_{C}$, the number of Cs, is distributed as $Bin(115,p_{c})$. Using what we know about binomial variance (which can be re-calculated by finding the variance of the indicator r.v.s for a specific letter being C), we have $Var(N_{C}) = 115(p_{c}-p_{c}^{2})$. 
 
 \item Let $I_{j}$ be the indicator random variable that CATCAT starts at
 position $j$. Then, the expected number of CATCAT is $\text{E}(X) = 110(p_{C}p_
 {A}p_{T})^{2}$.
 
-\item In a sequence of length $6$, the desired options are CATxxx, xxxCAT. Thus,
-$P(\text{at least one CAT}) = 2(p_{C}p_{A}p_{T}(1 - p_{C}p_{A}p_{T})) + (p_{C}p_
-{A}p_{T})^{2}$.
+\item In a sequence of length $6$, the desired options are CATxxx, xCATxx, xxCATx, and xxxCAT. This at first appears to equal $4*(p_{c}p_{a}p_{t})$. However, the CATxxx and xxxCAT cases both count CATCAT, which we have overcounted by 1. None of the other cases can possibly overlap. Therefore, we obtain $$4*(p_{c}p_{a}p_{t})-(p_{c}p_{a}p_{t})^2$
 
 \end{enumerate}
