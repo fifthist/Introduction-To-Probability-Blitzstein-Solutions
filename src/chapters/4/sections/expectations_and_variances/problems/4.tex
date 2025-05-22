@@ -1,18 +1,93 @@
-Key idea is that the expected value of a die roll is $3.5$. If the value of a
-roll is less than $4$, one should roll again.
+Let's start defining some convenient r.v.s for this problem:
 
-For the winnings to be $1$, $2$ or $3$ under the above strategy, the first two
-dice need to land on a value less than $4$, and the last die needs to land on
-$1$, $2$, and $3$ respectively.
+\begin{itemize}
+    \item $D_i$: value of the i-th roll.
+    \item $w_1$: winning if one keeps playing after the first roll.
+    \item $w_2$: winning if one keeps playing after the second roll.
+\end{itemize}
 
-Thus, $P(W = i) = (\frac{3}{6})^2 * \frac{1}{6} = \frac{1}{24}$ for $i \in {1,
-2, 3}$.
 
-For the winnings to be $i \geq 4$, either the first die lands on $i$, or the
-first die lands on a value less than $4$, and the second die lands on $i$, or the
-first two dice land on values less than $4$, and the third die lands on $i$.
+The optimal strategy is to stop if the value of the last roll is greater than the expected winning if one keeps playing.
+In other words, keep rolling if doing so brings winnings that are, on average, greater than the last roll:
 
-Thus, $P(W = i) = \frac{1}{6} + \frac{3}{6} * \frac{1}{6} + (\frac{3}{6})^{2} * 
-\frac{1}{6} = \frac{7}{24}$ for $i \in {4, 5, 6}$.
+\begin{enumerate}
+\item If $D_1 > E(w_1)$, STOP after 1 roll.
 
-Thus, $$E(W) = (1 + 2 + 3) * \frac{1}{24} + (4 + 5 + 6) * \frac{7}{24} = 4.625$$
+\item Else if $D_2 > E(w_2)$, STOP after 2 rolls.
+\end{enumerate}
+
+
+Since the rolls are independent, we can calculate the expectations of $w_1$ and $w_2$ in reverse order.
+
+The winning $w_2$ is equal to the value of the third roll:
+
+$$E(w_2) = E(D_3) = \sum_{x=1}^6 x \, P(D_3=x) = \frac{1}{6} * (1+2+3+4+5+6)$$
+
+$$E(w_2) = 3.50 \text{ dollars}$$
+
+
+This reveals the second part of the optimal strategy: stop after 2 rolls if $D_2 \ge 4$.
+
+
+The PMF of $w_1$ is given by
+
+\begin{equation*}
+\begin{split}
+    P(w_1=x) & = P(D_2<4, D_3=x) = \frac{3}{6} * \frac{1}{6}\\
+    & = \frac{3}{36} \text{ for } x=1,2,3
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+    P(w_1=x) & = P(D_2=x \cup D_2<4,D_3=x) = \frac{1}{6} + \frac{3}{6} * \frac{1}{6}\\
+    & = \frac{9}{36} \text{ for } x=4,5,6
+\end{split}
+\end{equation*}
+
+
+Using those probabilities to calculate the expected winning $w_1$ from the definition of expectation:
+
+$$E(w_1) = \sum_{x=1}^6 x \, P(w_1=x) = 4.25 \text{ dollars}$$
+
+
+Now we can fully describe the optimal strategy, which maximizes the expected winnings:
+
+\begin{enumerate}
+\item If the value of the first roll is $\ge$ 5, STOP after 1 roll.
+
+\item Else if the value of the second roll is $\ge$ 4, STOP after 2 rolls.
+\end{enumerate}
+
+
+Finally, let's calculate the expected winning $W^*$ of the optimal strategy.
+The PMF of $W^*$ is calculated below
+
+\begin{equation*}
+\begin{split}
+    P(W^*=x) & = P(D_1<5 , D_2<4 , D_3=x) = \frac{4}{6} * \frac{3}{6} * \frac{1}{6}\\
+    & = \frac{12}{6^3} \text{ for } x=1,2,3
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+    P(W^*=4) & = P(D_1<5 , D_2=4 \cup D_1<5 , D_2<4 , D_3=4)\\
+    & = \frac{4}{6}*\frac{1}{6} + \frac{4}{6}*\frac{3}{6}*\frac{1}{6}\\
+    & = \frac{36}{6^3}
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+    P(W^*=x) & = P(D_1=x \cup D_1<5,D_2=x \cup D_1<5,D_2<4,D_3=x)\\
+    & = \frac{1}{6} + \frac{4}{6}*\frac{1}{6} + \frac{4}{6}*\frac{3}{6}*\frac{1}{6}\\
+    & = \frac{72}{6^3} \text{ for } x=5,6
+\end{split}
+\end{equation*}
+
+
+Plugging these probabilities into the definition of expectation:
+
+$$E(W^*) = \sum_{x=1}^6 x \, P(W^* = x) = 4.67 \text{ dollars}$$
+
