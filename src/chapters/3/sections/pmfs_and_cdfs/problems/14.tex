@@ -4,7 +4,9 @@
 $$P(X \geq 2) = 1 - P(X = 0) - P(X = 1) = (1 - e^{-\lambda}) - e^
 {-\lambda}\lambda$$
 
-\item $$P(X = k | X > 0) = \frac{P(X = k)}{P(X > 0)} = \frac{\lambda^{k}}{(e^
-{\lambda} - 1)k!}$$
+\item $$P(X = k | X > 0) = \frac{P(X = k)}{P(X > 0)} = \begin{cases}
+    0 & \text{if } k = 0 \\
+    \frac{\lambda^{k}}{(e^{\lambda} - 1)k!} & \text{if } k \geq 1
+\end{cases}$$
 
 \end{enumerate}
