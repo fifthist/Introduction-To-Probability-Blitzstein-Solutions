@@ -1,5 +1,8 @@
-$P(B) = P(A \cap B) + P(A ^{c} \cap B)$.
+$P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B) - P(B \cap A^c)}{P(B)} = 1 - \frac{P(B \cap A^c)}{P(B)}.$
 
-$P(A^{c} \cap B) = P(A^{c})P(B|A^{c}) = 0$, since $P(A^{c}) = 0$.
+Note that $P(A^c) = P(A^c \cap B) + P(A^c \cap B^c)$.
+Hence, $P(B \cap A^c) = P(A^c) - P(A^c \cap B^c) = 0 - P(A^c \cap B^c) = -P(A^c \cap B^c)$.
 
-Thus, $P(B) = P(A \cap B) = P(B)P(A|B) \implies P(A|B) = 1$.
+Since probabilities are nonnegative, this implies $P(B \cap A^c) = P(A^c \cap B^c) = 0$.
+
+Thus, $P(A | B) = 1$.
