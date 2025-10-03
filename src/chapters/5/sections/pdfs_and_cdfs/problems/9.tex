@@ -1,0 +1,17 @@
+Let $F$ be the CDF of the Cauchy distribution.
+
+$$
+F(x) = P(X \le x) = \int_{-\infty}^x f(t) dt = \int_{-\infty}^x \frac{1}{\pi(1+t^2)} dt
+$$
+
+Making the substitution $u = \arctan(t)$, we obtain $du = \frac{dt}{1+t^2}$.
+The lower and upper limits of integration become $-\pi/2$ and $\arctan(x)$, respectively.
+
+$$
+F(x) = \int_{-\pi/2}^{\arctan(x)} \frac{1}{\pi} \, du = \frac{1}{\pi} \left( \arctan(x) + \frac{\pi}{2} \right)
+$$
+
+$$
+F(x) = \frac{1}{2} + \frac{1}{\pi} \arctan(x) \text{ , for } x \in \mathbb{R}
+$$
+
