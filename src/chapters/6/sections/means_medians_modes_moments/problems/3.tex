@@ -1,0 +1,18 @@
+Let k be the median, and F be the CDF of X, such that
+\[F(k) = 1/2\]
+since X is continuous from 1 onwards, and 0 otherwise,
+\begin{align*}
+F(k) &= \int_{-\infty}^{k}{\frac{a}{x^{a+1}}} \\
+&= \int_{1}^{k}{\frac{a}{x^{a+1}}} \\
+&= 1 - k^{-a}
+\end{align*}
+It follows that
+\begin{align*}
+1-k^{-a} &= \frac{1}{2} \\
+k &= \sqrt[a]{2}
+\end{align*}
+The median is therefore \(\sqrt[a]{2}\). \\ 
+
+Let $f$ be the PDF of X, then,
+\[f'(x) = -a(a+1)x^{-a-2}\]
+since $f'(x) \le 0$ for all $x \in [1,\infty)$, $f(x)$ is strictly decreasing between 1 and \(\infty\) and 0 otherwise, $f(x)$ has maximum at 1, so 1 is the mode.
