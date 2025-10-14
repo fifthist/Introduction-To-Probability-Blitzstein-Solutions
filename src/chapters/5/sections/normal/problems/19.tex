@@ -1,0 +1,35 @@
+From the statement, $Y$ is a normal-distributed r.v. with mean $\mu=1$ and variance $\sigma^2=4$, which implies standard deviation $\sigma=2$.
+
+
+We can obtain $Y$ as a function of $Z$ using the location-scale transform, applicable to Normal distributions
+
+$$
+Z = \frac{Y-\mu}{\sigma} = \frac{Y-1}{2}
+$$
+
+$$
+Y = 1 + 2 Z
+$$
+
+
+Let's check that the mean of $Y$ is correct by taking the expectation operator in both sides of the above equation
+
+$$
+E(Y) = E(1 + 2Z) = 1 + 2 E(Z)
+$$
+
+$$
+E(Y) = 1
+$$
+
+Doing the same with variance
+
+$$
+\mathrm{Var}(Y) = \mathrm{Var}(1 + 2Z) = 0 + 2^2 \mathrm{Var}(Z)
+$$
+
+$$
+\mathrm{Var}(Y) = 4
+$$
+
+The mean and variance matched, therefore the simple-looking function between $Y$ and $Z$ is correct.
