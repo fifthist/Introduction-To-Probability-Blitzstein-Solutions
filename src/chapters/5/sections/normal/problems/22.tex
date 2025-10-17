@@ -1,0 +1,37 @@
+Let $M$ be a random measurement of the distance between the two points.
+
+From the problem statement, $M = 10 + \epsilon$, where $\epsilon \sim \mathcal{N}(0, 0.04)$.
+
+By the location-scale transformation, $Z = \epsilon/0.2$ is a standard Normal r.v.
+Replacing that into the relation of $M$
+
+$$
+M = 10 + 0.2 Z
+$$
+
+$$
+Z = \frac{M-10}{0.2}
+$$
+
+\noindent which is the location-scale transformation of $M$. Thus, $M \sim \mathcal{N}(10, 0.04)$.
+
+The exact answer for the requested probability is given by
+
+\begin{equation*}
+\begin{split}
+P( |M-10| < 0.4 )
+&= P(-0.4 < M-10 < 0.4) \\
+&= P(-0.4 < 0.2Z < 0.4) \\
+&= P(-2 < Z < 2) = P(|Z| < 2) \\
+&= \Phi(2) - \Phi(-2)
+\end{split}
+\end{equation*}
+
+\noindent
+where in the second equality we used the location-scale transformation of $M$, and the $\Phi$ in the last equality is the CDF of the standard Normal distribution.
+
+By the 68-95-99.7\% rule, the probability for a normal r.v. to be within 2 standard deviations from the mean is approximately 95\%. Using this result, the approximate answer is
+
+$$
+P( |M-10| < 0.4 ) \approx 0.95
+$$
