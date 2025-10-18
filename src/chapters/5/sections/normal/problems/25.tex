@@ -1,0 +1,50 @@
+Let $X_1$ and $X_2$ be independent normal r.v.s, with $X_1 \sim \mathcal{N}(\mu_1,\sigma_1^2)$ and $X_2 \sim \mathcal{N}(\mu_2,\sigma_2^2)$.
+
+For this problem, it is convenient to derive the distribution of $X_1 - X_2$.
+
+First we need to calculate the distribution of $-X_2$.
+The standardization of $X_2$ is given by $Z_2 = (X_2 - \mu_2)/\sigma_2 \sim \mathcal{N}(0,1)$.
+Multiplying this expression by $-1$
+
+$$
+-Z_2 = \frac{(-X_2) - (-\mu_2)}{\sigma_2}
+$$
+
+Due to the symmetry of the standard Normal, $-Z_2 \sim \mathcal{N}(0,1)$.
+The above expression is the standardization of a normal r.v. with mean $-\mu_2$ and variance $\sigma_2^2$. Then, $-X_2 \sim \mathcal{N}(-\mu_2, \sigma_2^2)$.
+
+If $X_1$ is independent of $X_2$, then $X_1$ is independent of $-X_2$, according to the Theorem 3.8.5 (numbering used in the book's 2nd edition) .
+
+
+Therefore, $X_1$ and $-X_2$ are independent normal r.v.s. From the property given in the statement
+
+$$
+X_1 - X_2 = X_1 + (-X_2) \sim \mathcal{N}(\mu_1-\mu_2, \sigma_1^2+\sigma_2^2)
+$$
+
+Now we are properly equipped to answer the question.
+Let $X$ and $Y$ be independent Normal r.v.s, with $X \sim \mathcal{N}(a,b)$ and $Y \sim \mathcal{N}(c,d)$.
+
+The requested probability is given by $P(X < Y) = P(X - Y < 0)$, where $X-Y \sim \mathcal{N}(a-c, b+d)$.
+The standardization of $X-Y$ is as follows
+
+$$
+Z = \frac{ (X-Y) - (a-c) }{\sqrt{b+d}} \sim \mathcal{N}(0,1)
+$$
+
+$$
+X-Y = a-c + Z \sqrt{b+d}
+$$
+
+Substituting this relation in the requested probability
+
+$$
+P(X < Y) = P(a-c + Z \sqrt{b+d} < 0) = P \left( Z < \frac{c-a}{\sqrt{b+d}} \right)
+$$
+
+$$
+P(X < Y) = \Phi \left( \frac{c-a}{\sqrt{b+d}} \right)
+$$
+
+If $X$ and $Y$ are i.i.d., $a=c$ and $b=d$, which implies $P(X < Y) = \Phi(0) = 1/2$ .
+This makes sense because, by symmetry, all possible orderings of i.i.d. continuous r.v.s are equally likely.
