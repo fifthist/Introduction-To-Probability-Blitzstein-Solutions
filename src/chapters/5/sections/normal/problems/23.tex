@@ -1,0 +1,71 @@
+We start defining the following convenient r.v.s
+
+\begin{itemize}
+\item $A$: answer sent by Alice.
+
+\item $V$: value received by Bob.
+
+\item $B$: answer interpreted by Bob.
+\end{itemize}
+
+From the statement, $V = A + \epsilon$, where $\epsilon \sim \mathcal{N}(0,\sigma^2)$ is the channel noise.
+
+Let $C$ be the event in which Bob understands Alice correctly.\\
+
+a. By LOTP
+
+$$
+P(C) = P(C|A=0) P(A=0) + P(C|A=1) P(A=1)
+$$
+
+Bob understands the correct message $i$ sent by Alice if he interprets the answer as $i$. Thus, $P(C|A=i) = P(B=i|A=i)$, for $i=0,1$.
+
+Using this result and assuming that Alice is equally likely to send a ``yes'' or ``no'' answer, the LOTP simplifies to
+
+$$
+P(C) = \frac{1}{2} P(B=0|A=0) + \frac{1}{2} P(B=1|A=1)
+$$
+
+The probability $P(B=0|A=0)$ is given by
+
+\begin{equation*}
+\begin{split}
+P(B=0|A=0)
+&= P(V \le 1/2 | A=0) \\
+&= P(A + \epsilon \le 1/2 | A=0) \\
+&= P(\epsilon \le 1/2 | A=0) \\
+&= P(\epsilon \le 1/2)
+\end{split}
+\end{equation*}
+
+\noindent where the last equality is due to the fact that $\epsilon$ is independent of $A$.
+
+Applying the location-scale transformation on $\epsilon$, we have that $Z = \epsilon/\sigma \sim \mathcal{N}(0,1)$.
+Substituting this relation into $P(B=0|A=0)$
+
+$$
+P(B=0 | A=0) = P(Z \le 1/2\sigma) = \Phi \left( \frac{1}{2\sigma} \right)
+$$
+
+\noindent where $\Phi(\cdot)$ is the CDF of the standard Normal distribution.
+
+Using a very similar derivation, one can also obtain
+
+$$
+P(B=1 | A=1) = \Phi \left( \frac{1}{2\sigma} \right)
+$$
+
+Substituting these results into the expression of $P(C)$
+
+$$
+P(C) = \frac{1}{2} \Phi \left( \frac{1}{2\sigma} \right) + \frac{1}{2} \Phi \left( \frac{1}{2\sigma} \right) = \Phi \left( \frac{1}{2\sigma} \right)
+$$\\
+
+b. If $\sigma$ is very small, $P(C) \approx 1$. If $\sigma$ is very large, $P(C) \approx 1/2$.
+
+These extreme case results make sense.
+
+The case where $\sigma$ is very small approximates to the ideal noise-free channel. In this situation the information is transmitted without disturbances through the channel, and Bob receives the exact same message transmitted by Alice. Therefore, Bob always interprets the message correctly.
+
+The case with large $\sigma$ corresponds to a heavily noisy channel.
+The value received by Bob is dominated by noise, such that the interpreted message depends mostly on whether the noise realization at the time of transmission is positive or negative, regardless of what Alice has sent. Since the Gaussian noise $\epsilon$ is positive half of the time and negative in the other half, Bob correctly understands the message with probability $\approx$ 1/2.
