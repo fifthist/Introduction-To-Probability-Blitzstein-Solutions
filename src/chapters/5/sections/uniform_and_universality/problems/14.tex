@@ -1,0 +1,38 @@
+Let $F$ be the CDF and $f$ the PDF of $X$.
+
+The maximum is less than or equal to some $x$ if and only if all $U_i$ are less than or equal to $x$.
+
+$$
+P(X \le x) = P(U_1 \le x, U_2 \le x, \dots, U_n \le x) \text{ , for } 0<x<1
+$$
+
+Since the r.v.s $U_i$ are independent, the events $\{ U_i \le x \}$ are independent as well.
+
+$$
+P(X \le x) = P(U_1 \le x) P(U_2 \le x) \dots P(U_n \le x)
+$$
+
+The CDF of the standard uniform is equal to $x$ for $0<x<1$. Thus:
+
+$$
+F(x) = P(X \le x) =
+\begin{cases}
+0   &\text{ , for } x \le 0 \\
+x^n &\text{ , for } 0 < x < 1 \\
+1   &\text{ , for } x \ge 1
+\end{cases}
+$$
+
+
+The PDF is equal to the derivative of the CDF
+
+$$
+f(x) = F'(x) = n x^{n-1} \text{ , for } 0 < x < 1
+$$
+
+By the definition of expectation for continuous r.v.s
+
+$$
+E(X) = \int_0^1 x f(x) dx = \int_0^1 n x^n dx = \frac{n}{n+1}
+$$
+
