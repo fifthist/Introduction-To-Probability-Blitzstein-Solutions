@@ -8,4 +8,16 @@ c. \(P(L > t) = P(T_{1}>t)P(T_{2}>t)...P(T_{n}>t) = e^{-n\lambda t}\), so \(L \s
 
 d. M must be equal to the sum of \(D_{1} + D_{2} + D_{3} +...+D_{n}\), where \(D_{i}\) is the amount of time between the \(i-1\)th and \(i\)th decay event. We observe that \(D_{i}\) must then be the minimum of \(n-i+1\) \(Expo(\lambda)\) variables - for example, \(D_{1}\) is the first particle to decay out of n particles, \(D_{2}\) is the first particle to decay out of the remaining n-1 particles, etc. Since \(Expo\) is memoryless, \(D_{i+1}\) is independent of \(D_{i}\) as the amount of time it takes for the next particle to decay is not affected by the amount of time it took the previous particle to decay. Therefore, \(D_{i} \sim Expo((n-i+1)\lambda)\).\\
 
-Then \(E(M) = E(D_{1}) + E(D_{2}) +... +E(D_{n}) = \frac{1}{\lambda}(\sum_{i=1}^{n}(1/n)) = \frac{1}{\lambda}(ln(n) + 0.577) \)
+Then \(E(M) = E(D_{1}) + E(D_{2}) +... +E(D_{n}) = \frac{1}{\lambda} \sum_{i=1}^{n} \frac{1}{i} \) \\
+
+Now we calculate the variance of M, recalling that the variance of the sum of independent r.v.s is equal to the sum of variances
+
+\(\mathrm{Var}(M) = \mathrm{Var}(D_1 + D_2 + \dots + D_n)\)
+
+\(\mathrm{Var}(M) = \mathrm{Var}(D_1) + \mathrm{Var}(D_2) + \dots + \mathrm{Var}(D_n)\)
+
+Since \(\mathrm{Var}(D_i) = 1 / [ (n-i+1)^2 \lambda^2 ]\),
+
+\[
+    \mathrm{Var}(M) = \sum_{i=1}^n \frac{1}{(n-i+1)^2 \lambda^2} = \frac{1}{\lambda^2} \sum_{i=1}^n \frac{1}{i^2}
+\]
