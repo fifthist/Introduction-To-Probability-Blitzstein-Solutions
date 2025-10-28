@@ -1,0 +1,99 @@
+(a). Since, \[Z_j = \frac{X_j-\mu}{\sigma} \Longrightarrow X_j = \sigma Z_j +\mu\]
+so,
+\begin{equation} \label{gamma_as_e(z3)}
+\begin{split}
+    \text{Skew}(X_j) &= \text{E} [(\frac{X_j - \mu}{\sigma})^3] \\
+    &= \text{E} [(\frac{\sigma Z_j + \mu - \mu}{\sigma})^3] \\
+    &= \text{E} [(\frac{\sigma Z_j }{\sigma})^3] \\
+    &= \text{E} (Z_j^3).
+\end{split}
+\end{equation}
+Since \(\text{E} (Z_j) = 0\), \(\text{Var}(Z_j) = 1\), \[\text{Skew} (Z_j) = \text{E} [(\frac{Z_j - \text{E} (Z_j)}{\sqrt{\text{Var}(Z_j)}})^3] = \text{E} (Z_j^3) = \text{Skew}(X_j).\]
+\\
+Now, \(\bar{X}_n = \frac{1}{n} \sum_{j=1}^{n}X_j\), therefore by linearity of expectation,
+\begin{flalign*}
+    \text{E} (\bar{X}_n) &= \text{E} (\frac{1}{n} \sum_{j=1}^{n}X_j) \\
+    &= \frac{1}{n} \text{E} (\sum_{j=1}^{n}X_j) \\
+    &= \frac{1}{n} \cdot n \mu \\
+    &= \mu
+\end{flalign*}
+and,
+\begin{flalign*}
+    \text{Var} (\bar{X}_n) &= \text{Var}(\frac{1}{n} \sum_{j=1}^{n}X_j) \\
+    &= \frac{1}{n^2} \text{Var} (\sum_{j=1}^{n}X_j).
+\end{flalign*}
+Since each \(X_j\) is mutually independent,
+\begin{flalign*}
+    \text{Var}(\bar{X}_n) &= \frac{1}{n^2} \cdot n\sigma^2\\
+    &= \frac{\sigma^2}{n}
+\end{flalign*}
+thus,
+\begin{flalign*}
+    \text{Skew}(\bar{X}_n) &= \text{E} [(\frac{\bar{X}_n - \text{E} (\bar{X}_n)}{\sqrt{\text{Var}(\bar{X}_n)}})^3] \\
+    &= \text{E} [(\frac{\bar{X}_n - \mu}{\sqrt{\frac{\sigma^2}{n}}})^3] \\
+    &= \text{E} [(\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma})^3] \\
+\end{flalign*} 
+Consider \(\bar{Z}_n\),
+\begin{flalign*}
+    \bar{Z}_n &= \frac{1}{n} \sum_{j=1}^{n}Z_j \\
+    &= \frac{1}{n} \sum_{j=1}^{n}\frac{X_j-\mu}{\sigma}\\
+    &= \frac{(\sum_{j=1}^{n}X_j)-n\mu}{n \sigma} \\
+    &= \frac{(n \cdot \frac{\sum_{j=1}^{n}X_j}{n})-n\mu}{n \sigma} \\
+    &= \frac{n\bar{X}_n-n\mu}{n \sigma} \\
+    &= \frac{\bar{X}_n-\mu}{\sigma} 
+\end{flalign*}
+so, by linearity of expectation, \begin{equation} \label{expectation_z_bar}
+    \text{E} (\bar{Z}_n) = \frac{1}{n}\sum_{j=1}^{n}\text{E} (Z_j) = 0, 
+\end{equation}and,
+\begin{flalign*}
+    \text{Var} (\bar{Z}_n) &= \text{Var}(\frac{1}{n} \sum_{j=1}^{n}Z_j) \\
+    &= \frac{1}{n^2} \text{Var} (\sum_{j=1}^{n}Z_j)
+\end{flalign*}
+Since each \(Z_j\) is mutually independent and \(\text{Var}(Z_j) = 1\) for all j,
+\begin{flalign*}
+    \text{Var}(\bar{Z}_n) &= \frac{1}{n^2} \cdot n \cdot 1^2\\
+    &= \frac{1}{n}
+\end{flalign*}
+finally,
+\begin{flalign*}
+    \text{Skew}(\bar{Z}_n) &= \text{E} [(\frac{\bar{Z}_n - \text{E} (\bar{Z}_n)}{\sqrt{\text{Var}(\bar{Z}_n)}})^3] \\
+    &= \text{E} [(\frac{\frac{\bar{X}_n-\mu}{\sigma} - 0}{\sqrt{\frac{1}{n}}})^3] \\
+    &= \text{E} [(\frac{\frac{\bar{X}_n-\mu}{\sigma}}{\frac{1}{\sqrt{n}}})^3] \\
+    &= \text{E} [(\frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma})^3] \\
+    &= \text{Skew}(\bar{X}_n).
+\end{flalign*}  
+And so \(\bar{Z}_n\) has the same skewness as \(\bar{X}_n\). \\
+
+(b). From (a),
+\begin{flalign*}
+    \text{Skew}(\bar{X}_n) &= \text{Skew}(\bar{Z}_n)\\
+    &= \text{E} [(\frac{\bar{Z}_n - \text{E} (\bar{Z}_n)}{\sqrt{\text{Var}(\bar{Z}_n)}})^3] \\
+    &= \frac{1}{(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot \text{E} [(\bar{Z}_n - \text{E} (\bar{Z}_n))^3] \\
+    &= \frac{1}{(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot \text{E} ((\bar{Z}_n)^3)
+\end{flalign*}
+as \(\text{E}(\bar{Z}_n) = 0\) (by (\ref{expectation_z_bar})). \\
+Since \(\text{E} ((\bar{Z}_n)^3) = \text{E}[(\frac{1}{n}\sum_{j=1}^{n}\text{E} (Z_j))^3] = \frac{1}{n^3}\text{E}[(\sum_{j=1}^{n}\text{E} (Z_j))^3]\) (again by \ref{expectation_z_bar}),
+\[
+    \text{Skew}(\bar{X}_n) = \frac{1}{n^3(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot (\sum_{j=1}^{n}\text{E} (Z_j))^3
+\]
+We now focus on \((\sum_{j=1}^{n}\text{E} (Z_j))^3\).
+\[
+    (\sum_{j=1}^{n} \text{E} (Z_j))^3= \sum_{i=1}^n \text{E}(Z_i)^3 + 3 \sum_{i=1}^{n} \sum_{\substack{j=1 \\ j \ne i}}^{n} \text{E}(Z_i)^2 \text{E}(Z_j) + 6 \sum_{i=1}^{n} \sum_{\substack{j=1 \\ j \ne i}}^{n} \sum_{\substack{k=1 \\ k \ne j, k \ne i}}^{n} \text{E}(Z_i) \text{E}(Z_j) \text{E}(Z_k)
+\]
+Since \(\text{E}(Z_j) = 0\) for all j,
+\begin{flalign*}
+    (\sum_{j=1}^{n}\text{E} (Z_j))^3 &= \sum_{i=1}^n\text{E}(Z_i)^3 + 3\sum_{i=1}^{n} \sum_{\substack{j=1 \\ j \ne i}}^{n} \text{E}(Z_i)^2 \cdot 0 + 6\sum_{i=1}^{n}\sum_{\substack{j=1 \\ j \ne i}}^{n} \sum_{\substack{k=1 \\ k \ne j, k \ne i}}^{n} 0 \cdot 0 \cdot 0 \\ 
+    &= \sum_{i=1}^n\text{E}(Z_i)^3.
+\end{flalign*}
+Hence,
+\[
+   \text{Skew}(\bar{X}_n) =  \frac{1}{n^3(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot \sum_{j=1}^{n}(\text{E}(Z_j)^3).
+\]
+As each \(Z_j\) is independent, by (\ref{gamma_as_e(z3)}), \(\text{E}(Z_j)^3 = \text{E}(Z_j^3) = \text{Skew}(X_j) =\gamma\), and since \(\text{Var}(\bar{Z}_n)) = \frac{1}{n}\),
+\begin{flalign*}
+    \text{Skew}(\bar{X}_n) &= \frac{1}{n^3(\frac{1}{n})^\frac{3}{2}} \cdot \sum_{j=1}^{n}\gamma\\
+    &=  \frac{1}{n^\frac{3}{2}} \cdot n\gamma\\
+    &= \frac{\gamma}{\sqrt{n}}.
+\end{flalign*}
+
+(c). Since \(\text{Skew}(\bar{X}_n) = \frac{\gamma}{\sqrt{n}}\), as n becomes large, skewness becomes small, hence the distribution of \(\bar{X}_n\) will be more symmetric.
