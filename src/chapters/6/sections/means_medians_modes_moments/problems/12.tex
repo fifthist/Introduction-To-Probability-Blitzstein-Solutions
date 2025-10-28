@@ -1,0 +1,46 @@
+(a). Note that, when \(Y\) is a discrete r.v. whose possible values are \(y_1, ..., y_n\),
+\begin{flalign*}
+P((\frac{1}{n}\sum_{j=1}^{n}{y_j})^2 \le \frac{1}{n}\sum_{j=1}^{n}{y_j^2}) &= P((\frac{1}{n}\sum_{j=1}^{n}{y_j})^2 - \frac{1}{n}\sum_{j=1}^{n}{y_j^2} \le 0) \\
+&= P(\frac{1}{n}\sum_{j=1}^{n}{y_j^2} - (\frac{1}{n}\sum_{j=1}^{n}{y_j})^2 \ge 0) \\
+&= P(\text{E}(Y^2) - \text{E}(Y)^2 \ge 0)\\
+&= P(\text{Var}(Y) \ge 0) \\
+&= 1,
+\end{flalign*}
+where \(\text{Var}(Y) = 0\) if and only if \(y_1= ... = y_n\). \hfill \break
+Since \(X_j\) are continuous r.v.s, \(P(X_1 = ...  = X_n) = P(T_1 = T_2) = 0\), therefore, 
+\begin{flalign*}
+P(T_1 \le T_2)&= P(T_1 < T_2)\\
+&= P(T_2 - T_1  >  0)\\
+&= P(\frac{1}{n}\sum_{j=1}^{n}{X_j^2} - (\frac{1}{n}\sum_{j=1}^{n}{X_j})^2 > 0) \\
+&= 1.
+\end{flalign*}
+
+(b). Note that we want to estimate \(sigma^2\), hence \(\theta = c^2\). \\To find the bias of \(T_1\), we want to find \(\text{E}(T_1) - c^2\).
+\begin{flalign*}
+    \text{E}(T_1) &= \text{E}(\bar{X}_n^2) \\ 
+    &= \text{Var}(\bar{X}_n) + (\text{E}(\bar{X}_n))^2 \\ 
+    &= \text{Var}(\frac{1}{n}\sum_{j=1}^{n}X_j) + (\text{E}(\frac{1}{n}\sum_{j=1}^{n}X_j))^2 \\ 
+    &= \frac{1}{n^2}\text{Var}(\sum_{j=1}^{n}X_j) + (\frac{1}{n}\text{E}(\sum_{j=1}^{n}X_j))^2 \\ 
+    &= \frac{1}{n^2}\text{Var}(\sum_{j=1}^{n}X_j) + \frac{1}{n^2}(\text{E}(\sum_{j=1}^{n}X_j))^2 \\ 
+\end{flalign*}
+Since each \(X_j\) is mutually independent, and by linearity of expectation,
+\begin{flalign*}
+    \text{E}(T_1) &= \frac{1}{n^2}\sum_{j=1}^{n}\text{Var}(X_j) + \frac{1}{n^2}(\sum_{j=1}^{n}\text{E}(X_j))^2 \\ 
+    &= \frac{1}{n^2}\sum_{j=1}^{n}\sigma^2 + \frac{1}{n^2}(\sum_{j=1}^{n}c)^2 \\ 
+    &= \frac{1}{n^2} \cdot n\sigma^2 + \frac{1}{n^2} \cdot (nc)^2 \\ 
+    &= \frac{\sigma^2}{n} + c^2 \\ 
+\end{flalign*}
+Hence the bias of \(T_1\) is \[\frac{\sigma^2}{n} + c^2 - c^2 = \frac{\sigma^2}{n}\] 
+\\ \\
+Finding the bias of \(T_2\), we need to find \(\text{E}(T_2) - c^2\). \[ \text{E}(T_2) = \text{E}(\frac{1}{n}\sum_{j=1}^{n}{X}_j^2) \]
+By linearity of expectation,
+\begin{flalign*}
+    \text{E}(T_2) &= \frac{1}{n} \sum_{j=1}^{n}\text{E}({X}_j^2) \\
+    &= \frac{1}{n} \sum_{j=1}^{n}(\text{Var}({X}_j) + (\text{E}({X}_j))^2) \\
+    &= \frac{1}{n} \sum_{j=1}^{n}(\sigma^2 + c^2) \\
+    &= \frac{1}{n} \cdot n(\sigma^2 + c^2) \\
+    &= \sigma^2 + c^2.
+\end{flalign*}
+Hence the bias of \(T_2\) is \[\sigma^2 + c^2 - c^2 = \sigma^2.\]
+
+In fact, \(T_1\) is the better estimator, as when \(n\) becomes large, the bias of \(T_1\) decreases, whereas the bias of \(T_2\) does not.
