@@ -1,0 +1,17 @@
+Since \(\mu = \frac{1}{\lambda}, \sigma = \sqrt{\frac{1}{\lambda^2}} = \frac{1}{\lambda}\),
+\begin{flalign*}
+\text{Skew}(X) &= \text{E}[(\frac{X-\mu}{\sigma})^3] \\ 
+&= \text{E}[(\frac{X-\frac{1}{\lambda}}{\frac{1}{\lambda}})^3] \\ 
+&= \text{E}[(\lambda \cdot (X-\frac{1}{\lambda}))^3] \\ 
+&= \text{E}[(\lambda \cdot \frac{\lambda X - 1}{\lambda})^3] \\ 
+&= \text{E}[(\lambda X - 1)^3] \\ 
+&= \text{E}[(\lambda X)^3 - 3(\lambda X)^2 + 3(\lambda X) - 1]
+\end{flalign*}
+As \(\lambda X \sim \text{Expo}(1)\) and the $n$th moment of an Expo(1) r.v. is $n!$, the $n$th moment of \(\lambda X\) is \[\text{E}((\lambda X)^n) = n!.\]
+Hence by linearity of expectation,
+\begin{flalign*}
+\text{Skew}(X) &= \text{E}((\lambda X)^3) - 3 \cdot \text{E}((\lambda X)^2) + 3 \cdot\text{E}((\lambda X)) - \text{E}(1)] \\ 
+&= 3! - 3 \cdot 2! +3 \cdot 1! - 1 \\ 
+&= 2.
+\end{flalign*}
+Hence the skewness of Expo($\lambda$) is always positive and independent of $\lambda$.
