@@ -9,7 +9,6 @@ so,
 \end{split}
 \end{equation}
 Since \(\text{E} (Z_j) = 0\), \(\text{Var}(Z_j) = 1\), \[\text{Skew} (Z_j) = \text{E} [(\frac{Z_j - \text{E} (Z_j)}{\sqrt{\text{Var}(Z_j)}})^3] = \text{E} (Z_j^3) = \text{Skew}(X_j).\]
-\\
 Now, \(\bar{X}_n = \frac{1}{n} \sum_{j=1}^{n}X_j\), therefore by linearity of expectation,
 \begin{flalign*}
     \text{E} (\bar{X}_n) &= \text{E} (\frac{1}{n} \sum_{j=1}^{n}X_j) \\
@@ -71,7 +70,7 @@ And so \(\bar{Z}_n\) has the same skewness as \(\bar{X}_n\). \\
     &= \frac{1}{(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot \text{E} [(\bar{Z}_n - \text{E} (\bar{Z}_n))^3] \\
     &= \frac{1}{(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot \text{E} ((\bar{Z}_n)^3)
 \end{flalign*}
-as \(\text{E}(\bar{Z}_n) = 0\) (by (\ref{expectation_z_bar})). \\
+as \(\text{E}(\bar{Z}_n) = 0\) (by (\ref{expectation_z_bar})). \hfill \\
 Since \(\text{E} ((\bar{Z}_n)^3) = \text{E}[(\frac{1}{n}\sum_{j=1}^{n}\text{E} (Z_j))^3] = \frac{1}{n^3}\text{E}[(\sum_{j=1}^{n}\text{E} (Z_j))^3]\) (again by \ref{expectation_z_bar}),
 \[
     \text{Skew}(\bar{X}_n) = \frac{1}{n^3(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot (\sum_{j=1}^{n}\text{E} (Z_j))^3
@@ -85,14 +84,11 @@ Since \(\text{E}(Z_j) = 0\) for all j,
     (\sum_{j=1}^{n}\text{E} (Z_j))^3 &= \sum_{i=1}^n\text{E}(Z_i)^3 + 3\sum_{i=1}^{n} \sum_{\substack{j=1 \\ j \ne i}}^{n} \text{E}(Z_i)^2 \cdot 0 + 6\sum_{i=1}^{n}\sum_{\substack{j=1 \\ j \ne i}}^{n} \sum_{\substack{k=1 \\ k \ne j, k \ne i}}^{n} 0 \cdot 0 \cdot 0 \\ 
     &= \sum_{i=1}^n\text{E}(Z_i)^3.
 \end{flalign*}
-Hence,
-\[
-   \text{Skew}(\bar{X}_n) =  \frac{1}{n^3(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot \sum_{j=1}^{n}(\text{E}(Z_j)^3).
-\]
+Hence, \[\text{Skew}(\bar{X}_n) =  \frac{1}{n^3(\text{Var}(\bar{Z}_n))^\frac{3}{2}} \cdot \sum_{j=1}^{n}(\text{E}(Z_j)^3).\]
 As each \(Z_j\) is independent, by (\ref{gamma_as_e(z3)}), \(\text{E}(Z_j)^3 = \text{E}(Z_j^3) = \text{Skew}(X_j) =\gamma\), and since \(\text{Var}(\bar{Z}_n)) = \frac{1}{n}\),
 \begin{flalign*}
     \text{Skew}(\bar{X}_n) &= \frac{1}{n^3(\frac{1}{n})^\frac{3}{2}} \cdot \sum_{j=1}^{n}\gamma\\
-    &=  \frac{1}{n^\frac{3}{2}} \cdot n\gamma\\
+    &=  \frac{1}{n^\frac{3}{2}} \cdot n\gamma \\
     &= \frac{\gamma}{\sqrt{n}}.
 \end{flalign*}
 
