@@ -1,0 +1,53 @@
+a. The first success occurs at times $k \Delta t$, where $k \ge 0$ is the number of failures before the first success. Therefore, $T = G \Delta t$. \\
+
+b. Since the trials are independent and with the same probability of success $\lambda \Delta t$, the number of failures before the first success is $G \sim \mathrm{Geom}(\lambda \Delta t)$ by the story of the geometric.
+The PMF of $G$ is given by
+
+$$
+P(G=k) = (1 - \lambda \Delta t)^k \lambda \Delta t \text{ , for } k=0,1,\dots
+$$
+
+It is convenient to calculate $P(G > k)$
+
+$$
+P(G > k) = \sum_{i=k+1}^\infty P(G=i) = \lambda \Delta t \sum_{i=k+1}^\infty (1 - \lambda \Delta t)^i = (1 - \lambda \Delta t)^{k+1}
+$$
+
+The CDF of $T$ is calculated as
+
+\begin{flalign*}
+P(T \le t)
+& = 1 - P(T > t) = 1 - P(G > t / \Delta t) \\
+& = 1 - (1 - \lambda \Delta t)^{\frac{t}{\Delta t} + 1}
+\end{flalign*}
+
+
+c. Taking the limit of the CDF of $T$ for $\Delta t \to 0$
+
+$$
+\lim_{\Delta t \to 0} P(T \le t)
+=
+\lim_{\Delta t \to 0} \left[ 1 - (1 - \lambda \Delta t)^{\frac{t}{\Delta t} + 1} \right]
+=
+1 - \lim_{\Delta t \to 0} (1 - \lambda \Delta t)^{\frac{t}{\Delta t} + 1}
+$$
+
+If we do the substitution $n = t/\Delta t$, we obtain $n \to \infty$ for $\Delta t \to 0$
+
+$$
+\lim_{\Delta t \to 0} P(T \le t)
+=
+1 - \lim_{n \to \infty} \left( 1 - \frac{\lambda t}{n} \right)^{n+1}
+=
+1 - \lim_{n \to \infty} \left( 1 - \frac{\lambda t}{n} \right)^n \times \lim_{n \to \infty} \left( 1 - \frac{\lambda t}{n} \right)
+$$
+
+The first limit is the compount interest limit and is equal to $e^{-\lambda t}$.
+The second limit is equal to 1. Thus,
+
+$$
+\lim_{\Delta t \to 0} P(T \le t) = 1 - e^{-\lambda t}
+$$
+
+\noindent which is the CDF of the $\mathrm{Expo}(\lambda)$ distribution.
+Therefore, $T$ converges to $\mathrm{Expo}(\lambda)$ as trials are performed faster and with smaller success probabilities.
