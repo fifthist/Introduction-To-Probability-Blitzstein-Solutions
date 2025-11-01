@@ -1,0 +1,72 @@
+a. Let's develop the integral $\int_0^t h(s) ds$
+
+$$
+\int_0^t h(s) ds = \int_0^t \frac{f(s)}{1 - F(s)} ds = \int_0^t \frac{f(s)}{G(s)} ds
+$$
+
+\noindent where $G(t) = 1 - F(t)$ is the survival function.
+
+
+Doing the substitution $v = \log G(s)$, we have
+
+$$
+dv = \frac{G\;\!'(s)}{G(s)} ds = -\, \frac{F\;\!'(s)}{G(s)} ds = -\, \frac{f(s)}{G(s)} ds
+$$
+
+
+With the substitution, the lower limit of integration becomes $\log G(0) = \log 1 = 0$, and the upper limit becomes $\log G(t)$.
+Therefore,
+
+\begin{equation} \label{eq_h_G}
+\int_0^t h(s) ds = \int_0^{\log G(t)} - dv = -\log G(t)
+\end{equation}
+
+
+$$
+\log G(t) = - \int_0^t h(s) ds
+$$
+
+$$
+G(t) = 1 - F(t) = \exp \left( - \int_0^t h(s) ds \right)
+$$
+
+$$
+F(t) = 1 - \exp \left( - \int_0^t h(s) ds \right) \text{ , for all } t>0
+$$ \\
+
+
+b. The PDF is the derivative of the CDF
+
+$$
+f(t) = F\;\!'(t) = \left[ 1 - \exp \left( - \int_0^t h(s) ds \right) \right]'
+$$
+
+\begin{equation} \label{eq_f_expint}
+f(t) = - \exp \left( - \int_0^t h(s) ds \right) \cdot \left( - \int_0^t h(s) ds \right)'
+\end{equation}
+
+To calculate the derivative of the integral in the relation above, let's apply the differential in both sides of equation \eqref{eq_h_G}
+
+$$
+\left( \int_0^t h(s) ds \right)'
+=
+\left( - \log G(t) \right)'
+=
+- \frac{G\;\!'(t)}{G(t)}
+=
+\frac{ (F(t)-1)' }{G(t)}
+=
+\frac{f(t)}{1 - F(t)}
+=
+h(t)
+$$
+
+Substituting this result in equation \eqref{eq_f_expint}
+
+$$
+f(t) = - \exp \left( - \int_0^t h(s) ds \right) \cdot (-h(t))
+$$
+
+$$
+f(t) = h(t) \exp \left( - \int_0^t h(s) ds \right) \text{ , for all } t>0
+$$
