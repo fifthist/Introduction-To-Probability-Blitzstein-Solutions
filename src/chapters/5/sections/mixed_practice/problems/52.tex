@@ -1,14 +1,49 @@
-\begin{flalign}
-    \mathbb{E}[X] & = \int_{0}^{\infty} x f(x) dx \\
-    & = \int_{0}^{\infty} x^2 e^{-\frac{x^2}{2}} dx \\
-    & = \frac{1}{2} \ri x^2 e^{-\frac{x^2}{2}} dx \\
-    & = \frac{1}{2}
-\end{flalign}
+a. From the definition of expectation
+
+$$
+\mathbb{E}[X] = \int_{-\infty}^\infty x f(x) dx = \int_0^\infty x^2 e^{-x^2/2} dx
+$$
+
+The integral in the above equation is similar to the integral that arises when calculating the second moment of a standard Normal distribution.
+Let $Z \sim \mathcal{N}(0,1)$, with PDF $\varphi$.
+We know that $\mathbb{E}[Z]=0$ and $\mathrm{Var}(Z)=1$.
+From the definition of variance,
+
+$$
+\mathrm{Var}(Z) = \mathbb{E}[Z^2] - (\mathbb{E}[Z])^2 = \mathbb{E}[Z^2] - 0 = 1
+$$
+
+$$
+\mathbb{E}[Z^2]
+= \int_{-\infty}^\infty z^2 \varphi(z) dz
+= \int_{-\infty}^\infty z^2 \frac{1}{\sqrt{2\pi}} e^{-z^2/2} dz
+= 1
+$$
+
+$$
+\int_{-\infty}^\infty z^2 e^{-z^2/2} dz = \sqrt{2\pi}
+$$
+
+Since the integrand is an even function, the integral in $(0,\infty)$ is half this value. Therefore,
+
+$$
+\mathbb{E}[X] = \frac{\sqrt{2\pi}}{2} = \sqrt{\frac{\pi}{2}}
+$$ \\
 
 
-\begin{flalign}
+b.
+
+\begin{flalign*}
     \mathbb{E}[X^2] & = \int_{0}^{\infty} x^2 f(x) dx \\
-    & = \int_{0}^{\infty} x^3 e^{\frac{x^2}{2}} dx \\
-    & = \int_{0}^{\infty} 2 u e^u du = 2 \\
-\end{flalign}
+    & = \int_{0}^{\infty} x^3 e^{-\frac{x^2}{2}} dx \\
+    & = \int_{0}^{\infty} 2 u e^{-u} du \\
+\end{flalign*}
 
+The last integral is similar to the integral that arises when calculating the expected value of $Y \sim \mathrm{Expo}(1)$.
+We know that $\mathbb{E}[Y] = 1$,
+
+$$
+\mathbb{E}[Y] = \int_0^\infty y e^{-y} dy = 1
+$$
+
+It then follows that $\mathbb{E}[X^2] = 2$
