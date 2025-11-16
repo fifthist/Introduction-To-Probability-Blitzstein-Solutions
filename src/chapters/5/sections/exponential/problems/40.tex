@@ -1,0 +1,79 @@
+a. The average length of time measured by Fred equals the mean of the distribution of times between arrivals of buses, which is 10 minutes. \\
+
+
+b. The mean is not a full description of the distribution of times between buses, the variability of interarrival times is another key aspect.
+The presence of times between buses much higher than the average, even if they occur rarely, can greatly affect Fred's average waiting time, because he is more likely to arrive at the bus stop during one of these long intervals (length-biased sampling).
+
+
+An example of discrete distribution of times between buses $T$ that meets the metrics specified in the problem is characterized by the PMF
+
+\begin{flalign*}
+P(T=k)
+& = 140/149 \text{ , if k = 1 minute} \\
+& = 9/149 \text{ , if k = 2 hours and 30 minutes}
+\end{flalign*}
+
+This distribution has average bus-to-bus time of 10 minutes, and average waiting time of 68 minutes.
+The appendix below contains the full derivation of the average waiting time for a discrete distribution given its PMF.
+Notice that, although the times between buses in this distribution are 10 minutes on average, there is great variability around the mean (high variance). \\
+
+
+\textbf{Appendix: Derivation of the expected waiting time}
+
+Let $W$ be Fred's waiting time for the next bus.
+
+Assume that the time $T$ between buses is a discrete r.v.
+with PMF given by $P(T=t_i) = p_i$, for $i=1,2,\dots,n$, where the $t_1$, \dots, $t_n$ are sorted in increasing order.
+
+Let $F_i$ be the event where Fred gets to the bus stop during an interval between buses of length $t_i$.
+To calculate $P(F_i)$, imagine you observe a large number $N$ of consecutive buses arrive at the bus stop, and write down the arrival instants on a timeline.
+On average, the intervals of length $t_j$ combined make up for $N p_j t_j$ units of time of the timeline.
+Fred gets to the bus stop at a completely random instant along this timeline.
+Therefore, the probability of Fred getting to the bus stop during a bus-to-bus interval of length $t_i$ is proportional to the total amount of time these intervals make up for on the timeline
+
+
+$$
+P(F_i) = \frac{N p_i t_i}{\sum_{j=1}^n N p_j t_j} = \frac{p_i t_i}{\sum_{j=1}^n p_j t_j}
+$$
+
+
+Calculation of the CDF of $W$ using LOTP
+
+$$
+P(W \le x) = \sum_{i=1}^n P(W \le x | F_i) P(F_i)
+$$
+
+Fred gets to the bus stop at a completely random instant within the $t_i$ interval, hence $(W | F_i) \sim \mathrm{Unif}(0, t_i)$.
+The CDF of $W$ expands to
+
+\begin{flalign*}
+P(W \le x)
+& = 0 \text{ , for } x \le 0 \\
+& = \sum_{i=1}^n \frac{x}{t_i} P(F_i) \text{ , for } 0 < x < t_1 \\
+& = \sum_{j=1}^i P(F_j) + \sum_{j=i+1}^n \frac{x}{t_j} P(F_j) \text{ , for } t_i < x < t_{i+1} , \\
+& \text{ where } i=1,\dots,n-1 \\
+& = 1 \text{ , for } x \ge t_n
+\end{flalign*}
+
+
+The derivative of the CDF equals the PDF $f$ of $W$
+
+\begin{flalign*}
+f(x)
+& = \sum_{i=1}^n P(F_i)/t_i \text{ , for } 0 < x < t_1 \\
+& = \sum_{j=i+1}^n P(F_j)/t_j \text{ , for } t_i < x < t_{i+1} \text{ , where } i=1,\dots,n-1
+\end{flalign*}
+
+
+The mean waiting time can finally be calculated from the definition of expectation
+
+$$
+E(W) = \int_{-\infty}^{\infty} x f(x) dx
+= \int_0^{t_1} \sum_{i=1}^n \frac{P(F_i)}{t_i} x dx
+  + \sum_{i=1}^{n-1} \left( \int_{t_i}^{t_{i+1}} \sum_{j=i+1}^n \frac{P(F_j)}{t_j} x dx \right)
+$$
+
+$$
+E(W) = \frac{t_1^2}{2} \sum_{i=1}^n \frac{P(F_i)}{t_i}
+       + \sum_{i=1}^{n-1} \left[ \left( \frac{t_{i+1}^2 - t_i^2}{2} \right) \sum_{j=i+1}^n \frac{P(F_j)}{t_j} \right]
+$$
