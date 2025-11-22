@@ -1,0 +1,19 @@
+Let c be the mode and \[f(x) = x^{a-1} (1-x)^{b-1},\]where \(0<x<1\). \\
+Taking logarithms and then finding the derivative,
+\begin{flalign*}
+    \frac{d}{dx} \log(f(x)) &= \frac{d}{dx} ((a-1)\log(x) + (b-1)\log(1-x))\\
+    &= \frac{a-1}{x} - \frac{b-1}{1-x}.
+\end{flalign*}
+We can find the x-coordinate of the turning point by,
+\begin{flalign*}
+    \frac{d}{dx} \log(f(x)) &= 0\\
+    \frac{a-1}{x} - \frac{b-1}{1-x} &= 0 \\ 
+    x &= \frac{a-1}{a+b-2}.
+\end{flalign*}
+Finding the second derivative of \(\log(f(x))\),
+\begin{flalign*}
+    \frac{d^2}{dx^2} \log(f(x)) &= \frac{d}{dx}( \frac{a-1}{x} - \frac{b-1}{1-x})\\
+    &= - (\frac{a-1}{x^2} + \frac{b-1}{(1-x)^2}). 
+\end{flalign*}
+Since \(0 < x < 1\), \(a > 1\) and \(b > 1\), \(\frac{a-1}{x^2} > 0\) and \( \frac{b-1}{(1-x)^2} > 0,\)\[-(\frac{a-1}{x^2} + \frac{b-1}{(1-x)^2}) = \frac{d^2}{dx^2} log(f(x))  < 0\]
+Therefore, \(t\) is the maxima and mode, hence, \[c = \frac{a-1}{a+b-2}\]
