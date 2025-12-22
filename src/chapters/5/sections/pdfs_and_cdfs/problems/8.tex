@@ -1,0 +1,74 @@
+(a)
+Let $F$ be the CDF of the Beta distribution with parameters $a=3$, $b=2$.
+
+Due to the properties of the CDF, $F$ must be 0 for $x \le 0$ and 1 for $x \ge 1$.
+
+For $0 < x < 1$:
+
+\begin{equation*}
+\begin{split}
+F(x)
+& = \int_0^x f(t) dt = \int_0^x 12 t^2 (1-t) dt = 12 \int_0^x t^2 dt - 12 \int_0^x t^3 dt \\
+& = 12 \left( \frac{x^3}{3} - \frac{x^4}{4} \right) \\
+& = 4 x^3 - 3 x^4
+\end{split}
+\end{equation*}
+
+Then:
+
+$$
+F(x) =
+\begin{cases}
+0           &\text{ , for } x \le 0 \\
+x^3(4 - 3x) &\text{ , for } 0 < x < 1 \\
+1           &\text{ , for } x \ge 1
+\end{cases}
+$$
+
+
+(b)
+\begin{equation*}
+\begin{split}
+P(0 < X < 1/2)
+& = F(1/2) - F(0) = \left( \frac{1}{2} \right)^3 \left( 4 - \frac{3}{2} \right) - 0 \\
+& = \frac{5}{16}
+\end{split}
+\end{equation*}
+
+
+(c)
+The mean of $X$ can be calculated by the definition of expectation:
+
+\begin{equation*}
+\begin{split}
+E(X)
+& = \int_0^1 x f(x) dx = \int_0^1 12 x^3 (1-x) dx \\
+& = 12 \int_0^1 x^3 dx - 12 \int_0^1 x^4 dx = 12 \left( \frac{1}{4} - \frac{1}{5} \right) \\
+& = \frac{3}{5}
+\end{split}
+\end{equation*}
+
+
+By the definition of variance:
+
+$$
+\mathrm{Var}(X) = E(X^2) - (EX)^2
+$$
+
+Let's calculate the second moment of $X$ by LOTUS:
+
+\begin{equation*}
+\begin{split}
+E(X^2)
+& = \int_0^1 x^2 f(x) dx = \int_0^1 12 x^4 (1 - x) dx \\
+& = 12 \int_0^1 x^4 dx - 12 \int_0^1 x^5 dx = 12 \left( \frac{1}{5} - \frac{1}{6} \right) \\
+& = \frac{2}{5}
+\end{split}
+\end{equation*}
+
+
+Substituting this value into the definition of variance:
+
+$$
+\mathrm{Var}(X) = \frac{2}{5} - \left( \frac{3}{5} \right)^2 = \frac{1}{25}
+$$
