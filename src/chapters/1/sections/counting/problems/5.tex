@@ -5,21 +5,20 @@ of players can be halved before a single player is left.
 
   The number of times $2^N$ can be divided by two is $\log_{2}{2^N}$ which means the total amount of rounds in the tournament is $$ N $$
 
-\item The number of games in a given round is $\frac{N_{r}}{2}$. We can sum up 
+\item The number of games in a given round is $2^N$. We can sum up 
 these values for all the rounds.
 
   \begin{equation} 
   \begin{split}
-   f(N) & = \frac{N}{2} + \frac{N}{4}  + \frac{N}{8} + \dots + \frac{N}{2^{\log_{2}{N}}}\\
-   & =N \sum_{i=0}^{\log_{2}{N}} \frac{1}{2^{i}}\\
-   & =N \times \frac{N-1}{N}\\
-   & =N-1
+   f(N) & = \2^0 + \2^1  + \2^2 + \dots + \2^N\\
+   & =N \sum_{i=0}^{\N} \2^N\\
+   & =2^N -1
   \end{split}
   \end{equation} 
 
-\item Tournament is over when a single player is left. Hece, $N-1$ players 
+\item Tournament is over when a single player is left. Hece, $2^N$ players 
 need to be eliminated. As a result of a match, exactly one player is eliminated. 
-Hence, the number of matches needed to eliminate $N-1$ people is
+Hence, the number of matches needed to eliminate $2^N -1$ people is
 
-  $$ N-1 $$
+  $$ 2^N - 1$$
 \end{enumerate}
