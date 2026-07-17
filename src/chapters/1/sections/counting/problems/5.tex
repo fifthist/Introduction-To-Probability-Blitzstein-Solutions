@@ -1,24 +1,25 @@
 \begin{enumerate}[label=(\alph*)]
-\item By the end of each round, half of the players participating in the round 
-are eliminated. So, the problem reduces to finding out how many times the number 
+\item By the end of each round, half of the players participating in the round
+are eliminated. So, the problem reduces to finding out how many times the number
 of players can be halved before a single player is left.
 
   The number of times $2^N$ can be divided by two is $\log_{2}{2^N}$ which means the total amount of rounds in the tournament is $$ N $$
 
-\item The number of games in a given round is $2^N$. We can sum up 
-these values for all the rounds.
+\item The number of games in a given round is half the number of players in that
+round. In the first round there are $2^{N-1}$ games, in the second $2^{N-2}$, and
+so on down to a single final game. We can sum up these values for all the rounds.
 
-  \begin{equation} 
+  \begin{equation}
   \begin{split}
-   f(N) & = \2^0 + \2^1  + \2^2 + \dots + \2^N\\
-   & =N \sum_{i=0}^{\N} \2^N\\
-   & =2^N -1
+   f(N) & = 2^{N-1} + 2^{N-2} + \dots + 2^1 + 2^0\\
+   & = \sum_{i=0}^{N-1} 2^{i}\\
+   & = 2^N - 1
   \end{split}
-  \end{equation} 
+  \end{equation}
 
-\item Tournament is over when a single player is left. Hece, $2^N$ players 
-need to be eliminated. As a result of a match, exactly one player is eliminated. 
-Hence, the number of matches needed to eliminate $2^N -1$ people is
+\item Tournament is over when a single player is left. Hence, $2^N - 1$ players
+need to be eliminated. As a result of a match, exactly one player is eliminated.
+Hence, the number of matches needed to eliminate $2^N - 1$ people is
 
   $$ 2^N - 1$$
 \end{enumerate}
