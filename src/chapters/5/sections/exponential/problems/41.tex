@@ -1,0 +1,55 @@
+a. Fred's 20-minute wait does not change the distribution of the additional waiting time for the next bus, due to the memoryless property of the exponential.
+Since the intervals between Route 1 buses are i.i.d. $\mathrm{Expo}(\lambda_1)$, Fred will have to wait another $1/\lambda_1$ minutes on average. \\
+
+
+b. Let's define the r.v.s of interest below
+
+\begin{itemize}
+\item $T_1$: time of arrival of the first Route 1 bus;
+
+\item $\Delta_i$: time interval between the i-th and (i+1)-th arrivals of Route 1 buses;
+
+\item $T_2$: time of arrival of the first Route 2 bus;
+
+\item $B$: number of Route 1 bus arrivals before the first Route 2 bus.
+\end{itemize}
+
+By the property of the Poisson process, $T_1 \sim \mathrm{Expo}(\lambda_1)$ and\\ $T_2 \sim \mathrm{Expo}(\lambda_2)$.
+
+The event $\{B=k\}$ happens when each of the first k Route 1 buses arrives before $T_2$, and the (k+1)-th Route 1 bus arrives after $T_2$.
+These sub-events are independent due to the memoryless property of the exponential.
+
+The first Route 1 bus arrives before the Route 2 bus with probability
+$P(T_1 < T_2) = \lambda_1/(\lambda_1+\lambda_2)$.
+The probability that the second Route 1 bus arrives before the Route 2 bus is $P(\Delta_1 < T_2 - T_1)$; once $T_1$ realizes to a fixed value, $T_2-T_1$ represents the additional waiting time for the Route 2 bus after the arrival of the first Route 1 bus, thus $T_2-T_1 \sim \mathrm{Expo}(\lambda_2)$ by the memoryless property. Therefore, $P(\Delta_1 < T_2 - T_1) = \lambda_1/(\lambda_1+\lambda_2)$.
+With the same reasoning, we conclude that the probability for each of the first k buses is given by the same expression.
+Finally, the (k+1)-th Route 1 bus arrives after $T_2$ with probability $P(\Delta_k > T_2 - \sum_{i=1}^{k-1} \Delta_i) = \lambda_2/(\lambda_1+\lambda_2)$.
+Therefore,
+
+$$
+P(B=k) = \left( \frac{\lambda_1}{\lambda_1+\lambda_2} \right)^k \left( \frac{\lambda_2}{\lambda_1+\lambda_2} \right) \text{ , for } k = 0, 1, \dots
+$$
+
+The event of interest is $\{B \ge n\}$, calculated as
+
+\begin{flalign*}
+P(B \ge n)
+& = \sum_{k=n}^\infty P(B=k) = \frac{\lambda_2}{\lambda_1+\lambda_2} \sum_{k=n}^\infty \left( \frac{\lambda_1}{\lambda_1+\lambda_2} \right)^k \\
+& = \left( \frac{\lambda_1}{\lambda_1+\lambda_2} \right)^n
+\end{flalign*}
+
+
+c. Let $W_F$ and $W_G$ be Fred's and Gretchen's waiting times, respectively.
+$W_F$ and $W_G$ are i.i.d. $\mathrm{Expo}(\lambda)$.
+
+The first of the two, Fred or Gretchen, takes the bus at \\
+$L = \min(W_F,W_G) \sim \mathrm{Expo}(2\lambda)$.
+After that, the second of the two waits an additional time $t \sim \mathrm{Expo}(\lambda)$, by the memoryless property.
+
+The time it takes until both Fred and Gretchen have caught their buses is
+$M = L + t$.
+Taking the expected value
+
+$$
+E(M) = E(L) + E(t) = \frac{1}{2\lambda} + \frac{1}{\lambda} = \frac{3}{2\lambda}
+$$
