@@ -1,0 +1,19 @@
+Let $D$ be the event in which the woman gives birth on the due date.
+
+From the statement, $T \sim \mathcal{N}(0,8^2)$ days.
+$T$ can be transformed to a standard Normal r.v. by the relation
+$Z = (T-0)/8 = T/8 \sim \mathcal{N}(0,1)$.
+
+Assuming that the time $t$ on the timeline is in the unit of days,
+the due date corresponds to the interval $t \in [0,1)$.
+Therefore
+
+$$
+P(D) = P(0 \le T < 1) = P(0 \le 8Z < 1) = \Phi \left( \frac{1}{8} \right) - \Phi(0)
+$$
+
+$$
+P(D) = \Phi \left( \frac{1}{8} \right) - \frac{1}{2}
+$$
+
+\noindent where $\Phi(\cdot)$ is the CDF of the standard Normal distribution.
