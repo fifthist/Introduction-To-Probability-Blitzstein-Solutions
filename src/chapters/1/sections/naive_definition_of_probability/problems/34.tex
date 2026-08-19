@@ -1,0 +1,14 @@
+There are $\binom{52}{5}$ equally likely $5$-card hands.
+
+(a) Choose a suit in $\binom{4}{1}$ ways, then choose $5$ of its $13$ ranks in
+$\binom{13}{5}$ ways. This includes the royal flush for that suit, so we
+subtract the $1$ way to get the royal flush. Hence, the probability of a
+flush (excluding the royal flush) is
+$$\frac{\binom{4}{1}\left[\binom{13}{5} - 1\right]}{\binom{52}{5}}$$
+
+(b) Choose the $2$ ranks that form the pairs in $\binom{13}{2}$ ways, then
+choose $2$ suits out of $4$ for each of those ranks in $\binom{4}{2}^{2}$ ways.
+Then choose the rank of the remaining card from the $11$ leftover ranks in
+$\binom{11}{1}$ ways, and its suit in $\binom{4}{1}$ ways. Hence, the
+probability of two pair is
+$$\frac{\binom{13}{2}\binom{4}{2}^{2}\binom{11}{1}\binom{4}{1}}{\binom{52}{5}}$$
