@@ -6,3 +6,9 @@ _book
 _bookdown_files
 rsconnect
 output
+
+src/index.aux
+src/index.log
+src/index.ptc
+src/index.toc
+src/index.pdf

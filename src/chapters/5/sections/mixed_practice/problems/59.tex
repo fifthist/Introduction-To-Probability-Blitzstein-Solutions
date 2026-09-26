@@ -1,7 +1,10 @@
-(a) Length biased sampling
-\[L_1 + L_2 + L_3 = 2 \pi\]
-\[\mathbb{E}[L_1] = \mathbb{E}[L_2] = \mathbb{E}[L_3] = \frac{2\pi}{3}\]
-But our point is more likely to be a part of the longest arc. If there was a \(\frac{1}{3}\) chance of the point being in any one of the three points then \(\mathbb{E}[L] = \frac{2\pi}{3}\)
+(a) Let $\theta_1$, $\theta_2$ and $\theta_3$ be the angles corresponding to points A, B and C respectively.
+From the statement of the problem, those angles are i.i.d. $\mathrm{Unif}(0,2\pi)$.
+
+The angles $\theta_1$, $\theta_2$ and $\theta_3$ divide the $[0,2\pi)$ range in four successive sub-intervals.
+The argument is wrong because the problem is not symmetric with respect to the three arcs, but rather with respect to the four angle sub-intervals.
+The average length of each sub-interval is $2\pi/4=\pi/2$, by symmetry.
+The length of the arc that contains the point (1,0) is the sum of the first and fourth sub-intervals, so it is twice as long as the other arcs on average. \\
 
 (b)
 \[\theta_1 = \text{Unif}(0, 2\pi)\]
@@ -10,21 +13,23 @@ But our point is more likely to be a part of the longest arc. If there was a \(\
 
 \[L_1 = \text{min} (\theta_1, \theta_2, \theta_3)\]
 CDF,
-\begin{flalign}
+\begin{flalign*}
     F(y) & = 1 - P(\text{min}(\theta_1, \theta_2, \theta_3) > y) \\
-    & = 1 - \frac{2\pi - y}{2\pi}^3
-\end{flalign}
+    & = 1 - ( \frac{2\pi - y}{2\pi} )^3 \text{ , for } 0 \le y < 2\pi
+\end{flalign*}
 PDF,
-\begin{flalign}
+\begin{flalign*}
     f(y) & = \frac{d}{dy} F(y) \\
-    & = \frac{3}{2\pi} (1 - \frac{y}{2\pi})^2 
-\end{flalign}
+    & = \frac{3}{2\pi} (1 - \frac{y}{2\pi})^2 \text{ , for } 0 \le y < 2\pi
+\end{flalign*}
 
 (c)
-\begin{flalign}
+\begin{flalign*}
     \mathbb{E}[L] & = 2 \mathbb{E}[L_1] \\
     & = 2 \int_{0}^{2\pi} y \frac{3}{2\pi} (1 - \frac{y}{2\pi})^2 dy \\
-    & = \frac{3}{\pi} \int_{0}^{2\pi} y + \frac{y^3}{4\pi^2} - \frac{y^2}{\pi} dy \\
+    & = \frac{3}{\pi} \int_{0}^{2\pi} (y + \frac{y^3}{4\pi^2} - \frac{y^2}{\pi}) dy \\
     & = \frac{3}{\pi} [ \frac{4\pi^2}{2} + \frac{1}{4\pi^2} \frac{16\pi^4}{4} - \frac{1}{\pi} \frac{8\pi^3}{3}] \\
     & = \pi
-\end{flalign}
+\end{flalign*}
+
+We can reach the same result from the qualitative explanation given in part (a): since $L$ is the sum of the first and fourth sub-intervals, where the length of each sub-interval is $\pi/2$ on average, $\mathbb{E}[L] = \pi/2+\pi/2 = \pi$.

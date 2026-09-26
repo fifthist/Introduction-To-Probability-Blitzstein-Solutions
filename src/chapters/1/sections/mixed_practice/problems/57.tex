@@ -3,15 +3,14 @@ where $A_{i}$ is the event that the $i$-th molecule in my breath is shared
 with Caesar. We can compute the desired probability using inclusion exclusion.
 
 Since every molecule in the universe is equally likely to be shared with Caesar, 
-and we assume our breath samples molecules with replacement, 
-$P(\bigcap\limits_{i=1}^{n}A_{i}) = (\frac{1}{10^{22}})^{n}$. 
+and we assume our breath samples molecules with replacement, for any $k$ specific molecules, 
+$P(\bigcap\limits_{i=1}^{k}A_{i_{k}}) = (\frac{10^{22}}{10^{44}})^{k} = (\frac{1}{10^{22}})^{k}$, where $A_{i_{k}}$ is index variable to represent a specific, randomly chosen subset of $k$ events out of the total ${10^{22}}$.
 
 Thus,
 
 \begin{flalign}
-P(\bigcup\limits_{i=1}^{10^{22}}A_{i}) & = 
-\sum_{i=1}^{10^{22}}(-1)^{i+1}\left(\frac{1}{10^{22}}\right)^{i} \nonumber && \\
-& = \left(1 - \frac{1}{10^{22}}\right)^{10^{22}} \nonumber && \\
-& \approx e^{-1} \nonumber 
+P(\bigcup\limits_{i=1}^{10^{22}}A_{i}) & = \sum_{k=1}^{10^{22}}(-1)^{k+1}\binom{10^{22}}{k}\left(\frac{1}{10^{22}}\right)^{k} \nonumber && \\
+& = 1 - \sum_{k=0}^{10^{22}}\binom{10^{22}}{k}\left(-\frac{1}{10^{22}}\right)^{k} \nonumber && \\
+& = 1 - \left(1 - \frac{1}{10^{22}}\right)^{10^{22}} \nonumber && \\
+& \approx 1 - e^{-1} \nonumber 
 \end{flalign}
-

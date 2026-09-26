@@ -1,0 +1,48 @@
+(a)
+\begin{equation*}
+\begin{split}
+\Phi(z)
+&= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z e^{-x^2/2} dx \\
+&= \frac{1}{\sqrt{2\pi}} \left( \int_{-\infty}^0 e^{-x^2/2} dx + \int_0^z e^{-x^2/2} dx \right)
+\end{split}
+\end{equation*}
+
+We know from the Normal PDF that $\int_{-\infty}^{\infty} e^{-x^2/2} dx = \sqrt{2\pi}$. Since the integrand is an even function, the integral from $-\infty$ to $0$ is half this value
+
+$$
+\Phi(z) = \frac{1}{2} + \frac{1}{\sqrt{2\pi}} \int_0^z e^{-x^2/2} dx
+$$
+
+By applying the variable substitution $u = x/\sqrt{2}$ in the integral, we obtain $du = dx/\sqrt{2}$. The lower and upper limits of integration become $0$ and $z/\sqrt{2}$, respectively.
+
+\begin{equation*}
+\begin{split}
+\Phi(z)
+&= \frac{1}{2} + \frac{1}{\sqrt{2\pi}} \int_0^{z/\sqrt{2}} e^{-u^2} \sqrt{2} \, du \\
+&= \frac{1}{2} + \frac{1}{2} \frac{2}{\sqrt{\pi}} \int_0^{z/\sqrt{2}} e^{-u^2} du
+\end{split}
+\end{equation*}
+
+$$
+\Phi(z) = \frac{1}{2} + \frac{1}{2} \, \mathrm{erf} \left( \frac{z}{\sqrt{2}} \right)
+$$
+
+
+(b)
+$$
+\mathrm{erf}(z) = \frac{2}{\sqrt{\pi}} \int_0^z e^{-x^2} dx
+$$
+
+The integrand is an even function, so the integrals from 0 to $z$ and from $-z$ to 0 are the same
+
+\begin{equation*}
+\begin{split}
+\mathrm{erf}(z)
+&= \frac{2}{\sqrt{\pi}} \int_{-z}^0 e^{-x^2} dx \\
+&= - \frac{2}{\sqrt{\pi}} \int_0^{-z} e^{-x^2} dx
+\end{split}
+\end{equation*}
+
+$$
+\mathrm{erf}(-z) = -\mathrm{erf}(z)
+$$
