@@ -1,0 +1,20 @@
+Let $F$ be the CDF of $X$.
+It is given by $F(x) = 1 - e^{-\lambda x}$, for $x>0$.
+
+As per the Universality of the Uniform (UoU), $X$ can be generated from $U$ using $X$'s quantile function:
+
+$$
+X = F^{-1}(U)
+$$
+
+The quantile function is calculated as
+
+$$
+F^{-1}(x) = -\frac{1}{\lambda} \log(1-x)
+$$
+
+Plugging the quantile function into the UoU formula
+
+$$
+X = -\frac{1}{\lambda} \log(1 - U)
+$$
