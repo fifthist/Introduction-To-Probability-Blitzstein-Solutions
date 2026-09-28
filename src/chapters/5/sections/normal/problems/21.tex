@@ -1,0 +1,43 @@
+a. Let's begin calculating the second derivative of the standard Normal PDF
+
+$$
+\Phi(z) = \frac{1}{\sqrt{2\pi}} \, e^{-z^2/2}
+$$
+
+$$
+\Phi^{'}(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2} \frac{(-2z)}{2} = -\frac{z}{\sqrt{2\pi}} \, e^{-z^2/2}
+$$
+
+\begin{equation*}
+\begin{split}
+\Phi^{''}(z)
+&= -\frac{1}{\sqrt{2\pi}} \left[ e^{-z^2/2} + z e^{-z^2/2} \frac{(-2z)}{2} \right] \\
+&= \frac{1}{\sqrt{2\pi}} e^{-z^2/2} (z^2 - 1)
+\end{split}
+\end{equation*}
+
+The second derivative of the PDF is zero at the points of inflection $z_{\mathrm{inflec}}$ .
+
+$$
+\Phi^{''}(z_{\mathrm{inflec}}) = 0
+$$
+
+$$
+z_{\mathrm{inflec}}^2-1 = 0
+$$
+
+$$
+z_{\mathrm{inflec}} = \pm 1
+$$
+
+The points of inflection of the standard Normal PDF are at $-1$ and $+1$.\\
+
+b. Let $Z \sim \mathcal{N}(0,1)$ and $X \sim \mathcal{N}(\mu,\sigma^2)$.
+
+We can relate $X$ to $Z$ by the location-scale transformation
+
+$$
+X = \mu + \sigma Z
+$$
+
+Substituting $Z = \pm 1$ into the above relation, we have that the points of inflection of the $\mathcal{N}(\mu,\sigma^2)$ PDF are at $(\mu-\sigma)$ and $(\mu+\sigma)$.
